@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+}
+
+.menu,
+.home {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.menu {
+  text-transform: uppercase;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ec2576;
+  position: fixed;
+  top: 0;
+}
+
+.menu__ul {
+  list-style: none;
+}
+
+.menu__item {
+  display: inline-block;
+  margin: 17px 25px;
+}
+
+.menu__item a {
+  text-decoration: none;
+  color: white;
+}
+
+.home {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.home__hello {
+  font: 3rem "Fira Code", "Courier New", monospace;
+  color: #ec2576;
+  margin: 30px auto;
+}
+
+.home__iam {
+  text-transform: uppercase;
+  color: #ec2576;
+  font-size: .8rem;
+}
+
+.home__monika {
+  text-transform: uppercase;
+}
+
+.home__diamondWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#cut-diamond {
+  border-style: solid;
+  border-color: transparent transparent #ec2576 transparent;
+  border-width: 0 25px 25px 25px;
+  height: 0;
+  width: 50px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: relative;
+  margin: 20px 0 50px 0;
+}
+
+#cut-diamond:after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #ec2576 transparent transparent transparent;
+  border-width: 70px 50px 0 50px;
+}
+/*# sourceMappingURL=main.css.map */
