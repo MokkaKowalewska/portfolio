@@ -32,8 +32,7 @@ $myGrey: #8D8D8D;
   margin: 0;
 }
 
-.menu,
-.home {
+body {
   @include montserrat;
 }
 
@@ -60,6 +59,7 @@ $myGrey: #8D8D8D;
 .flex-container {
   @include flexCenter;
   height: 100vh;
+  width: 100vw;
 }
 
 .home {
@@ -94,5 +94,37 @@ $myGrey: #8D8D8D;
     font-weight: bold;
   }
 }
+
+.bio {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  &__h2 {
+    margin: 20px 0;
+    font-size: 3rem;
+    // font-family: "Fira Code";
+    @include uppercase;
+    color: $myPink;
+  }
+  &__content {
+    margin-right: 60px;
+    font-size: .85rem;
+    line-height: 1.4;
+  }
+  &__first-line {
+    color: $myPink;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1.1;
+    margin-bottom: 20px;
+  }
+  &__img {
+width: 30%;
+  }
+
+}
+
+
 
 

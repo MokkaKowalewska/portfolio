@@ -9,8 +9,7 @@
   margin: 0;
 }
 
-.menu,
-.home {
+body {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
@@ -56,6 +55,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
+  width: 100vw;
 }
 
 .home {
@@ -96,5 +96,41 @@
   margin: 10px;
   font-size: .8rem;
   font-weight: bold;
+}
+
+.bio {
+  width: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bio__h2 {
+  margin: 20px 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #ec2576;
+}
+
+.bio__content {
+  margin-right: 60px;
+  font-size: .85rem;
+  line-height: 1.4;
+}
+
+.bio__first-line {
+  color: #ec2576;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1.1;
+  margin-bottom: 20px;
+}
+
+.bio__img {
+  width: 30%;
 }
 /*# sourceMappingURL=main.css.map */
