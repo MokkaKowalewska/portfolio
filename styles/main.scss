@@ -8,6 +8,7 @@ $myPink: #ec2576;
 
 @mixin flexCenter {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -50,9 +51,13 @@ $myPink: #ec2576;
   }
 }
 
+.flex-container {
+  @include flexCenter;
+  height: 100vh;
+}
 .home {
   text-align: center;
-  margin-top: 150px;
+  // margin-top: 150px;
   &__hello {
     font: 3rem "Fira Code", "Courier New", monospace;
     color: $myPink;
@@ -66,8 +71,9 @@ $myPink: #ec2576;
   &__monika {
     @include uppercase;
   }
-  &__diamondWrapper {
-    @include flexCenter;
+  &__diamond {
+    width: 55px;
+    height: 55px;
   }
 }
 

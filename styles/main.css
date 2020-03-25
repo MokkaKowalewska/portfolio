@@ -20,6 +20,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -42,9 +45,21 @@
   color: white;
 }
 
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
 .home {
   text-align: center;
-  margin-top: 150px;
 }
 
 .home__hello {
@@ -63,36 +78,8 @@
   text-transform: uppercase;
 }
 
-.home__diamondWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#cut-diamond {
-  border-style: solid;
-  border-color: transparent transparent #ec2576 transparent;
-  border-width: 0 25px 25px 25px;
-  height: 0;
-  width: 50px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  position: relative;
-  margin: 20px 0 50px 0;
-}
-
-#cut-diamond:after {
-  content: "";
-  position: absolute;
-  top: 25px;
-  left: -25px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: #ec2576 transparent transparent transparent;
-  border-width: 70px 50px 0 50px;
+.home__diamond {
+  width: 55px;
+  height: 55px;
 }
 /*# sourceMappingURL=main.css.map */
