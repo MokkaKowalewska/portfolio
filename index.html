@@ -32,29 +32,38 @@
         </ul>
       </nav>
     </header>
-
-    <div class="flex-container">
+    <main>
+    <div class="container">
       <section class="home">
+        <div class="left-up">
         <h1 class="home__hello">Hello world_</h1>
-        <p class="home__iam">I am</p>
-        <p class="home__monika">Monika Kowalewska</p>
+        </div>
+
+        <div class="right-up">
+          <figure class="svg-pattern"></figure>
+        </div>
+
+        <div class="right-down">
+        <p class="home__iam"><span class="italic">let</span> iAm = {
+          name: "Monika Kowalewska",
+          postition?: "Frontend Developer",
+          isLookingFor(<span class="italic">first-job</span>);
+      }
+      </p>
+    </div>
+
+
         <figure>
-          <img
-            class="home__diamond"
-            src="images/diamond.svg"
-            alt="diamond icon"
-          />
+
         </figure>
-        <p class="home__f-dev">frontend dev</p>
-        <p class="home__looking">looking for a first job</p>
       </section>
     </div>
 
-      <!-- <div class="container"> -->
       <section class="bio">
         <div class="bio__content">
         <h2 class="bio__h2">bio</h2>
 
+        <!-- change p to h2? and 100% width? -->
         <p class="bio__first-line">I just love making things useful and pretty.</p>
 
         <p>
@@ -77,7 +86,8 @@
         </div>
         <img class="bio__img" src="images/my-face.jpg" alt="Photo of my face">
       </section>
-      <!-- </div> -->
 
+
+    </main>
   </body>
 </html>

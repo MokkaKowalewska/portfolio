@@ -1,6 +1,6 @@
 // variables
 $myPink: #ec2576;
-$myGrey: #8D8D8D;
+$myGrey: #8d8d8d;
 
 // mixins
 @mixin montserrat {
@@ -34,6 +34,12 @@ $myGrey: #8D8D8D;
 
 body {
   @include montserrat;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fira Code", "Courier New", "Courier", monospace;
 }
 
 .menu {
@@ -70,14 +76,14 @@ body {
     margin: 30px auto;
   }
   &__iam {
-    @include uppercase;
-    font-size: .8rem;
-    font-weight: bold;
+
+    font: 0.8rem "Fira Code", "Courier New", "Courier", monospace;
+
   }
   &__monika {
-      color: $myGrey;
-      font-size: 2.5rem;
-      margin: 5px;
+    color: $myGrey;
+    font-size: 2.5rem;
+    margin: 5px;
   }
   &__diamond {
     @include diamondSize(30px);
@@ -90,10 +96,16 @@ body {
   }
   &__looking {
     margin: 10px;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: bold;
   }
 }
+
+.svg-pattern {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23ec2576' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
 
 .bio {
   width: 50%;
@@ -109,22 +121,17 @@ body {
   }
   &__content {
     margin-right: 60px;
-    font-size: .85rem;
+    font-size: 0.85rem;
     line-height: 1.4;
   }
   &__first-line {
     color: $myPink;
-    font-weight: bold;
     font-size: 1.1rem;
     letter-spacing: 1.1;
     margin-bottom: 20px;
+    font-family: "fira code";
   }
   &__img {
-width: 30%;
+    width: 30%;
   }
-
 }
-
-
-
-
