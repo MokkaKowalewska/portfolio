@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
@@ -50,7 +50,7 @@ h3 {
   color: white;
 }
 
-.flex-container {
+.start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,49 +62,32 @@ h3 {
           justify-content: center;
   height: 100vh;
   width: 100vw;
-}
-
-.home {
-  text-align: center;
   color: #ec2576;
+  font-family: "Fira Code", "Courier New", "Courier", monospace;
+  background: url(/images/background-start.png) no-repeat center center fixed;
+  background-size: cover;
 }
 
-.home__hello {
-  font: 3rem "Fira Code", "Courier New", monospace;
-  margin: 30px auto;
+.start__h1 {
+  font-size: 12rem;
+  margin-right: 2rem;
+  font-weight: 300;
 }
 
-.home__iam {
-  font: 0.8rem "Fira Code", "Courier New", "Courier", monospace;
+.start__p {
+  margin-left: 2rem;
+  font-family: "Montserrat", sans-serif;
 }
 
-.home__monika {
-  color: #8d8d8d;
+.start__p--bigger {
   font-size: 2.5rem;
-  margin: 5px;
 }
 
-.home__diamond {
-  width: 30px;
-  height: 30px;
-  fill: #ec2576;
-  margin: 20px;
-}
-
-.home__f-dev {
-  text-transform: uppercase;
-  font-size: 2rem;
-}
-
-.home__looking {
-  margin: 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.svg-pattern {
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23ec2576' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+.right-top {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 .bio {
@@ -121,7 +104,6 @@ h3 {
 .bio__h2 {
   margin: 20px 0;
   font-size: 3rem;
-  text-transform: uppercase;
   color: #ec2576;
 }
 

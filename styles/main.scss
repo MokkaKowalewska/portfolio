@@ -1,11 +1,8 @@
 // variables
-$myPink: #ec2576;
+$myPink: rgb(236, 37, 118);
 $myGrey: #8d8d8d;
 
 // mixins
-@mixin montserrat {
-  font-family: "Montserrat", Arial, sans-serif;
-}
 
 @mixin flexCenter {
   display: flex;
@@ -22,6 +19,7 @@ $myGrey: #8d8d8d;
   text-transform: uppercase;
 }
 
+//global styles
 *,
 *::before,
 *::after {
@@ -33,7 +31,7 @@ $myGrey: #8d8d8d;
 }
 
 body {
-  @include montserrat;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
@@ -62,49 +60,38 @@ h3 {
   }
 }
 
-.flex-container {
+
+.start {
   @include flexCenter;
   height: 100vh;
   width: 100vw;
-}
-
-.home {
-  text-align: center;
   color: $myPink;
-  &__hello {
-    font: 3rem "Fira Code", "Courier New", monospace;
-    margin: 30px auto;
-  }
-  &__iam {
+  font-family: "Fira Code", "Courier New", "Courier", monospace;
+  background: url(/images/background-start.png) no-repeat center center fixed;
+  background-size: cover;
 
-    font: 0.8rem "Fira Code", "Courier New", "Courier", monospace;
-
+  &__h1 {
+    font-size: 12rem;
+    margin-right: 2rem;
+    font-weight: 300;
   }
-  &__monika {
-    color: $myGrey;
-    font-size: 2.5rem;
-    margin: 5px;
-  }
-  &__diamond {
-    @include diamondSize(30px);
-    fill: $myPink;
-    margin: 20px;
-  }
-  &__f-dev {
-    @include uppercase;
-    font-size: 2rem;
-  }
-  &__looking {
-    margin: 10px;
-    font-size: 0.8rem;
-    font-weight: bold;
+  &__p {
+      // font-size: rem;
+      // text-align: left;
+    margin-left: 2rem;
+    font-family: "Montserrat", sans-serif;
+    &--bigger {
+      font-size: 2.5rem;
+    }
   }
 }
 
-.svg-pattern {
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23ec2576' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+.right-top {
+  justify-content: center;
+  text-align: center;
 }
+
+
 
 
 .bio {
@@ -116,7 +103,6 @@ h3 {
     margin: 20px 0;
     font-size: 3rem;
     // font-family: "Fira Code";
-    @include uppercase;
     color: $myPink;
   }
   &__content {
