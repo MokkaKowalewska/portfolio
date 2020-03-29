@@ -1,27 +1,17 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0;
-  margin: 0;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Fira Code", "Courier New", "Courier", monospace;
-}
-
 .menu {
   text-transform: uppercase;
-  width: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,6 +24,8 @@ h3 {
   background-color: #ec2576;
   position: fixed;
   top: 0;
+  left: 0;
+  height: 45px;
 }
 
 .menu__ul {
@@ -50,25 +42,30 @@ h3 {
   color: white;
 }
 
+@media screen and (min-device-width: 1024px) {
+  .start {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: url(/images/background-start.png) no-repeat;
+    background-size: cover;
+  }
+}
+
 .start {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 100vh;
   width: 100vw;
   color: #ec2576;
-  font-family: "Fira Code", "Courier New", "Courier", monospace;
-  background: url(/images/background-start.png) no-repeat center center fixed;
-  background-size: cover;
 }
 
 .start__h1 {
+  font-family: "Fira Code", "Courier New", "Courier", monospace;
   font-size: 12rem;
   margin-right: 2rem;
   font-weight: 300;
@@ -76,35 +73,32 @@ h3 {
 
 .start__p {
   margin-left: 2rem;
-  font-family: "Montserrat", sans-serif;
 }
 
 .start__p--bigger {
   font-size: 2.5rem;
 }
 
-.right-top {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+.start__btn {
+  display: block;
+  margin: 1rem auto;
+  padding: .5rem;
+  background: rgba(236, 37, 118, 0.3);
+  border: #ec2576 solid 2px;
+  color: #ec2576;
+  font-weight: bold;
 }
 
 .bio {
-  width: 50%;
+  width: 60vw;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .bio__h2 {
   margin: 20px 0;
   font-size: 3rem;
-  color: #ec2576;
+  font-weight: 900;
+  color: #8d8d8d;
 }
 
 .bio__content {
