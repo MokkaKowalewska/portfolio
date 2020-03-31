@@ -1,9 +1,10 @@
 // variables
-$myPink: rgb(236, 37, 118);
-$myGrey: #8d8d8d;
+$myPink: #c02f69;
+$myGrey: #575757;
+$montserrat: "Montserrat", sans-serif;
+$firaCode: "Fira Code", "Courier New", "Courier", monospace;
 
 // mixins
-
 @mixin flexCenter {
   display: flex;
   align-items: center;
@@ -19,9 +20,10 @@ $myGrey: #8d8d8d;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: $montserrat;
 }
 
+//menu
 .menu {
   text-transform: uppercase;
   width: 100vw;
@@ -40,6 +42,7 @@ body {
     a {
       text-decoration: none;
       color: white;
+      font-weight: 600;
     }
   }
 }
@@ -47,21 +50,50 @@ body {
 @media screen and (min-device-width: 1024px) {
   .start {
     @include flexCenter;
-    background: url(/images/background-start.png) no-repeat;
+    background: url(/images/background-start.png) no-repeat center center fixed;
     background-size: cover;
   }
+}
 
+.btn {
+  display: block;
+  margin: 1rem auto;
+  padding: .5rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: $myPink solid 2px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  color: $myPink;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s cubic-bezier(.58,.11,.11,.95);
+  &:focus:hover {
+    // background-color: $myPink;
+    // color: white;
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .start {
   height: 100vh;
+  min-height: 12rem;
   width: 100vw;
   color: $myPink;
   &__h1 {
-    font-family: "Fira Code", "Courier New", "Courier", monospace;
+    font-family: $firaCode;
     font-size: 12rem;
     margin-right: 2rem;
     font-weight: 300;
+    .start__h1--transform {
+      display: inline-block;
+      transform: rotate(-180deg);
+      direction: rtl;
+      unicode-bidi: bidi-override;
+    }
   }
   &__p {
     margin-left: 2rem;
@@ -69,41 +101,97 @@ body {
       font-size: 2.5rem;
     }
   }
-  &__btn {
-    display: block;
-    margin: 1rem auto;
-    padding: .5rem;
-    background: rgba(236, 37, 118, 0.3);
-    border: $myPink solid 2px;
-    color: $myPink;
-    font-weight: bold;
-  }
+
 }
 
 // bio
 .bio {
-  width: 60vw;
-  margin: 0 auto;
-
+  padding-top: 30px;
+  color: $myGrey;
+  &__grid {
+      display: grid;
+      grid-template: repeat(3, 70vh) / repeat(2, 30vw);
+      place-items: stretch;
+      justify-content: center;
+      gap: 50px;
+      &-item {
+        border: 1px solid lightgrey;
+        border-radius: 15px;
+        padding: 40px;
+      }
+  }
+  &__lastDiv {
+    margin: 30px auto;
+  }
   &__h2 {
-    margin: 20px 0;
+    line-height: 1.2;
+    margin-bottom: 70px;
     font-size: 3rem;
-    font-weight: 900;
-    color: $myGrey;
+    font-weight: 700;
+    text-align: center;
   }
-  &__content {
-    margin-right: 60px;
-    font-size: 0.85rem;
-    line-height: 1.4;
+  &__h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    text-align: center;
   }
-  &__first-line {
-    color: $myPink;
-    font-size: 1.1rem;
-    letter-spacing: 1.1;
-    margin-bottom: 20px;
-    font-family: "fira code";
+  &__p {
+    font-size: 1.3rem;
+    &--highlighted {
+      font-weight: 600;
+      color: white;
+      background-color: $myPink;
+
+    }
+    &--bold {
+      font-weight: 600;
+    }
+    &--noBottomMargin {
+      margin-bottom: 0;
+    }
+  }
+  &__ul {
+    margin-top: 0;
+    font-size: 1.3rem;
   }
   &__img {
-    width: 30%;
+    width: 6rem;
+    display: block;
+    margin: 0 auto;
+    float: right;
+    border-radius: 50%;
+  }
+  &__btn {
+    margin: 100px;
+  }
+}
+
+
+// portfolio
+.portfolio {
+padding-top: 30px;
+  &__skills {
+    // display: grid;
+    // grid-template: 1fr 1fr / 200px repeat(4, 80px);
+    // gap: 30px;
+    // .grid__h3 {
+    //   justify-self: right;
+    // }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__tools {
+    display: flex;
+  }
+  &__h3 {
+    color: $myPink;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 30px;
+  }
+  &__h3-last {
+    text-align: center;
+    margin: 50px;
   }
 }

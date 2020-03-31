@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Fira+Code:300,400,500|Montserrat:300,400,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Fira+Code:300,400,500|Montserrat:300,400,600,700,900&display=swap"
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/143ac2990d.js" crossorigin="anonymous"></script>
@@ -36,42 +36,116 @@
     <main>
 
         <section class="start">
-            <h1 class="start__h1">Hello</br>world</h1>
+            <h1 class="start__h1">Hello<br><span class="start__h1--transform">world</span></h1>
 
-            <p class="start__p"><span class="start__p--bigger">It's Monika,</span></br>
-              Junior Frontend Developer</br>
+            <p class="start__p"><span class="start__p--bigger">It's Monika,</span><br>
+              Junior Frontend Developer<br>
               looking for a first job.
-              <button class="start__btn">who am i?</button>
+              <a class="btn" href="#bio">more</a>
               </p>
 
 
         </section>
 
 
-      <section class="bio">
-        <!-- <div class="bio__content"> -->
-
+      <section class="bio" id="bio">
 
 
           <h2 class="bio__h2">
             I just love making things useful and pretty.
           </h2>
+          <div class="bio__grid">
 
-            <p>For the past 10 years I was booking ferry departures for cargo trucks.
-  Kind of useful, definitely not pretty.</p>
+            <!-- <i class="fas fa-truck-moving fa-4x"></i> -->
+            <div class="bio__grid-item">
+              <h3 class="bio__h3">
+                The Past
+              </h3>
+          <p class="bio__p">For the past 10 years I had been booking ferry departures for cargo trucks.</p>
+          <p class="bio__p">Well, kind of useful, definitely not pretty.</p>
+</div>
+          <!-- <img class="bio__img" src="images/my-face.png" alt="Photo of my face"/> -->
+          <div class="bio__grid-item">
+            <h3 class="bio__h3">
+              The Present
+            </h3>
+          <p class="bio__p">Long story short: <span class="bio__p--highlighted">I have no time to be a shitty developer, so I decided to be an awesome one.</span> I am making it happen everyday, step by step. I am so determined, that once I was coding hidden in the closet, so that kids didn’t find me (thanks, coronavirus!).
+          </p>
+</div>
 
-  <p>I’m almost 30 and, to be honest, I have no time to be a shitty developer. So I decided to be an awesome one! I am making it happen everyday, step by step. I am so determined, that I was coding hidden in the closet, so that kids didn’t find me (thanks for nothing, coronavirus!).
-  I may be a #CodeNewbie, but certainly not an employee newbie. I am nothing like 19-year-old me, who sat at the desk at the first day of new job and was trying to look smart. Thanks to previous work and maternity I learnt to:
-  •	make a team with coworkers (even with those who haven’t washed their cups)
-  •	organize my work (at first, be sure what is expected from me)
-  •	working under pressure (with client phoning every 2 minutes, asking „is it already done?” or with a daughter, asking every 2 seconds „mommy, is it already done?”)</p>
-
-  <p>I love making things useful and pretty for users and other developers.
-  To take care of high accesibility and beautiful animations, as well as clean, quality code and variable’s names that make sense.</p>
 
 
-        <!-- </div> -->
-        <img class="bio__img" src="images/my-face.jpg" alt="Photo of my face" />
+
+          <!-- <i class="far fa-flushed fa-4x"></i> -->
+          <div class="bio__grid-item">
+            <h3 class="bio__h3">
+              What other value can I bring?
+            </h3>
+          <p class="bio__p">I may be a <span class="bio__p--bold">#CodeNewbie</span>, but certainly <span class="bio__p--highlighted">not an employee newbie</span>. I am nothing like 19-year-old me, who sat at the desk at the first day of new job and was trying to look smart. In less that 5 years from an assistant I became Senior Ferry Forwarding Agent and I've learnt a lot, for instance:</p>
+</div>
+
+  <!-- <i class="fas fa-coffee fa-4x"></i> -->
+  <div class="bio__grid-item">
+    <!-- <h3 class="bio__h3">
+
+    </h3> -->
+          <!-- <p class="bio__p bio__p--noBottomMargin">Thanks to previous work and maternity I learnt to: -->
+          <ul class="bio__ul">
+            <li>make a real team with coworkers (even with those who don't wash their cups),</li>
+            <li>organize my work (at first, be sure what is expected from me),</li>
+            <li>working under pressure (with client phoning every 2 minutes, asking „is it already done?”).</li></ul></p>
+</div>
+
+
+
+<!-- <i class="fas fa-code fa-4x"></i> -->
+<div class="bio__grid-item">
+  <h3 class="bio__h3">
+    Work ethic
+  </h3>
+
+          <p class="bio__p">I love making things <span class="bio__p--highlighted">useful and pretty for users and other developers.</span>
+          To take care of high accesibility and beautiful animations, as well as clean, quality code and variable’s names that make sense.</p>
+</div>
+
+<div class="bio__grid-item">
+  <h3 class="bio__h3">
+    Work ethic
+  </h3>
+
+          <p class="bio__p">I love making things <span class="bio__p--highlighted">useful and pretty for users and other developers.</span>
+          To take care of high accesibility and beautiful animations, as well as clean, quality code and variable’s names that make sense.</p>
+</div>
+</div>
+
+
+          <a class="btn" href="#portfolio">check my skills</a>
+
+
+
+      </section>
+
+      <section class="portfolio">
+        <div class="portfolio__skills">
+          <div class="portfolio__h3 grid__h3">skills</div>
+          <div class="portfolio__icons">
+            <div class="html">
+              <i class="fab fa-html5 fa-4x"></i>
+              <div>HTML</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio__tools">
+          <div class="portfolio__h3 grid__h3">tools</div>
+          <div class="portfolio__icons"></div>
+        </div>
+
+          <div class="portfolio__h3 portfolio__h3-last">projects</div>
+
+
+
+
       </section>
     </main>
   </body>

@@ -21,7 +21,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ec2576;
+  background-color: #c02f69;
   position: fixed;
   top: 0;
   left: 0;
@@ -40,6 +40,7 @@ body {
 .menu__item a {
   text-decoration: none;
   color: white;
+  font-weight: 600;
 }
 
 @media screen and (min-device-width: 1024px) {
@@ -53,15 +54,39 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: url(/images/background-start.png) no-repeat;
+    background: url(/images/background-start.png) no-repeat center center fixed;
     background-size: cover;
   }
 }
 
+.btn {
+  display: block;
+  margin: 1rem auto;
+  padding: .5rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: #c02f69 solid 2px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  color: #c02f69;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
+  transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
+}
+
+.btn:focus:hover {
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+}
+
 .start {
   height: 100vh;
+  min-height: 12rem;
   width: 100vw;
-  color: #ec2576;
+  color: #c02f69;
 }
 
 .start__h1 {
@@ -69,6 +94,14 @@ body {
   font-size: 12rem;
   margin-right: 2rem;
   font-weight: 300;
+}
+
+.start__h1 .start__h1--transform {
+  display: inline-block;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  direction: rtl;
+  unicode-bidi: bidi-override;
 }
 
 .start__p {
@@ -79,43 +112,114 @@ body {
   font-size: 2.5rem;
 }
 
-.start__btn {
-  display: block;
-  margin: 1rem auto;
-  padding: .5rem;
-  background: rgba(236, 37, 118, 0.3);
-  border: #ec2576 solid 2px;
-  color: #ec2576;
-  font-weight: bold;
+.bio {
+  padding-top: 30px;
+  color: #575757;
 }
 
-.bio {
-  width: 60vw;
-  margin: 0 auto;
+.bio__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (70vh)[3];
+  -ms-grid-columns: (30vw)[2];
+      grid-template: repeat(3, 70vh)/repeat(2, 30vw);
+  place-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+}
+
+.bio__grid-item {
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.bio__lastDiv {
+  margin: 30px auto;
 }
 
 .bio__h2 {
-  margin: 20px 0;
+  line-height: 1.2;
+  margin-bottom: 70px;
   font-size: 3rem;
-  font-weight: 900;
-  color: #8d8d8d;
+  font-weight: 700;
+  text-align: center;
 }
 
-.bio__content {
-  margin-right: 60px;
-  font-size: 0.85rem;
-  line-height: 1.4;
+.bio__h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.bio__first-line {
-  color: #ec2576;
-  font-size: 1.1rem;
-  letter-spacing: 1.1;
-  margin-bottom: 20px;
-  font-family: "fira code";
+.bio__p {
+  font-size: 1.3rem;
+}
+
+.bio__p--highlighted {
+  font-weight: 600;
+  color: white;
+  background-color: #c02f69;
+}
+
+.bio__p--bold {
+  font-weight: 600;
+}
+
+.bio__p--noBottomMargin {
+  margin-bottom: 0;
+}
+
+.bio__ul {
+  margin-top: 0;
+  font-size: 1.3rem;
 }
 
 .bio__img {
-  width: 30%;
+  width: 6rem;
+  display: block;
+  margin: 0 auto;
+  float: right;
+  border-radius: 50%;
+}
+
+.bio__btn {
+  margin: 100px;
+}
+
+.portfolio {
+  padding-top: 30px;
+}
+
+.portfolio__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio__tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio__h3 {
+  color: #c02f69;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 30px;
+}
+
+.portfolio__h3-last {
+  text-align: center;
+  margin: 50px;
 }
 /*# sourceMappingURL=main.css.map */
