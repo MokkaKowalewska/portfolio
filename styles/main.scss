@@ -88,11 +88,14 @@ body {
     font-size: 12rem;
     margin-right: 2rem;
     font-weight: 300;
+    line-height: 0.9;
     .start__h1--transform {
+      font-family: $montserrat;
+      font-weight: 700;
       display: inline-block;
       transform: rotate(-180deg);
-      direction: rtl;
-      unicode-bidi: bidi-override;
+      // direction: rtl;
+      // unicode-bidi: bidi-override;
     }
   }
   &__p {
@@ -110,7 +113,7 @@ body {
   color: $myGrey;
   &__grid {
       display: grid;
-      grid-template: repeat(3, 70vh) / repeat(2, 30vw);
+      grid-template: repeat(3, 400px) / repeat(2, 30vw);
       place-items: stretch;
       justify-content: center;
       gap: 50px;
@@ -119,9 +122,6 @@ body {
         border-radius: 15px;
         padding: 40px;
       }
-  }
-  &__lastDiv {
-    margin: 30px auto;
   }
   &__h2 {
     line-height: 1.2;
@@ -170,20 +170,17 @@ body {
 // portfolio
 .portfolio {
 padding-top: 30px;
-  &__skills {
-    // display: grid;
-    // grid-template: 1fr 1fr / 200px repeat(4, 80px);
-    // gap: 30px;
-    // .grid__h3 {
-    //   justify-self: right;
-    // }
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__grid {
+    display: grid;
+    grid-template: 1fr 1fr / 200px repeat(4, 80px);
+    gap: 30px;
+    .grid__h3 {
+      justify-self: right;
+    }
+
   }
-  &__tools {
-    display: flex;
-  }
+
+
   &__h3 {
     color: $myPink;
     font-size: 3rem;
