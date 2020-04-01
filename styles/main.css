@@ -60,26 +60,24 @@ body {
 }
 
 .btn {
-  display: block;
   margin: 1rem auto;
-  padding: .5rem;
-  background: rgba(255, 255, 255, 0.3);
-  border: #c02f69 solid 2px;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  padding: 0.5rem;
+  background: rgba(192, 47, 105, 0);
   color: #c02f69;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   -webkit-transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
   transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
+  display: block;
+  border: 1px solid #c02f69;
+  border-radius: 5px;
 }
 
-.btn:focus:hover {
+.btn:hover {
+  background-color: rgba(192, 47, 105, 0.8);
+  color: white;
   cursor: pointer;
-  width: 90px;
-  height: 90px;
 }
 
 .start {
@@ -114,7 +112,7 @@ body {
 }
 
 .bio {
-  padding-top: 30px;
+  padding: 30px 0;
   color: #575757;
 }
 
@@ -188,6 +186,16 @@ body {
 
 .portfolio {
   padding-top: 30px;
+  color: white;
+  width: 100vw;
+}
+
+.portfolio__divShaped {
+  margin: -5px;
+}
+
+.portfolio__background {
+  background: #c02f69;
 }
 
 .portfolio__grid {
@@ -197,6 +205,11 @@ body {
   -ms-grid-columns: 200px (80px)[4];
       grid-template: 1fr 1fr/200px repeat(4, 80px);
   gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+      grid-template-areas: "skills icon icon icon icon" "tools icon icon icon icon";
 }
 
 .portfolio__grid .grid__h3 {
@@ -204,8 +217,24 @@ body {
       justify-self: right;
 }
 
+.portfolio__grid .skills {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: skills;
+}
+
+.portfolio__grid .tools {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: tools;
+}
+
+.portfolio__icon {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 .portfolio__h3 {
-  color: #c02f69;
   font-size: 3rem;
   font-weight: 700;
   margin: 0 30px;
@@ -214,5 +243,17 @@ body {
 .portfolio__h3-last {
   text-align: center;
   margin: 50px;
+}
+
+.projects__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=main.css.map */
