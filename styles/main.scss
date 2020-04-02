@@ -83,7 +83,7 @@ body {
   width: 100vw;
   color: $myPurple;
   @include flexCenter;
-  background: url("images/background-start.png") no-repeat center center fixed;
+  background: url("/images/background-start.png") no-repeat center center fixed;
   background-size: cover;
   &__h1 {
     font-family: $firaCode;
