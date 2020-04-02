@@ -56,14 +56,6 @@ body {
   }
 }
 
-@media screen and (min-device-width: 1024px) {
-  .start {
-    @include flexCenter;
-    background: url(/images/background-start.png) no-repeat center center fixed;
-    background-size: cover;
-  }
-}
-
 .btn {
   margin: 1rem auto;
   padding: 0.5rem;
@@ -90,6 +82,9 @@ body {
   min-height: 12rem;
   width: 100vw;
   color: $myPurple;
+  @include flexCenter;
+  background: url(/images/background-start.png) no-repeat center center fixed;
+  background-size: cover;
   &__h1 {
     font-family: $firaCode;
     font-size: 12rem;
