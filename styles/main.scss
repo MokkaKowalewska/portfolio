@@ -117,7 +117,7 @@ body {
   color: $myGrey;
   &__grid {
     display: grid;
-    grid-template: repeat(3, 400px) / repeat(2, 30vw);
+    grid-template: repeat(3, 350px) / repeat(3, 350px);
     place-items: stretch;
     justify-content: center;
     gap: 50px;
@@ -125,11 +125,15 @@ body {
       border: 1px solid lightgrey;
       border-radius: 15px;
       padding: 40px;
+      &--noPadding {
+        padding: 0;
+      }
     }
+
   }
   &__h2 {
     line-height: 1.2;
-    margin-bottom: 70px;
+    margin-bottom: 70 px;
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
@@ -140,7 +144,7 @@ body {
     text-align: center;
   }
   &__p {
-    font-size: 1.3rem;
+    font-size: .97rem;
     &--highlighted {
       font-weight: 600;
       color: white;
@@ -155,14 +159,13 @@ body {
   }
   &__ul {
     margin-top: 0;
-    font-size: 1.3rem;
+    // font-size: 1.3rem;
   }
   &__img {
-    width: 6rem;
-    display: block;
-    margin: 0 auto;
-    float: right;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
   }
   &__btn {
     margin: 100px;
@@ -191,9 +194,7 @@ body {
       "skills icon icon icon icon"
       "tools icon icon icon icon";
 
-    .grid__h3 {
-      justify-self: right;
-    }
+
     .skills {
       grid-area: skills;
     }
@@ -218,22 +219,29 @@ body {
   width: 100vw;
 &__grid {
   display: grid;
-  grid-template-columns: repeat(2, 30vw);
+  grid-template-columns: repeat(2, 40vw);
   justify-content: center;
-  justify-items: center;
+  place-items: center;
+}
+&__imgWrapper {
+  height: 26vw;
+  @include flexCenter;
 }
 &__img {
-  width: 25vw;
+  height: 23vw;
   border-radius: 10px;
   box-shadow: 0 0 1em wheat;
   transition: all 0.5s cubic-bezier(0.58, 0.11, 0.11, 0.95);
   &:hover {
-    width: 26vw;
+    height: 25vw;
     cursor: pointer;
   }
 }
 &__h3 {
   text-align: center;
   margin: 50px;
+}
+&__h4 {
+  text-align: center;
 }
 }

@@ -119,9 +119,9 @@ body {
 .bio__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (400px)[3];
-  -ms-grid-columns: (30vw)[2];
-      grid-template: repeat(3, 400px)/repeat(2, 30vw);
+  -ms-grid-rows: (350px)[3];
+  -ms-grid-columns: (350px)[3];
+      grid-template: repeat(3, 350px)/repeat(3, 350px);
   place-items: stretch;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -135,9 +135,13 @@ body {
   padding: 40px;
 }
 
+.bio__grid-item--noPadding {
+  padding: 0;
+}
+
 .bio__h2 {
   line-height: 1.2;
-  margin-bottom: 70px;
+  margin-bottom: 70 px;
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
@@ -150,7 +154,7 @@ body {
 }
 
 .bio__p {
-  font-size: 1.3rem;
+  font-size: .97rem;
 }
 
 .bio__p--highlighted {
@@ -169,15 +173,12 @@ body {
 
 .bio__ul {
   margin-top: 0;
-  font-size: 1.3rem;
 }
 
 .bio__img {
-  width: 6rem;
-  display: block;
-  margin: 0 auto;
-  float: right;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 
 .bio__btn {
@@ -212,11 +213,6 @@ body {
       grid-template-areas: "skills icon icon icon icon" "tools icon icon icon icon";
 }
 
-.portfolio__grid .grid__h3 {
-  -ms-grid-column-align: right;
-      justify-self: right;
-}
-
 .portfolio__grid .skills {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -248,16 +244,29 @@ body {
 .projects__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (30vw)[2];
-      grid-template-columns: repeat(2, 30vw);
+  -ms-grid-columns: (40vw)[2];
+      grid-template-columns: repeat(2, 40vw);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  justify-items: center;
+  place-items: center;
+}
+
+.projects__imgWrapper {
+  height: 26vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .projects__img {
-  width: 25vw;
+  height: 23vw;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 1em wheat;
           box-shadow: 0 0 1em wheat;
@@ -266,12 +275,16 @@ body {
 }
 
 .projects__img:hover {
-  width: 26vw;
+  height: 25vw;
   cursor: pointer;
 }
 
 .projects__h3 {
   text-align: center;
   margin: 50px;
+}
+
+.projects__h4 {
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
