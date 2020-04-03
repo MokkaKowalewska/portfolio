@@ -78,7 +78,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("/images/background-start.png") no-repeat center center fixed;
+  background: url("../images/background-start.png") no-repeat center center fixed;
   background-size: cover;
 }
 
