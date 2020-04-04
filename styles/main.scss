@@ -11,15 +11,6 @@ $firaCode: "Fira Code", "Courier New", "Courier", monospace;
   justify-content: center;
 }
 
-// @mixin btnSize($size) {
-//   width: $size+px;
-//   height: $size+px;
-//   &:hover {
-//     width: $size+10+px;
-//     height: $size+10+px;
-//   }
-// }
-
 //global styles
 *,
 *::before,
@@ -30,6 +21,7 @@ $firaCode: "Fira Code", "Courier New", "Courier", monospace;
 
 body {
   font-family: $montserrat;
+  width: 100vw;
 }
 
 //menu
@@ -42,6 +34,8 @@ body {
   top: 0;
   left: 0;
   height: 45px;
+  border-bottom: 1px solid white;
+  z-index: 20;
   &__ul {
     list-style: none;
   }
@@ -57,24 +51,54 @@ body {
 }
 
 .btn {
-  margin: 1rem auto;
+
   padding: 0.5rem;
-  background: rgba(192, 47, 105, 0);
-  color: $myPurple;
+
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
   display: block;
-  border: 1px solid $myPurple;
   border-radius: 5px;
   &:hover {
-    background-color: rgba(192, 47, 105, 0.8);
-    color: white;
     cursor: pointer;
-    // width: 90px;
-    // height: 90px;
   }
+}
+
+.start__btn {
+  margin: 1rem auto;
+  background: rgba(192, 47, 105, 0);
+  color: $myPurple;
+  border: 1px solid $myPurple;
+  &:hover {
+    background: rgba(192, 47, 105, 0.8);
+    color: white;
+  }
+}
+
+.projects__btn-demo {
+  background: rgba(255, 255, 255, 0.3);
+  color: $myPurple;
+  border: 1px solid $myPurple;
+  &:hover {
+    background: rgba(192, 47, 105, 0.8);
+    color: white;
+  }
+}
+
+.projects__btn-code {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 1px solid white;
+  &:hover {
+    background: rgba(192, 47, 105, 0.8);
+    color: white;
+  }
+}
+
+.projects__btn {
+  margin: .5rem;
+  width: 30%;
 }
 
 .start {
@@ -83,7 +107,8 @@ body {
   width: 100vw;
   color: $myPurple;
   @include flexCenter;
-  background: url("../images/background-start.png") no-repeat center center fixed;
+  background: url("../images/background-start.png") no-repeat center center
+    fixed;
   background-size: cover;
   &__h1 {
     font-family: $firaCode;
@@ -178,19 +203,23 @@ body {
   }
   &__grid {
     display: grid;
-    grid-template: 1fr 1fr / 200px repeat(4, 80px);
+    grid-template: repeat(3, 1fr) / 200px repeat(4, 80px);
     gap: 30px;
     justify-content: center;
     place-items: center;
     grid-template-areas:
       "skills icon icon icon icon"
-      "tools icon icon icon icon";
+      "tools icon icon icon icon"
+      "learning icon icon icon icon";
 
     .skills {
       grid-area: skills;
     }
     .tools {
       grid-area: tools;
+    }
+    .learning {
+      grid-area: learning;
     }
   }
   &__icon {
@@ -218,25 +247,59 @@ body {
   &__imgWrapper {
     height: 26vw;
     @include flexCenter;
+    position: relative;
   }
   &__img {
     height: 23vw;
     border-radius: 10px;
     box-shadow: 0 0 1em wheat;
-    transition: all .2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
+    transition: all 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
     &:hover {
       height: 24vw;
+      opacity: .3;
+      // animation: scaleMckp 1s ease-in-out;
       cursor: pointer;
+      // animation: 1s showBtns;
     }
+  }
+  &__btns {
+    @include flexCenter;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // opacity: 0;
   }
   &__h3 {
     text-align: center;
     margin: 50px;
   }
   &__h4 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
     text-align: center;
+    margin: 10px 0;
   }
-  &__p {
-    padding: 20px;
+  &__p, &__ul {
+    padding: 0 20px;
+    margin: 20px 40px;
+    font-size: .9rem;
   }
+  &__ul {
+list-style: none;
+  }
+  &__li {
+    display: inline-flex;
+    &::after {
+      content: " | ";
+      white-space: pre;
+    }
+
+    &:last-child::after {
+      content: "";
+    }
+  }
+
 }
+
+

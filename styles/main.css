@@ -7,6 +7,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  width: 100vw;
 }
 
 .menu {
@@ -26,6 +27,8 @@ body {
   top: 0;
   left: 0;
   height: 45px;
+  border-bottom: 1px solid white;
+  z-index: 20;
 }
 
 .menu__ul {
@@ -44,24 +47,57 @@ body {
 }
 
 .btn {
-  margin: 1rem auto;
   padding: 0.5rem;
-  background: rgba(192, 47, 105, 0);
-  color: #c02f69;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   -webkit-transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
   transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
   display: block;
-  border: 1px solid #c02f69;
   border-radius: 5px;
 }
 
 .btn:hover {
-  background-color: rgba(192, 47, 105, 0.8);
-  color: white;
   cursor: pointer;
+}
+
+.start__btn {
+  margin: 1rem auto;
+  background: rgba(192, 47, 105, 0);
+  color: #c02f69;
+  border: 1px solid #c02f69;
+}
+
+.start__btn:hover {
+  background: rgba(192, 47, 105, 0.8);
+  color: white;
+}
+
+.projects__btn-demo {
+  background: rgba(255, 255, 255, 0.3);
+  color: #c02f69;
+  border: 1px solid #c02f69;
+}
+
+.projects__btn-demo:hover {
+  background: rgba(192, 47, 105, 0.8);
+  color: white;
+}
+
+.projects__btn-code {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 1px solid white;
+}
+
+.projects__btn-code:hover {
+  background: rgba(192, 47, 105, 0.8);
+  color: white;
+}
+
+.projects__btn {
+  margin: .5rem;
+  width: 30%;
 }
 
 .start {
@@ -197,15 +233,15 @@ body {
 .portfolio__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr;
+  -ms-grid-rows: (1fr)[3];
   -ms-grid-columns: 200px (80px)[4];
-      grid-template: 1fr 1fr/200px repeat(4, 80px);
+      grid-template: repeat(3, 1fr)/200px repeat(4, 80px);
   gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   place-items: center;
-      grid-template-areas: "skills icon icon icon icon" "tools icon icon icon icon";
+      grid-template-areas: "skills icon icon icon icon" "tools icon icon icon icon" "learning icon icon icon icon";
 }
 
 .portfolio__grid .skills {
@@ -218,6 +254,12 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: tools;
+}
+
+.portfolio__grid .learning {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: learning;
 }
 
 .portfolio__icon {
@@ -258,6 +300,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .projects__img {
@@ -271,7 +314,25 @@ body {
 
 .projects__img:hover {
   height: 24vw;
+  opacity: .3;
   cursor: pointer;
+}
+
+.projects__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .projects__h3 {
@@ -280,10 +341,34 @@ body {
 }
 
 .projects__h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
   text-align: center;
+  margin: 10px 0;
 }
 
-.projects__p {
-  padding: 20px;
+.projects__p, .projects__ul {
+  padding: 0 20px;
+  margin: 20px 40px;
+  font-size: .9rem;
+}
+
+.projects__ul {
+  list-style: none;
+}
+
+.projects__li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.projects__li::after {
+  content: " | ";
+  white-space: pre;
+}
+
+.projects__li:last-child::after {
+  content: "";
 }
 /*# sourceMappingURL=main.css.map */
