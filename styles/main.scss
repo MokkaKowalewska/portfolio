@@ -287,11 +287,12 @@ body {
   }
   &__ul {
 list-style: none;
+font-weight: 700;
   }
   &__li {
     display: inline-flex;
     &::after {
-      content: " | ";
+      content: " && ";
       white-space: pre;
     }
 

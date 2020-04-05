@@ -355,6 +355,7 @@ body {
 
 .projects__ul {
   list-style: none;
+  font-weight: 700;
 }
 
 .projects__li {
@@ -364,7 +365,7 @@ body {
 }
 
 .projects__li::after {
-  content: " | ";
+  content: " && ";
   white-space: pre;
 }
 
