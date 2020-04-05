@@ -51,7 +51,6 @@ body {
 }
 
 .btn {
-
   padding: 0.5rem;
 
   font-weight: 700;
@@ -97,7 +96,7 @@ body {
 }
 
 .projects__btn {
-  margin: .5rem;
+  margin: 0.5rem;
   width: 30%;
 }
 
@@ -256,7 +255,7 @@ body {
     transition: all 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
     &:hover {
       height: 24vw;
-      opacity: .3;
+      opacity: 0.3;
       // animation: scaleMckp 1s ease-in-out;
       cursor: pointer;
       // animation: 1s showBtns;
@@ -280,27 +279,22 @@ body {
     text-align: center;
     margin: 10px 0;
   }
-  &__p, &__ul {
+  &__p,
+  &__ul {
     padding: 0 20px;
     margin: 20px 40px;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   &__ul {
-list-style: none;
-font-weight: 700;
+    text-align: center;
+    list-style: none;
+    // font-weight: 700;
+    text-transform: uppercase;
   }
   &__li {
-    display: inline-flex;
-    &::after {
-      content: " && ";
-      white-space: pre;
-    }
-
-    &:last-child::after {
-      content: "";
-    }
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
   }
-
 }
-
-
