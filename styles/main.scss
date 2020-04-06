@@ -34,7 +34,7 @@ body {
   top: 0;
   left: 0;
   height: 45px;
-  border-bottom: 1px solid white;
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   z-index: 20;
   &__ul {
     list-style: none;
@@ -45,7 +45,9 @@ body {
     a {
       text-decoration: none;
       color: white;
-      font-weight: 600;
+      // font-weight: 600;
+      letter-spacing: 0.2rem;
+      font-size: 0.8rem;
     }
   }
 }
@@ -192,13 +194,18 @@ body {
 // portfolio
 .portfolio {
   padding-top: 30px;
-  color: whitesmoke;
+  color: white;
   width: 100vw;
   &__divShaped {
     margin: -5px;
   }
   &__background {
     background: $myPurple;
+    background: linear-gradient(
+      0deg,
+      rgba(235, 126, 84, 1) 0%,
+      rgba(193, 47, 105, 1) 100%
+    );
   }
   &__grid {
     display: grid;
@@ -239,7 +246,7 @@ body {
   width: 100vw;
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 38vw);
+    grid-template: repeat(4, auto) / repeat(2, 38vw);
     justify-content: center;
     justify-items: center;
   }
@@ -271,13 +278,13 @@ body {
     margin: 50px;
   }
   &__h4 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+    font-size: 1.7rem;
+    // text-transform: uppercase;
     text-align: center;
     margin: 10px 0;
-    background: linear-gradient(to right, #e46be0, #f598a5, #eeae86);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(to right, #e46be0, #f598a5, #eeae86);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
   &__p,
   &__ul {
@@ -288,7 +295,6 @@ body {
   &__ul {
     text-align: center;
     list-style: none;
-    // font-weight: 700;
     text-transform: uppercase;
   }
   &__li {
@@ -311,7 +317,7 @@ body {
 }
 
 .scroll-up__path {
-  stroke: BLUE;
+  stroke: rgb(255, 151, 169);
   fill: transparent;
   stroke-width: 1px;
   animation: blinkUp 7s infinite;

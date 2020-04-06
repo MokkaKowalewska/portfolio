@@ -27,7 +27,6 @@ body {
   top: 0;
   left: 0;
   height: 45px;
-  border-bottom: 1px solid white;
   z-index: 20;
 }
 
@@ -43,7 +42,8 @@ body {
 .menu__item a {
   text-decoration: none;
   color: white;
-  font-weight: 600;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
 }
 
 .btn {
@@ -218,7 +218,7 @@ body {
 
 .portfolio {
   padding-top: 30px;
-  color: whitesmoke;
+  color: white;
   width: 100vw;
 }
 
@@ -228,6 +228,8 @@ body {
 
 .portfolio__background {
   background: #c12f69;
+  background: -webkit-gradient(linear, left bottom, left top, from(#eb7e54), to(#c12f69));
+  background: linear-gradient(0deg, #eb7e54 0%, #c12f69 100%);
 }
 
 .portfolio__grid {
@@ -281,8 +283,9 @@ body {
 .projects__grid {
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: (auto)[4];
   -ms-grid-columns: (38vw)[2];
-      grid-template-columns: repeat(2, 38vw);
+      grid-template: repeat(4, auto)/repeat(2, 38vw);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -341,14 +344,9 @@ body {
 }
 
 .projects__h4 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
+  font-size: 1.7rem;
   text-align: center;
   margin: 10px 0;
-  background: -webkit-gradient(linear, left top, right top, from(#e46be0), color-stop(#f598a5), to(#eeae86));
-  background: linear-gradient(to right, #e46be0, #f598a5, #eeae86);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .projects__p, .projects__ul {
@@ -381,7 +379,7 @@ body {
 }
 
 .scroll-up__path {
-  stroke: BLUE;
+  stroke: #ff97a9;
   fill: transparent;
   stroke-width: 1px;
   -webkit-animation: blinkUp 7s infinite;
