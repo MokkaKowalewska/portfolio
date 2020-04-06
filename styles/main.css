@@ -290,6 +290,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   justify-items: center;
+  grid-auto-flow: column;
 }
 
 .projects__imgWrapper {
@@ -345,6 +346,9 @@ body {
 
 .projects__h4 {
   font-size: 1.7rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
   margin: 10px 0;
 }
@@ -356,7 +360,6 @@ body {
 }
 
 .projects__ul {
-  text-align: center;
   list-style: none;
   text-transform: uppercase;
 }

@@ -249,6 +249,7 @@ body {
     grid-template: repeat(4, auto) / repeat(2, 38vw);
     justify-content: center;
     justify-items: center;
+    grid-auto-flow: column;
   }
   &__imgWrapper {
     height: 26vw;
@@ -279,12 +280,9 @@ body {
   }
   &__h4 {
     font-size: 1.7rem;
-    // text-transform: uppercase;
+    align-self: center;
     text-align: center;
     margin: 10px 0;
-    // background: linear-gradient(to right, #e46be0, #f598a5, #eeae86);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
   }
   &__p,
   &__ul {
@@ -293,7 +291,6 @@ body {
     font-size: 0.9rem;
   }
   &__ul {
-    text-align: center;
     list-style: none;
     text-transform: uppercase;
   }
