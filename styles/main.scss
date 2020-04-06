@@ -301,4 +301,46 @@ body {
 
 //scroll up arrows
 .scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 72px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.scroll-up__path {
+  stroke: pink;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: blinkUp 7s infinite;
+  &--a1 {
+    animation-delay: -1s;
+  }
+  &--a2 {
+    animation-delay: -0.5s;
+  }
+  &--a3 {
+    animation-delay: 0s;
+  }
+}
+
+@keyframes blinkUp {
+  0% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  visibility: hidden;
 }

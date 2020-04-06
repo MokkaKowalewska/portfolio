@@ -365,4 +365,71 @@ body {
   border-radius: 10px;
   padding: 5px;
 }
+
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 72px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.scroll-up__path {
+  stroke: pink;
+  fill: transparent;
+  stroke-width: 1px;
+  -webkit-animation: blinkUp 7s infinite;
+          animation: blinkUp 7s infinite;
+}
+
+.scroll-up__path--a1 {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.scroll-up__path--a2 {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.scroll-up__path--a3 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes blinkUp {
+  0% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinkUp {
+  0% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
 /*# sourceMappingURL=main.css.map */
