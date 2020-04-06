@@ -1,5 +1,5 @@
 // variables
-$myPurple: #c02f69;
+$myPurple: #c12f69;
 $myGrey: #575757;
 $montserrat: "Montserrat", sans-serif;
 $firaCode: "Fira Code", "Courier New", "Courier", monospace;
@@ -142,7 +142,7 @@ body {
     gap: 50px;
     &-item {
       border: 1px solid lightgrey;
-      border-radius: 15px;
+      border-radius: 5%;
       padding: 40px;
       &--noPadding {
         padding: 0;
@@ -177,12 +177,12 @@ body {
   }
   &__ul {
     margin-top: 0;
-    // font-size: 1.3rem;
   }
   &__img {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 4%;
+    // overflow: hidden;
   }
   &__btn {
     margin: 100px;
@@ -192,7 +192,7 @@ body {
 // portfolio
 .portfolio {
   padding-top: 30px;
-  color: white;
+  color: whitesmoke;
   width: 100vw;
   &__divShaped {
     margin: -5px;
@@ -256,9 +256,7 @@ body {
     &:hover {
       height: 24vw;
       opacity: 0.3;
-      // animation: scaleMckp 1s ease-in-out;
       cursor: pointer;
-      // animation: 1s showBtns;
     }
   }
   &__btns {
@@ -267,7 +265,6 @@ body {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // opacity: 0;
   }
   &__h3 {
     text-align: center;
@@ -278,6 +275,9 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin: 10px 0;
+    background: linear-gradient(to right, #e46be0, #f598a5, #eeae86);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   &__p,
   &__ul {
@@ -311,7 +311,7 @@ body {
 }
 
 .scroll-up__path {
-  stroke: pink;
+  stroke: BLUE;
   fill: transparent;
   stroke-width: 1px;
   animation: blinkUp 7s infinite;
