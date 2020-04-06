@@ -19,9 +19,12 @@ $firaCode: "Fira Code", "Courier New", "Courier", monospace;
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $montserrat;
-  width: 100vw;
 }
 
 //menu
@@ -47,7 +50,7 @@ body {
       color: white;
       // font-weight: 600;
       letter-spacing: 0.2rem;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
   }
 }
@@ -196,7 +199,7 @@ body {
   padding-top: 30px;
   color: white;
   width: 100vw;
-  &__divShaped {
+  &__divShapedTop {
     margin: -5px;
   }
   &__background {

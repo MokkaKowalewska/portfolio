@@ -5,9 +5,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
-  width: 100vw;
 }
 
 .menu {
@@ -43,7 +46,7 @@ body {
   text-decoration: none;
   color: white;
   letter-spacing: 0.2rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .btn {
@@ -222,7 +225,7 @@ body {
   width: 100vw;
 }
 
-.portfolio__divShaped {
+.portfolio__divShapedTop {
   margin: -5px;
 }
 
