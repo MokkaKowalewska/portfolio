@@ -23,9 +23,9 @@ window.addEventListener(
     let pxScrolled = document.documentElement.scrollTop;
 
     if (pxScrolled > 100) {
-      scrollUp.classList.remove("hidden");
+      scrollUp.classList.remove("js-scroll-up-hidden");
     } else {
-      scrollUp.classList.add("hidden");
+      scrollUp.classList.add("js-scroll-up-hidden");
     }
   },
   false
