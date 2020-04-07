@@ -440,4 +440,14 @@ body {
 .hidden {
   visibility: hidden;
 }
+
+.js-aos-shown {
+  opacity: 1;
+  -webkit-transition: opacity 1.5s ease-in;
+  transition: opacity 1.5s ease-in;
+}
+
+.js-aos-hidden {
+  opacity: 0;
+}
 /*# sourceMappingURL=main.css.map */

@@ -350,3 +350,12 @@ body {
 .hidden {
   visibility: hidden;
 }
+
+.js-aos-shown {
+  opacity: 1;
+  transition: opacity 1.5s ease-in;
+}
+
+.js-aos-hidden {
+  opacity: 0;
+}
