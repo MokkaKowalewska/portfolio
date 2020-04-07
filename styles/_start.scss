@@ -1,0 +1,33 @@
+.start {
+  height: 100vh;
+  min-height: 12rem;
+  width: 100vw;
+  color: $myPurple;
+  @include flexCenter;
+  background: url("../images/trianglify-lowres.png") no-repeat center center
+    fixed;
+  background-size: cover;
+
+  &__h1 {
+    font-family: $firaCode;
+    font-size: 12rem;
+    margin-right: 2rem;
+    font-weight: 300;
+    line-height: 0.9;
+
+    .start__h1--transform {
+      font-family: $montserrat;
+      font-weight: 700;
+      display: inline-block;
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__p {
+    margin-left: 2rem;
+
+    &--bigger {
+      font-size: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.portfolio {
+  padding-top: 30px;
+  color: white;
+  width: 100vw;
+
+  &__divShapedTop {
+    margin: -5px;
+  }
+
+  &__background {
+    background: $myPurple;
+    background: linear-gradient(0deg, $myOrange 0%, $myPurple 100%);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 200px repeat(4, 80px);
+    gap: 30px;
+    justify-content: center;
+    place-items: center;
+    grid-template-areas:
+      "skills icon icon icon icon"
+      "tools icon icon icon icon"
+      "learning icon icon icon icon";
+
+    .skills {
+      grid-area: skills;
+    }
+
+    .tools {
+      grid-area: tools;
+    }
+
+    .learning {
+      grid-area: learning;
+    }
+  }
+
+  &__icon {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  &__h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 30px;
+  }
+}
