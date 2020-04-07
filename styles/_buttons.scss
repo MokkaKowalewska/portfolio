@@ -1,0 +1,45 @@
+.btn {
+  padding: 0.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
+  display: block;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.start__btn {
+  margin: 1rem auto;
+  background: rgba(192, 47, 105, 0);
+  color: $myPurple;
+  border: 1px solid $myPurple;
+  &:hover {
+    background: rgba(192, 47, 105, 0.8);
+    color: white;
+  }
+}
+
+.projects__btn {
+  margin: 0.5rem;
+  width: 30%;
+
+  &:hover {
+    background: rgba(192, 47, 105, 0.8);
+    color: white;
+  }
+}
+
+.projects__btn-demo {
+  background: rgba(255, 255, 255, 0.3);
+  color: $myPurple;
+  border: 1px solid $myPurple;
+}
+
+.projects__btn-code {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 1px solid white;
+}

@@ -1,16 +1,14 @@
-// variables
-$myPurple: rgba(193, 47, 105, 1);
-$myGrey: rgba(87, 87, 87, 1);
-$myOrange: rgba(235, 126, 84, 1);
-$montserrat: "Montserrat", sans-serif;
-$firaCode: "Fira Code", "Courier New", "Courier", monospace;
-
-// mixins
-@mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import "./fonts";
+@import "./colors";
+@import "./mixins";
+@import "./buttons";
+@import "./navigation";
+@import "./start";
+@import "./bio";
+@import "./skills";
+@import "./portfolio";
+@import "./contact";
+@import "./footer";
 
 //global styles
 *,
@@ -28,85 +26,7 @@ body {
   font-family: $montserrat;
 }
 
-//menu
-.menu {
-  text-transform: uppercase;
-  width: 100vw;
-  @include flexCenter;
-  background-color: $myPurple;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 45px;
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  z-index: 20;
-  &__ul {
-    list-style: none;
-  }
-  &__item {
-    display: inline-block;
-    margin: 17px 25px;
-    a {
-      text-decoration: none;
-      color: white;
-      // font-weight: 600;
-      letter-spacing: 0.2rem;
-      font-size: 0.7rem;
-    }
-  }
-}
-
-.btn {
-  padding: 0.5rem;
-
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
-  display: block;
-  border-radius: 5px;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.start__btn {
-  margin: 1rem auto;
-  background: rgba(192, 47, 105, 0);
-  color: $myPurple;
-  border: 1px solid $myPurple;
-  &:hover {
-    background: rgba(192, 47, 105, 0.8);
-    color: white;
-  }
-}
-
-.projects__btn-demo {
-  background: rgba(255, 255, 255, 0.3);
-  color: $myPurple;
-  border: 1px solid $myPurple;
-  &:hover {
-    background: rgba(192, 47, 105, 0.8);
-    color: white;
-  }
-}
-
-.projects__btn-code {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-  border: 1px solid white;
-  &:hover {
-    background: rgba(192, 47, 105, 0.8);
-    color: white;
-  }
-}
-
-.projects__btn {
-  margin: 0.5rem;
-  width: 30%;
-}
-
-.start {
+. .start {
   height: 100vh;
   min-height: 12rem;
   width: 100vw;
@@ -115,12 +35,14 @@ body {
   background: url("../images/trianglify-lowres.png") no-repeat center center
     fixed;
   background-size: cover;
+
   &__h1 {
     font-family: $firaCode;
     font-size: 12rem;
     margin-right: 2rem;
     font-weight: 300;
     line-height: 0.9;
+
     .start__h1--transform {
       font-family: $montserrat;
       font-weight: 700;
@@ -128,8 +50,10 @@ body {
       transform: rotate(-180deg);
     }
   }
+
   &__p {
     margin-left: 2rem;
+
     &--bigger {
       font-size: 2.5rem;
     }
@@ -140,24 +64,25 @@ body {
 .bio {
   padding: 30px 0;
   color: $myGrey;
+
   &__grid {
     display: grid;
     grid-template: repeat(3, 350px) / repeat(3, 350px);
     place-items: stretch;
     justify-content: center;
     gap: 50px;
+
     &-item {
       border: 1px solid lightgrey;
       border-radius: 5%;
       padding: 40px;
+
       &--noPadding {
         padding: 0;
-        &:hover {
-          transform: rotateY(-180deg);
-        }
       }
     }
   }
+
   &__h2 {
     line-height: 1.2;
     margin-bottom: 70 px;
@@ -165,34 +90,46 @@ body {
     font-weight: 700;
     text-align: center;
   }
+
   &__h3 {
     margin-top: 0;
     text-transform: uppercase;
     text-align: center;
   }
+
   &__p {
     font-size: 0.97rem;
+
     &--highlighted {
       font-weight: 600;
       color: white;
       background-color: $myPurple;
     }
+
     &--bold {
       font-weight: 600;
     }
+
     &--noBottomMargin {
       margin-bottom: 0;
     }
   }
+
   &__ul {
     margin-top: 0;
   }
+
   &__img {
     width: 100%;
     height: 100%;
     border-radius: 4%;
-    // overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(180deg);
+    }
   }
+
   &__btn {
     margin: 100px;
   }
@@ -203,13 +140,16 @@ body {
   padding-top: 30px;
   color: white;
   width: 100vw;
+
   &__divShapedTop {
     margin: -5px;
   }
+
   &__background {
     background: $myPurple;
     background: linear-gradient(0deg, $myOrange 0%, $myPurple 100%);
   }
+
   &__grid {
     display: grid;
     grid-template: repeat(3, 1fr) / 200px repeat(4, 80px);
@@ -224,13 +164,16 @@ body {
     .skills {
       grid-area: skills;
     }
+
     .tools {
       grid-area: tools;
     }
+
     .learning {
       grid-area: learning;
     }
   }
+
   &__icon {
     text-align: center;
     font-size: 0.8rem;
@@ -247,6 +190,7 @@ body {
 .projects {
   color: white;
   width: 100vw;
+
   &__grid {
     display: grid;
     grid-template: repeat(4, auto) / repeat(2, 38vw);
@@ -254,22 +198,26 @@ body {
     justify-items: center;
     grid-auto-flow: column;
   }
+
   &__imgWrapper {
     height: 26vw;
     @include flexCenter;
     position: relative;
   }
+
   &__img {
     height: 23vw;
     border-radius: 10px;
     box-shadow: 0 0 1em wheat;
     transition: all 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
+
     &:hover {
       height: 24vw;
       opacity: 0.3;
       cursor: pointer;
     }
   }
+
   &__btns {
     @include flexCenter;
     position: absolute;
@@ -277,26 +225,31 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   &__h3 {
     text-align: center;
     margin: 50px;
   }
+
   &__h4 {
     font-size: 1.7rem;
     align-self: center;
     text-align: center;
     margin: 10px 0;
   }
+
   &__p,
   &__ul {
     padding: 0 20px;
     margin: 20px 40px;
     font-size: 0.9rem;
   }
+
   &__ul {
     list-style: none;
     text-transform: uppercase;
   }
+
   &__li {
     display: inline-block;
     border: 1px solid white;
@@ -321,12 +274,15 @@ body {
   fill: transparent;
   stroke-width: 1px;
   animation: blinkUp 7s infinite;
+
   &--a1 {
     animation-delay: -1s;
   }
+
   &--a2 {
     animation-delay: -0.5s;
   }
+
   &--a3 {
     animation-delay: 0s;
   }
@@ -336,12 +292,15 @@ body {
   0% {
     opacity: 0.1;
   }
+
   30% {
     opacity: 1;
   }
+
   70% {
     opacity: 0.7;
   }
+
   100% {
     opacity: 0;
   }
