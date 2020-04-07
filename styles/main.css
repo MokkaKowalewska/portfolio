@@ -117,7 +117,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../images/trangles-background.png") no-repeat center center fixed;
+  background: url("../images/trianglify-lowres.png") no-repeat center center fixed;
   background-size: cover;
 }
 

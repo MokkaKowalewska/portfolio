@@ -1,6 +1,7 @@
 // variables
-$myPurple: #c12f69;
-$myGrey: #575757;
+$myPurple: rgba(193, 47, 105, 1);
+$myGrey: rgba(87, 87, 87, 1);
+$myOrange: rgba(235, 126, 84, 1);
 $montserrat: "Montserrat", sans-serif;
 $firaCode: "Fira Code", "Courier New", "Courier", monospace;
 
@@ -111,7 +112,7 @@ body {
   width: 100vw;
   color: $myPurple;
   @include flexCenter;
-  background: url("../images/trangles-background.png") no-repeat center center
+  background: url("../images/trianglify-lowres.png") no-repeat center center
     fixed;
   background-size: cover;
   &__h1 {
@@ -205,11 +206,7 @@ body {
   }
   &__background {
     background: $myPurple;
-    background: linear-gradient(
-      0deg,
-      #eb7e54, 126, 84) 0%,
-      rgba(193, 47, 105, 1) 100%
-    );
+    background: linear-gradient(0deg, $myOrange 0%, $myPurple 100%);
   }
   &__grid {
     display: grid;
