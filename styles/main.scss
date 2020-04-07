@@ -150,9 +150,12 @@ body {
       border: 1px solid lightgrey;
       border-radius: 5%;
       padding: 40px;
-      background: rgba(235, 126, 84, 0.3);
       &--noPadding {
         padding: 0;
+        // transition: 0.5s;
+        &:hover {
+          transform: rotateY(-180deg);
+        }
       }
     }
   }

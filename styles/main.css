@@ -167,11 +167,15 @@ body {
   border: 1px solid lightgrey;
   border-radius: 5%;
   padding: 40px;
-  background: rgba(235, 126, 84, 0.3);
 }
 
 .bio__grid-item--noPadding {
   padding: 0;
+}
+
+.bio__grid-item--noPadding:hover {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
 .bio__h2 {
