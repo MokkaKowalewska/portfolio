@@ -205,23 +205,23 @@
   margin: 100px;
 }
 
-.portfolio {
+.skills {
   padding-top: 30px;
   color: white;
   width: 100vw;
 }
 
-.portfolio__divShapedTop {
+.skills__divShapedTop {
   margin: -5px;
 }
 
-.portfolio__background {
+.skills__background {
   background: #c12f69;
   background: -webkit-gradient(linear, left bottom, left top, from(#eb7e54), to(#c12f69));
   background: linear-gradient(0deg, #eb7e54 0%, #c12f69 100%);
 }
 
-.portfolio__grid {
+.skills__grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[3];
@@ -235,30 +235,30 @@
       grid-template-areas: "skills icon icon icon icon" "tools icon icon icon icon" "learning icon icon icon icon";
 }
 
-.portfolio__grid .skills {
+.skills__grid .skills {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: skills;
 }
 
-.portfolio__grid .tools {
+.skills__grid .tools {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: tools;
 }
 
-.portfolio__grid .learning {
+.skills__grid .learning {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: learning;
 }
 
-.portfolio__icon {
+.skills__icon {
   text-align: center;
   font-size: 0.8rem;
 }
 
-.portfolio__h3 {
+.skills__h3 {
   font-size: 3rem;
   font-weight: 700;
   margin: 0 30px;
