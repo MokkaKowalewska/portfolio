@@ -7,4 +7,6 @@ function colorBox() {
   }
 }
 
-myPhoto.addEventListener("mouseover", colorBox, false);
+colorBox();
+
+myPhoto.addEventListener("click", colorBox, false);
