@@ -111,7 +111,7 @@ body {
   width: 100vw;
   color: $myPurple;
   @include flexCenter;
-  background: url("../images/background-start.png") no-repeat center center
+  background: url("../images/trangles-background.png") no-repeat center center
     fixed;
   background-size: cover;
   &__h1 {
@@ -149,6 +149,7 @@ body {
       border: 1px solid lightgrey;
       border-radius: 5%;
       padding: 40px;
+      background: rgba(235, 126, 84, 0.3);
       &--noPadding {
         padding: 0;
       }
@@ -206,7 +207,7 @@ body {
     background: $myPurple;
     background: linear-gradient(
       0deg,
-      rgba(235, 126, 84, 1) 0%,
+      #eb7e54, 126, 84) 0%,
       rgba(193, 47, 105, 1) 100%
     );
   }
@@ -353,7 +354,7 @@ body {
 
 .js-aos-shown {
   opacity: 1;
-  transition: opacity 1.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 .js-aos-hidden {

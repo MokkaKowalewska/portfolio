@@ -117,7 +117,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../images/background-start.png") no-repeat center center fixed;
+  background: url("../images/trangles-background.png") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -167,6 +167,7 @@ body {
   border: 1px solid lightgrey;
   border-radius: 5%;
   padding: 40px;
+  background: rgba(235, 126, 84, 0.3);
 }
 
 .bio__grid-item--noPadding {
@@ -437,14 +438,14 @@ body {
   }
 }
 
-.hidden {
+.js-scroll-up-hidden {
   visibility: hidden;
 }
 
 .js-aos-shown {
   opacity: 1;
-  -webkit-transition: opacity 1.5s ease-in;
-  transition: opacity 1.5s ease-in;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 .js-aos-hidden {
