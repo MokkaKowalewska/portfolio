@@ -14,26 +14,10 @@
 
   &__grid {
     display: grid;
-    grid-template: repeat(3, 1fr) / 200px repeat(4, 80px);
+    grid-template: repeat(3, 1fr) / repeat(8, 80px);
     gap: 30px;
     justify-content: center;
     place-items: center;
-    grid-template-areas:
-      "skills icon icon icon icon"
-      "tools icon icon icon icon"
-      "learning icon icon icon icon";
-
-    .skills {
-      grid-area: skills;
-    }
-
-    .tools {
-      grid-area: tools;
-    }
-
-    .learning {
-      grid-area: learning;
-    }
   }
 
   &__icon {
@@ -45,5 +29,6 @@
     font-size: 3rem;
     font-weight: 700;
     margin: 0 30px;
+    grid-column: 1 / span 3;
   }
 }

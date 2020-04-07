@@ -225,32 +225,13 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[3];
-  -ms-grid-columns: 200px (80px)[4];
-      grid-template: repeat(3, 1fr)/200px repeat(4, 80px);
+  -ms-grid-columns: (80px)[8];
+      grid-template: repeat(3, 1fr)/repeat(8, 80px);
   gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   place-items: center;
-      grid-template-areas: "skills icon icon icon icon" "tools icon icon icon icon" "learning icon icon icon icon";
-}
-
-.skills__grid .skills {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: skills;
-}
-
-.skills__grid .tools {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: tools;
-}
-
-.skills__grid .learning {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: learning;
 }
 
 .skills__icon {
@@ -262,6 +243,9 @@
   font-size: 3rem;
   font-weight: 700;
   margin: 0 30px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
 }
 
 .projects {
