@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Website, which is my resume - both its code and content as well. Constantly working on it!",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "changelog": "auto-changelog -u -l false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MokkaKowalewska/portfolio.git"
+  },
+  "author": "Monika Kowalewska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MokkaKowalewska/portfolio/issues"
+  },
+  "homepage": "https://github.com/MokkaKowalewska/portfolio#readme"
+}
