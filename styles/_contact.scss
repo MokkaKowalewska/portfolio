@@ -1,8 +1,11 @@
 .contact {
   &__grid {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    gap: 80px;
+    padding-top: 30px;
+    @include media(">tablet") {
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
+      gap: 80px;
+    }
     background-color: $myOrange;
     background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
     -webkit-background-clip: text;
@@ -15,6 +18,7 @@
 }
 
 .left-col {
+  margin: 20px;
   text-align: right;
   &__header {
     margin-top: 0;
@@ -23,13 +27,17 @@
       size: 4rem;
       weight: 700;
     }
+    @include media("<tablet") {
+      font-size: 3rem;
+    }
   }
-  &__p {
-  }
+  // &__p {
+  // }
   &__a {
+    display: inline-block;
     background-color: $myOrange;
     background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
-    //   border: 3px solid $myPurple;
+    margin: 10px 0;
     border-radius: 10px;
     padding: 10px;
     -webkit-text-fill-color: white;
@@ -39,6 +47,6 @@
 
 .right-col {
   &__header {
-    margin-top: 20px;
+    margin: 20px;
   }
 }

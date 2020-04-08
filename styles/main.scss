@@ -1,3 +1,6 @@
+//include-media - media queries library
+@import "./include-media";
+
 //variables and mixins
 @import "./fonts";
 @import "./colors";
@@ -10,6 +13,7 @@
 @import "./navigation";
 @import "./start";
 @import "./bio";
+@import "./div-shaped";
 @import "./skills";
 @import "./projects";
 @import "./contact";
@@ -19,14 +23,13 @@
 @import "./scroll-up-arrows";
 @import "./animate-on-scroll";
 
-*,
-*::before,
-*::after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// *, *: : before, *: : after {
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
 
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 

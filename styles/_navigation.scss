@@ -1,4 +1,7 @@
 .menu {
+  @include media("<=tablet") {
+    display: none;
+  }
   text-transform: uppercase;
   width: 100vw;
   @include flexCenter;
