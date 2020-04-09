@@ -1,7 +1,7 @@
 .projects {
   padding: 30px 0;
   color: white;
-  width: 100vw;
+  width: 100%;
 
   &__grid {
     @include media(">tablet") {
@@ -14,19 +14,30 @@
   }
 
   &__imgWrapper {
-    height: 26vw;
+    @include media(">tablet") {
+      height: 26vw;
+    }
     @include flexCenter;
     position: relative;
   }
 
   &__img {
-    height: 23vw;
     border-radius: 10px;
     box-shadow: 0 0 1em wheat;
     transition: all 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
-
+    @include media(">tablet") {
+      height: 23vw;
+      &:hover {
+        height: 24vw;
+      }
+    }
+    @include media("<=tablet") {
+      width: 60vw;
+      &:hover {
+        width: 61vw;
+      }
+    }
     &:hover {
-      height: 24vw;
       opacity: 0.3;
       cursor: pointer;
     }

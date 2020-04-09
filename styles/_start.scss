@@ -1,10 +1,8 @@
 .start {
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
-
+  color: $myPurple;
   @include media("<desktop") {
-    color: $myPurple;
-
     padding: 25vh 0;
     margin: 0 auto;
     text-align: center;
@@ -38,7 +36,7 @@
   }
 
   &__p {
-    margin-left: 2rem;
+    margin: 2rem;
 
     &--bigger {
       font-size: 2.5rem;
