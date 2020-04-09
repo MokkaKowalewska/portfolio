@@ -50,7 +50,7 @@
 
 .menu {
   text-transform: uppercase;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,17 +92,18 @@
 
 .start {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   color: #c12f69;
 }
 
 @media (max-width: 1023px) {
   .start {
-    padding: 25vh 0;
-    margin: 0 auto;
-    text-align: center;
     background: #fea684;
     background: linear-gradient(315deg, #fea684 0%, #feb9a3 74%);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -120,6 +121,11 @@
         -ms-flex-pack: center;
             justify-content: center;
     background-size: cover;
+    background-position: 100% 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -226,13 +232,13 @@
 
 .divShaped {
   width: 100%;
-  margin: -5px;
+  margin: -5px 0;
 }
 
 .skills {
   padding-top: 30px;
   color: white;
-  width: 100vw;
+  width: 100%;
 }
 
 .skills__background {
