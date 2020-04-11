@@ -1,8 +1,18 @@
 .js-aos-shown {
-  opacity: 1;
-  transition: opacity 0.5s ease-in;
+  animation: aos-slideIn 0.5s forwards;
 }
 
 .js-aos-hidden {
   opacity: 0;
+}
+
+@keyframes aos-slideIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

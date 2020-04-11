@@ -7,7 +7,7 @@
 
 function isVisible(section) {
   let sectionBox = section.getBoundingClientRect(),
-    pxFromTop = -150;
+    pxFromTop = -200;
 
   if (sectionBox.top - window.innerHeight < pxFromTop) {
     return true;
@@ -16,15 +16,12 @@ function isVisible(section) {
   }
 }
 
-// create fn listener
-// get elements by class hidden
-// for each element from this array-like object check if isVisible and remove class hidden
-
 function showSection() {
   let sections = document.querySelectorAll(".js-aos-hidden");
   sections.forEach(function (section) {
     if (isVisible(section)) {
       section.classList.remove("js-aos-hidden");
+      section.classList.add("js-aos-shown");
     } else {
       section.classList.add("js-aos-hidden");
     }

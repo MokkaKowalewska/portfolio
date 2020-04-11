@@ -5,17 +5,18 @@
   @include media("<desktop") {
     // padding: 25vh 0;
     // margin: 0 auto;
-    // text-align: center;
+    text-align: center;
     background: #fea684;
     background: linear-gradient(315deg, #fea684 0%, #feb9a3 74%);
-    flex-direction: column;
+    // flex-direction: column;
   }
 
   @include media(">=desktop") {
+    @include flexCenter;
     min-height: 12rem;
     background: url("../images/trianglify-lowres.png") no-repeat center center
       fixed;
-    @include flexCenter;
+    // @include flexCenter;
     background-size: cover;
     background-position: 100% 100%;
     flex-direction: row;

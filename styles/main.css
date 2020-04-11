@@ -98,19 +98,14 @@
 
 @media (max-width: 1023px) {
   .start {
+    text-align: center;
     background: #fea684;
     background: linear-gradient(315deg, #fea684 0%, #feb9a3 74%);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
 @media (min-width: 1024px) {
   .start {
-    min-height: 12rem;
-    background: url("../images/trianglify-lowres.png") no-repeat center center fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -120,6 +115,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    min-height: 12rem;
+    background: url("../images/trianglify-lowres.png") no-repeat center center fixed;
     background-size: cover;
     background-position: 100% 100%;
     -webkit-box-orient: horizontal;
@@ -543,13 +540,38 @@
 }
 
 .js-aos-shown {
-  opacity: 1;
-  -webkit-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
+  -webkit-animation: aos-slideIn 0.5s forwards;
+          animation: aos-slideIn 0.5s forwards;
 }
 
 .js-aos-hidden {
   opacity: 0;
+}
+
+@-webkit-keyframes aos-slideIn {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes aos-slideIn {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 html {
