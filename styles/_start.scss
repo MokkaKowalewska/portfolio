@@ -3,23 +3,19 @@
   width: 100%;
   color: $myPurple;
   @include media("<desktop") {
-    // padding: 25vh 0;
-    // margin: 0 auto;
     text-align: center;
     background: #fea684;
     background: linear-gradient(315deg, #fea684 0%, #feb9a3 74%);
-    // flex-direction: column;
   }
-
   @include media(">=desktop") {
-    @include flexCenter;
+    .start__textWrapper {
+      @include flexCenter;
+    }
     min-height: 12rem;
     background: url("../images/trianglify-lowres.png") no-repeat center center
       fixed;
-    // @include flexCenter;
     background-size: cover;
     background-position: 100% 100%;
-    flex-direction: row;
   }
 
   &__h1 {
@@ -45,5 +41,13 @@
     &--bigger {
       font-size: 2.5rem;
     }
+  }
+
+  &__mouseIcon {
+    // position: absolute;
+    height: 20px;
+
+    bottom: 20px;
+    margin: 0 auto;
   }
 }
