@@ -24,11 +24,12 @@
   &__img {
     border-radius: 10px;
     box-shadow: 0 0 1em wheat;
-    transition: all 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
+    transition: transform 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
+    overflow: hidden;
     @include media(">tablet") {
       height: 23vw;
       &:hover {
-        height: 24vw;
+        transform: scale(1.05);
       }
     }
     @include media("<=tablet") {
@@ -46,9 +47,10 @@
   &__btns {
     @include flexCenter;
     position: absolute;
-    top: 25%;
+    top: -5%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
   }
 
   &__h3 {
@@ -80,5 +82,19 @@
     border: 1px solid white;
     border-radius: 10px;
     padding: 5px;
+  }
+}
+
+.btnsSlide {
+  animation: btnsSlide 1s forwards;
+  display: block;
+}
+
+@keyframes btnsSlide {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
