@@ -441,7 +441,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  display: none;
+  opacity: 0;
 }
 
 .projects__h3 {
@@ -479,28 +479,23 @@
 .btnsSlide {
   -webkit-animation: btnsSlide 1s forwards;
           animation: btnsSlide 1s forwards;
-  display: block;
 }
 
 @-webkit-keyframes btnsSlide {
   0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    opacity: 1;
   }
 }
 
 @keyframes btnsSlide {
   0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    opacity: 1;
   }
 }
 

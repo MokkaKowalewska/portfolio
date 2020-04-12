@@ -50,7 +50,8 @@
     top: -5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
+    opacity: 0;
+    // display: none;
   }
 
   &__h3 {
@@ -87,14 +88,13 @@
 
 .btnsSlide {
   animation: btnsSlide 1s forwards;
-  display: block;
 }
 
 @keyframes btnsSlide {
   0% {
-    transform: translateY(30px);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0px);
+    opacity: 1;
   }
 }
