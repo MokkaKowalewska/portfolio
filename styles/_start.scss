@@ -1,7 +1,4 @@
 .start {
-  &__textWrapper {
-    margin: 0;
-  }
   width: 100%;
   color: $myPurple;
   @include media("<desktop") {
@@ -28,7 +25,7 @@
     line-height: 0.9;
     @include media("<=tablet") {
       padding-top: 20vh;
-      // margin: 0 auto;
+      margin: 0 auto;
     }
     @include media(">=desktop") {
       margin: 0 2rem;
@@ -42,7 +39,6 @@
   }
 
   &__p {
-    animation: aos-slideIn 0.5s forwards;
     margin: 2rem;
 
     &--bigger {
@@ -51,10 +47,23 @@
   }
 
   &__mouseIcon {
-    // position: absolute;
-    height: 20px;
-
+    position: absolute;
+    height: 30px;
+    fill: $myPurple;
     bottom: 20px;
-    // margin: 0 auto;
+    left: calc(50vw - 15px);
+    animation: mouseBounce 1s infinite ease-in-out;
+  }
+}
+
+@keyframes mouseBounce {
+  from {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
   }
 }

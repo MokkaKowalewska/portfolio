@@ -1,10 +1,3 @@
-// create function isVisible
-
-// create variable with getBoundingClientRect method
-// set pxFromTop
-// create if: rectangle top - window.innerHeight is less than pxFromTop
-// return true else false
-
 function isVisible(section) {
   let sectionBox = section.getBoundingClientRect(),
     pxFromTop = -200;
@@ -21,7 +14,7 @@ function showSection() {
   sections.forEach(function (section) {
     if (isVisible(section)) {
       section.classList.remove("js-aos-hidden");
-      section.classList.add("js-aos-shown");
+      section.classList.add("js-aos-slideIn");
     } else {
       section.classList.add("js-aos-hidden");
     }

@@ -1,9 +1,9 @@
-.js-aos-shown {
-  animation: aos-slideIn 0.5s forwards;
-}
-
 .js-aos-hidden {
   opacity: 0;
+}
+
+.js-aos-slideIn {
+  animation: aos-slideIn 0.5s forwards;
 }
 
 @keyframes aos-slideIn {
