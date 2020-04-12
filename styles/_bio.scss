@@ -5,24 +5,18 @@
   margin: 0 auto;
 
   &__grid {
-    // @include media(">1000px") {
-    //   display: grid;
-    //   grid-template: repeat(3, 350px) / repeat(3, 350px);
-    //   place-items: stretch;
-    //   justify-content: center;
-    //   gap: 50px;
-    // }
+    @include media(">1000px") {
+      display: grid;
+      grid-template: 1fr / repeat(3, 1fr);
+      place-items: stretch;
+      justify-content: center;
+      gap: 10vw;
+    }
 
     &-item {
-      // border: 1px solid lightgrey;
-      // border-radius: 5%;
       padding: 40px;
       @include media("<=tablet") {
         max-width: 90vw;
-      }
-
-      &--noPadding {
-        padding: 0;
       }
     }
   }
