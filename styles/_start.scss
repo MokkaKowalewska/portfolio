@@ -1,16 +1,18 @@
 .start {
-  height: 100vh;
+  &__textWrapper {
+    margin: 0;
+  }
   width: 100%;
   color: $myPurple;
   @include media("<desktop") {
     text-align: center;
     background: #fea684;
-    background: linear-gradient(315deg, #fea684 0%, #feb9a3 74%);
+    background: linear-gradient(315deg, #e68d69 0%, #feb9a3 74%);
+    min-height: 100vh;
   }
   @include media(">=desktop") {
-    .start__textWrapper {
-      @include flexCenter;
-    }
+    @include flexCenter;
+    height: 100vh;
     min-height: 12rem;
     background: url("../images/trianglify-lowres.png") no-repeat center center
       fixed;
@@ -22,11 +24,15 @@
     //  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
     font-size: calc(80px + (192 - 80) * ((100vw - 320px) / (1440 - 320)));
     font-family: $firaCode;
-    margin-right: 2rem;
-    margin-left: 2rem;
     font-weight: 300;
     line-height: 0.9;
-
+    @include media("<=tablet") {
+      padding-top: 20vh;
+      // margin: 0 auto;
+    }
+    @include media(">=desktop") {
+      margin: 0 2rem;
+    }
     .start__h1--transform {
       font-family: $montserrat;
       font-weight: 700;
@@ -48,6 +54,6 @@
     height: 20px;
 
     bottom: 20px;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 }
