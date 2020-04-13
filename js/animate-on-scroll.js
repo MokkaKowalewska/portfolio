@@ -1,6 +1,6 @@
 function isVisible(section) {
   let sectionBox = section.getBoundingClientRect(),
-    pxFromTop = -200;
+    pxFromTop = -140;
 
   if (sectionBox.top - window.innerHeight < pxFromTop) {
     return true;

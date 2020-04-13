@@ -210,25 +210,35 @@
   .bio__grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr;
+    -ms-grid-rows: auto;
     -ms-grid-columns: (1fr)[3];
-        grid-template: 1fr/repeat(3, 1fr);
+        grid-template: auto/repeat(3, 1fr);
     place-items: stretch;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 10vw;
+    gap: 2vw;
   }
 }
 
 .bio__grid-item {
-  padding: 40px;
+  padding: 30px;
+  border-radius: 60px;
+  -webkit-box-shadow: 0 0 1em #eb7e54;
+          box-shadow: 0 0 1em #eb7e54;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .bio__grid-item {
     max-width: 90vw;
   }
+}
+
+.bio__img {
+  width: 200px;
+  -webkit-margin-after: 20px;
+          margin-block-end: 20px;
 }
 
 .bio__header {
@@ -241,12 +251,14 @@
 
 .bio__h3 {
   margin-top: 0;
-  text-transform: uppercase;
   text-align: center;
+  font-size: 2.2rem;
+  color: #eb7e54;
 }
 
 .bio__p {
   font-size: 0.97rem;
+  text-align: left;
 }
 
 .bio__p--highlighted {
@@ -265,25 +277,6 @@
 
 .bio__ul {
   margin-top: 0;
-}
-
-.bio__img {
-  display: none;
-  width: 100%;
-  height: 100%;
-  border-radius: 4%;
-}
-
-@media (max-width: 768px) {
-  .bio__img {
-    display: none;
-  }
-}
-
-.bio__img:hover {
-  cursor: pointer;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 .svgShaped {
@@ -481,12 +474,13 @@
   padding: 5px;
 }
 
-.btnsSlide {
-  -webkit-animation: btnsSlide 1s forwards;
-          animation: btnsSlide 1s forwards;
+.showBtns {
+  -webkit-animation: showBtns 4s forwards;
+          animation: showBtns 4s forwards;
+  opacity: 1;
 }
 
-@-webkit-keyframes btnsSlide {
+@-webkit-keyframes showBtns {
   0% {
     opacity: 0;
   }
@@ -495,37 +489,11 @@
   }
 }
 
-@keyframes btnsSlide {
+@keyframes showBtns {
   0% {
     opacity: 0;
   }
   100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes btnsSlidee {
-  0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    opacity: 1;
-  }
-}
-
-@keyframes btnsSlidee {
-  0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
     opacity: 1;
   }
 }
