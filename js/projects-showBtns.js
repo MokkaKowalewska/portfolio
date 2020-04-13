@@ -1,18 +1,28 @@
-let btns = document.querySelector(".projects__btns"),
-  img = document.querySelector(".projects__img");
+let btns = document.querySelectorAll(".projects__btns"),
+  imgs = document.querySelectorAll(".projects__img");
 
-img.addEventListener(
+imgs.forEach.addEventListener(
   "mouseover",
   function (e) {
-    btns.classList.add("btnsSlide");
+    btns[].classList.add("btnsSlide");
+    e.stopPropagation;
   },
-  false
+  true
 );
+
+function showBtns() {
+    for( let i = 0; i < imgs.length ) {
+        imgs[i].addEventListener("mouseover",
+        function (e) {
+            btns[i].classList.add("btnsSlide");
+        })
+    }
+}
 
 img.addEventListener(
   "mouseout",
   function (e) {
     btns.classList.remove("btnsSlide");
   },
-  false
+  true
 );

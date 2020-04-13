@@ -50,7 +50,9 @@
     top: -5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
+    @include media(">=desktop") {
+      opacity: 0;
+    }
     // display: none;
   }
 
@@ -95,6 +97,17 @@
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes btnsSlidee {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100px);
     opacity: 1;
   }
 }
