@@ -17,6 +17,7 @@
       padding: 30px;
       @include media("<=tablet") {
         max-width: 90vw;
+        margin: 20px;
       }
       border-radius: 60px;
       box-shadow: 0 0 1em $myOrange;
@@ -60,13 +61,13 @@
 
   &__ul {
     text-align: left;
-    list-style: none;
+
     padding: 0;
   }
-  &__li::before {
+  &__li::marker {
     content: "\2665";
     color: $myPurple;
-    margin-inline-end: 5px;
+    // margin-inline-end: 5px;
     font-size: 1rem;
   }
   &__li-framed {

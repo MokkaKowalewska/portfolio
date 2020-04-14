@@ -278,6 +278,7 @@
 @media (max-width: 768px) {
   .bio__grid-item {
     max-width: 90vw;
+    margin: 20px;
   }
 }
 
@@ -320,16 +321,17 @@
 
 .bio__ul {
   text-align: left;
-  list-style: none;
   padding: 0;
 }
 
-.bio__li::before {
+.bio__li::marker {
   content: "\2665";
   color: #c12f69;
-  -webkit-margin-end: 5px;
-          margin-inline-end: 5px;
   font-size: 1rem;
+}
+
+.bio__li-framed {
+  border-color: #eb7e54;
 }
 
 .svgShaped {
@@ -441,20 +443,11 @@
   border-radius: 10px;
   -webkit-box-shadow: 0 0 1em wheat;
           box-shadow: 0 0 1em wheat;
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
-  transition: -webkit-transform 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
-  transition: transform 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
-  transition: transform 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95), -webkit-transform 0.2s cubic-bezier(0.58, 0.11, 0.11, 0.95);
-  overflow: hidden;
 }
 
 @media (min-width: 769px) {
   .projects__img {
     height: 23vw;
-  }
-  .projects__img:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
   }
 }
 
@@ -462,14 +455,6 @@
   .projects__img {
     width: 60vw;
   }
-  .projects__img:hover {
-    width: 61vw;
-  }
-}
-
-.projects__img:hover {
-  opacity: 0.3;
-  cursor: pointer;
 }
 
 .projects__btns {
@@ -483,16 +468,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: -5%;
+  top: 20%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-@media (min-width: 1024px) {
-  .projects__btns {
-    opacity: 0;
-  }
 }
 
 .projects__h3 {
@@ -522,6 +501,10 @@
 
 .projects__li {
   margin-bottom: 5px;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .showBtns {
@@ -682,13 +665,5 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-}
-
-.li-framed {
-  display: inline-block;
-  border: 1px solid;
-  border-color: #eb7e54;
-  border-radius: 10px;
-  padding: 5px;
 }
 /*# sourceMappingURL=main.css.map */
