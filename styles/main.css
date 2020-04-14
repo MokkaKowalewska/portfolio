@@ -326,7 +326,7 @@
 }
 
 .bio__li::before {
-  content: "\f3a5";
+  content: "\f005";
   font-family: FontAwesome;
   color: #c12f69;
   font-size: 0.8rem;
