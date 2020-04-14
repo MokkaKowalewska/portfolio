@@ -25,10 +25,10 @@
 //js classes
 @import "./scroll-up-arrows";
 
-// *, *: : before, *: : after {
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 html {
   font-size: 16px;

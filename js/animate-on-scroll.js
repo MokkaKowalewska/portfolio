@@ -34,19 +34,16 @@ function showBio(i) {
   });
 }
 
-document.addEventListener(
-  "scroll",
-  function () {
-    for (let i = 0; i < 3; i++) {
-      let timeout = (i + 1) * 5000;
-      console.log(timeout);
-      setTimeout(showBio, timeout);
-      showBio(i);
-    }
-  },
+// function () {
+//   for (let i = 0; i < 3; i++) {
+//     let timeout = (i + 1) * 5000;
+//     console.log(timeout);
+//     setTimeout(showBio, timeout);
+//     showBio(i);
+//   }
+// }
 
-  false
-);
+document.addEventListener("scroll", throttle(showBio, 300), false);
 
 document.addEventListener("scroll", throttle(showSection, 300), false);
 

@@ -61,16 +61,15 @@
 
   &__ul {
     text-align: left;
-
-    padding: 0;
+    padding-left: 1.3rem;
+    list-style: none;
   }
-  &__li::marker {
-    content: "\2665";
+  &__li::before {
+    content: "\f3a5";
+    font-family: FontAwesome;
     color: $myPurple;
-    // margin-inline-end: 5px;
-    font-size: 1rem;
-  }
-  &__li-framed {
-    border-color: $myOrange;
+    font-size: 0.8rem;
+    margin-inline-start: -1.3rem;
+    margin-inline-end: 0.45rem;
   }
 }

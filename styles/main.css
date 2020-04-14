@@ -321,17 +321,19 @@
 
 .bio__ul {
   text-align: left;
-  padding: 0;
+  padding-left: 1.3rem;
+  list-style: none;
 }
 
-.bio__li::marker {
-  content: "\2665";
+.bio__li::before {
+  content: "\f3a5";
+  font-family: FontAwesome;
   color: #c12f69;
-  font-size: 1rem;
-}
-
-.bio__li-framed {
-  border-color: #eb7e54;
+  font-size: 0.8rem;
+  -webkit-margin-start: -1.3rem;
+          margin-inline-start: -1.3rem;
+  -webkit-margin-end: 0.45rem;
+          margin-inline-end: 0.45rem;
 }
 
 .svgShaped {
@@ -656,6 +658,11 @@
 
 .js-scroll-up-hidden {
   visibility: hidden;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
