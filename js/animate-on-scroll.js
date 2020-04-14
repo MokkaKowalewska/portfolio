@@ -21,7 +21,7 @@ function showSection() {
   });
 }
 
-function showBio() {
+function showBio(i) {
   let bioItems = document.querySelectorAll(".js-aos-hidden-bio");
 
   bioItems.forEach(function (bioItem) {
@@ -31,14 +31,23 @@ function showBio() {
     } else {
       bioItem.classList.add("js-aos-hidden-bio");
     }
-
-    for (let i = 0; i < bioItems.length; i++) {
-      window.setTimeout(showBio, 5000 + i * 5000);
-    }
   });
 }
 
-document.addEventListener("scroll", showBio, false);
+document.addEventListener(
+  "scroll",
+  function () {
+    for (let i = 0; i < 3; i++) {
+      let timeout = (i + 1) * 5000;
+      console.log(timeout);
+      setTimeout(showBio, timeout);
+      showBio(i);
+    }
+  },
+
+  false
+);
+
 document.addEventListener("scroll", throttle(showSection, 300), false);
 
 function throttle(fn, wait) {
