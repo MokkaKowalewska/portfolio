@@ -1,7 +1,21 @@
+//animate on scroll with JS
+.js-aos-hidden,
+.js-aos-hidden-bio {
+  opacity: 0;
+}
+
+.js-aos-slideDown {
+  animation: aos-slideIn 0.5s forwards ease-in-out;
+}
+
 @keyframes aos-slideIn {
   0% {
     transform: translateY(-30px);
     opacity: 0;
+  }
+  70% {
+    transform: translateY(10px);
+    opacity: 0.8;
   }
   100% {
     transform: translateY(0px);

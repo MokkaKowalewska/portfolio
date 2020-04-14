@@ -48,6 +48,52 @@
   border: 1px solid white;
 }
 
+.js-aos-hidden,
+.js-aos-hidden-bio {
+  opacity: 0;
+}
+
+.js-aos-slideDown {
+  -webkit-animation: aos-slideIn 0.5s forwards ease-in-out;
+          animation: aos-slideIn 0.5s forwards ease-in-out;
+}
+
+@-webkit-keyframes aos-slideIn {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+  70% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes aos-slideIn {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+  70% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .menu {
   text-transform: uppercase;
   width: 100%;
@@ -247,6 +293,7 @@
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
+  color: #c12f69;
 }
 
 .bio__h3 {
@@ -271,12 +318,18 @@
   font-weight: 600;
 }
 
-.bio__p--noBottomMargin {
-  margin-bottom: 0;
+.bio__ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
 }
 
-.bio__ul {
-  margin-top: 0;
+.bio__li::before {
+  content: "\2665";
+  color: #c12f69;
+  -webkit-margin-end: 5px;
+          margin-inline-end: 5px;
+  font-size: 1rem;
 }
 
 .svgShaped {
@@ -472,6 +525,7 @@
   border: 1px solid white;
   border-radius: 10px;
   padding: 5px;
+  margin: 5px;
 }
 
 .showBtns {
@@ -623,41 +677,6 @@
 
 .js-scroll-up-hidden {
   visibility: hidden;
-}
-
-.js-aos-hidden {
-  opacity: 0;
-}
-
-.js-aos-slideIn {
-  -webkit-animation: aos-slideIn 0.5s forwards;
-          animation: aos-slideIn 0.5s forwards;
-}
-
-@-webkit-keyframes aos-slideIn {
-  0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes aos-slideIn {
-  0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
 }
 
 html {

@@ -33,6 +33,7 @@
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
+    color: $myPurple;
   }
 
   &__h3 {
@@ -55,13 +56,17 @@
     &--bold {
       font-weight: 600;
     }
-
-    &--noBottomMargin {
-      margin-bottom: 0;
-    }
   }
 
   &__ul {
-    margin-top: 0;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+  }
+  &__li::before {
+    content: "\2665";
+    color: $myPurple;
+    margin-inline-end: 5px;
+    font-size: 1rem;
   }
 }
