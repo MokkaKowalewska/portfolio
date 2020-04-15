@@ -1,7 +1,6 @@
 .btn {
   padding: 0.5rem;
   font-weight: 700;
-  text-align: center;
   text-decoration: none;
   -webkit-transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
   transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
@@ -13,17 +12,19 @@
   cursor: pointer;
 }
 
-.start__btn {
+.contact__btn {
   width: 100px;
   margin: 1rem auto;
-  background: rgba(192, 47, 105, 0);
-  color: #c12f69;
-  border: 1px solid #c12f69;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb7e54));
+  background: linear-gradient(0deg, #c12f69 0%, #eb7e54 100%);
+  -webkit-text-fill-color: white;
+  border: none;
+  font-size: 1rem;
 }
 
-.start__btn:hover {
-  background: rgba(192, 47, 105, 0.8);
-  color: white;
+.contact__btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .projects__btn {
@@ -583,14 +584,50 @@
   padding: 10px;
   -webkit-text-fill-color: white;
   text-decoration: none;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+}
+
+.left-col__a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .right-col {
   margin: 20px;
+  width: 35vw;
 }
 
 .right-col__header {
   margin: 20px;
+}
+
+.right-col .form__label {
+  font-size: 1rem;
+}
+
+.right-col .form__input, .right-col .form__textarea {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  border: 2px solid #eb7e54;
+  padding: 15px;
+  background: transparent;
+  -webkit-text-fill-color: #c12f69;
+  color: black;
+}
+
+.right-col .form__input:focus, .right-col .form__textarea:focus {
+  outline: none;
+  background: transparent;
+}
+
+.right-col .form__input__textarea, .right-col .form__textarea__textarea {
+  resize: vertical;
+  font-weight: 700;
 }
 
 .scroll-up {

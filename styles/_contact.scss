@@ -31,8 +31,6 @@
       font-size: 3rem;
     }
   }
-  // &__p {
-  // }
   &__a {
     display: inline-block;
     background-color: $myOrange;
@@ -42,12 +40,45 @@
     padding: 10px;
     -webkit-text-fill-color: white;
     text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
 .right-col {
   margin: 20px;
+  width: 35vw;
   &__header {
     margin: 20px;
+  }
+  .form {
+    &__label {
+      font-size: 1rem;
+    }
+    &__input,
+    &__textarea {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+
+      width: 100%;
+      border: 2px solid $myOrange;
+      padding: 15px;
+      background: transparent;
+      -webkit-text-fill-color: $myPurple;
+      color: black;
+      &:focus {
+        outline: none;
+        background: transparent;
+      }
+      &__textarea {
+        resize: vertical;
+        font-weight: 700;
+        &:focus {
+        }
+      }
+    }
   }
 }
