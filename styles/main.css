@@ -607,6 +607,12 @@
   margin: 20px;
 }
 
+@media (max-width: 768px) {
+  .right-col {
+    width: 95vw;
+  }
+}
+
 @media (min-width: 769px) {
   .right-col {
     width: 35vw;

@@ -51,9 +51,9 @@
 
 .right-col {
   margin: 20px;
-  // @include media ("<=tablet") {
-
-  // }
+  @include media("<=tablet") {
+    width: 95vw;
+  }
   @include media(">tablet") {
     width: 35vw;
   }
