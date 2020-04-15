@@ -28,3 +28,19 @@
     }
   }
 }
+
+//mobile nav
+.burger {
+  @include media(">tablet") {
+    display: none;
+  }
+  &__line {
+    width: 20px;
+    height: 2px;
+    margin: 4px;
+    background-color: white;
+  }
+}
+
+@include media("<=tablet") {
+}

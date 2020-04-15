@@ -29,8 +29,8 @@
     @include media(">tablet") {
       font-size: 4rem;
     }
-    @include media("<tablet") {
-      font-size: 1.8rem;
+    @include media("<=tablet") {
+      font-size: 3rem;
     }
   }
   &__a {
@@ -70,7 +70,7 @@
       display: block;
       font-size: 1.1rem;
       font-weight: 600;
-      width: 100%;
+      width: 80%;
       border: 2px solid $myOrange;
       padding: 15px;
       background: transparent;
