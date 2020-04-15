@@ -15,8 +15,8 @@
 .contact__btn {
   width: 100px;
   margin: 1rem auto;
-  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb7e54));
-  background: linear-gradient(0deg, #c12f69 0%, #eb7e54 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
+  background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
   -webkit-text-fill-color: white;
   border: none;
   font-size: 1rem;
@@ -271,15 +271,15 @@
 .bio__grid-item {
   padding: 30px;
   border-radius: 60px;
-  -webkit-box-shadow: 0 0 1em #eb7e54;
-          box-shadow: 0 0 1em #eb7e54;
+  -webkit-box-shadow: 0 0 1em #eb8056;
+          box-shadow: 0 0 1em #eb8056;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .bio__grid-item {
     max-width: 90vw;
-    margin: 20px;
+    margin-block: 20px;
   }
 }
 
@@ -302,7 +302,7 @@
   margin-top: 0;
   text-align: center;
   font-size: 2.2rem;
-  color: #eb7e54;
+  color: #eb8056;
 }
 
 .bio__p {
@@ -350,8 +350,8 @@
 
 .skills__background {
   background: #c12f69;
-  background: -webkit-gradient(linear, left bottom, left top, from(#eb7e54), to(#c12f69));
-  background: linear-gradient(0deg, #eb7e54 0%, #c12f69 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#eb8056), to(#c12f69));
+  background: linear-gradient(0deg, #eb8056 0%, #c12f69 100%);
 }
 
 .skills__grid {
@@ -536,9 +536,9 @@
 
 .contact__grid {
   padding-top: 30px;
-  background-color: #eb7e54;
-  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb7e54));
-  background: linear-gradient(0deg, #c12f69 0%, #eb7e54 100%);
+  background-color: #eb8056;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
+  background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.8rem;
@@ -576,9 +576,9 @@
 
 .left-col__a {
   display: inline-block;
-  background-color: #eb7e54;
-  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb7e54));
-  background: linear-gradient(0deg, #c12f69 0%, #eb7e54 100%);
+  background-color: #eb8056;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
+  background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
   margin: 10px 0;
   border-radius: 10px;
   padding: 10px;
@@ -613,7 +613,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   width: 100%;
-  border: 2px solid #eb7e54;
+  border: 2px solid #eb8056;
   padding: 15px;
   background: transparent;
   -webkit-text-fill-color: #c12f69;
