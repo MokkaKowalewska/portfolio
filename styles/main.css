@@ -339,7 +339,7 @@
 
 .svgShaped {
   width: 100%;
-  margin-bottom: -10px;
+  margin: -10px 0;
 }
 
 .skills {
@@ -647,6 +647,12 @@
 .right-col .form__input__textarea, .right-col .form__textarea__textarea {
   resize: vertical;
   font-weight: 700;
+}
+
+.footer {
+  background: #eb8056;
+  background-size: cover;
+  height: 200px;
 }
 
 .scroll-up {
