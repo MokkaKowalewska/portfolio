@@ -278,7 +278,7 @@
 
 @media (max-width: 768px) {
   .bio__grid-item {
-    max-width: 90vw;
+    max-width: 95vw;
     margin: 20px 0;
   }
 }
