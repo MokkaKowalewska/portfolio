@@ -553,6 +553,9 @@
     -ms-grid-columns: 1fr 1fr;
         grid-template: 1fr / 1fr 1fr;
     gap: 80px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -564,13 +567,18 @@
 .left-col__header {
   margin: 20px;
   text-transform: uppercase;
-  font-size: 4rem;
   font-weight: 700;
+}
+
+@media (min-width: 769px) {
+  .left-col__header {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 767px) {
   .left-col__header {
-    font-size: 3rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -597,7 +605,12 @@
 
 .right-col {
   margin: 20px;
-  width: 35vw;
+}
+
+@media (min-width: 769px) {
+  .right-col {
+    width: 35vw;
+  }
 }
 
 .right-col__header {
@@ -605,7 +618,7 @@
 }
 
 .right-col .form__label {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .right-col .form__input, .right-col .form__textarea {

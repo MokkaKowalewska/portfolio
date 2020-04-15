@@ -5,6 +5,7 @@
       display: grid;
       grid-template: 1fr / 1fr 1fr;
       gap: 80px;
+      align-items: center;
     }
     background-color: $myOrange;
     background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
@@ -23,14 +24,13 @@
   &__header {
     margin: 20px;
     text-transform: uppercase;
-    font: {
-      @include media(">tablet") {
-        size: 4rem;
-      }
-      weight: 700;
+    font-weight: 700;
+
+    @include media(">tablet") {
+      font-size: 4rem;
     }
     @include media("<tablet") {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
   &__a {
@@ -51,13 +51,19 @@
 
 .right-col {
   margin: 20px;
-  width: 35vw;
+  // @include media ("<=tablet") {
+
+  // }
+  @include media(">tablet") {
+    width: 35vw;
+  }
+
   &__header {
     margin: 20px;
   }
   .form {
     &__label {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
     &__input,
     &__textarea {
