@@ -418,14 +418,7 @@
   list-style: none;
 }
 
-.bio__li::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f1ea";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
+.bio__li:before {
   color: #c12f69;
   font-size: 0.8rem;
   -webkit-margin-start: -1.3rem;
@@ -638,6 +631,7 @@
   background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
   background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -652,13 +646,15 @@
   }
 }
 
-.left-col {
+.contact__grid__grid-item {
   margin: 20px;
+}
+
+.left-col {
   text-align: right;
 }
 
 .left-col__header {
-  margin: 20px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -701,10 +697,6 @@
           transform: scale(1.1);
 }
 
-.right-col {
-  margin: 20px;
-}
-
 @media (max-width: 768px) {
   .right-col {
     width: 95vw;
@@ -717,10 +709,6 @@
   }
 }
 
-.right-col__header {
-  margin: 20px 0;
-}
-
 .right-col .form__label {
   font-size: 0.9rem;
 }
@@ -730,7 +718,7 @@
   display: block;
   font-size: 1.1rem;
   font-weight: 600;
-  width: 80%;
+  width: 100%;
   border: 2px solid #eb8056;
   padding: 15px;
   background: transparent;
