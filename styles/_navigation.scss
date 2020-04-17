@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 7vh;
+  height: 9vh;
   z-index: 20;
 
   @include media(">tablet") {
@@ -28,10 +28,10 @@
 
     @include media("<=tablet") {
       position: absolute;
-      top: 7vh;
+      top: 9vh;
       right: 0;
       width: 100%;
-      height: 93vh;
+      height: 92vh;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -59,10 +59,9 @@
     }
     &--icon {
       color: white;
-      margin: 0 10px;
-      transition: color 0.1s ease-in-out;
+      transition: opacity 0.1s ease-in-out;
       &:hover {
-        color: $myOrange;
+        opacity: 0.5;
       }
     }
   }

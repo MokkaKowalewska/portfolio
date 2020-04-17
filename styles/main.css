@@ -138,7 +138,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 7vh;
+  height: 9vh;
   z-index: 20;
 }
 
@@ -180,10 +180,10 @@
 @media (max-width: 768px) {
   .menu__ul {
     position: absolute;
-    top: 7vh;
+    top: 9vh;
     right: 0;
     width: 100%;
-    height: 93vh;
+    height: 92vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -227,13 +227,12 @@
 
 .menu__item--icon {
   color: white;
-  margin: 0 10px;
-  -webkit-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .menu__item--icon:hover {
-  color: #eb8056;
+  opacity: 0.5;
 }
 
 @media (min-width: 769px) {
@@ -346,7 +345,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .bio__grid {
     display: -ms-grid;
     display: grid;
@@ -369,7 +368,7 @@
   text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .bio__grid-item {
     max-width: 95vw;
     margin: 20px 0;
