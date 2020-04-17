@@ -1,6 +1,10 @@
 .footer {
-  //   background: url(../images/footer-test.png) no-repeat;
   background: $myOrange;
   background-size: cover;
-  height: 200px;
+  height: 8vw;
+  @include flexCenter;
+  &__copyright {
+    font-size: 0.7rem;
+    color: white;
+  }
 }

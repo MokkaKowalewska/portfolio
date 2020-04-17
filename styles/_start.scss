@@ -1,13 +1,13 @@
 .start {
   width: 100%;
   color: $myPurple;
-  @include media("<desktop") {
+  @include media("<=tablet") {
     text-align: center;
     background: #fea684;
     background: linear-gradient(315deg, #e68d69 0%, #feb9a3 74%);
     min-height: 100vh;
   }
-  @include media(">=desktop") {
+  @include media(">tablet") {
     @include flexCenter;
     height: 100vh;
     min-height: 12rem;
@@ -23,11 +23,11 @@
     font-family: $firaCode;
     font-weight: 300;
     line-height: 0.9;
-    @include media("<desktop") {
+    @include media("<=tablet") {
       padding-top: 20vh;
       margin: 0 auto;
     }
-    @include media(">=desktop") {
+    @include media(">tablet") {
       margin: 0 2rem;
     }
     .start__h1--transform {
@@ -53,17 +53,5 @@
     bottom: 20px;
     left: calc(50vw - 15px);
     animation: mouseBounce 1s infinite ease-in-out;
-  }
-}
-
-@keyframes mouseBounce {
-  from {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  to {
-    transform: translateY(0px);
   }
 }
