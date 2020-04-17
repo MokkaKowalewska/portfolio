@@ -419,8 +419,13 @@
 }
 
 .bio__li::before {
-  content: "\f005";
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f1ea";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
   color: #c12f69;
   font-size: 0.8rem;
   -webkit-margin-start: -1.3rem;
