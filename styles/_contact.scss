@@ -1,20 +1,16 @@
 .contact {
   &__grid {
     padding-top: 30px;
+    font-weight: 700;
     @include media(">tablet") {
       display: grid;
       grid-template: 1fr / 1fr 1fr;
       gap: 80px;
-      align-items: center;
     }
     background-color: $myOrange;
     background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font: {
-      size: 1.8rem;
-      weight: 700;
-    }
   }
 }
 
@@ -32,6 +28,10 @@
     @include media("<=tablet") {
       font-size: 3rem;
     }
+  }
+  &__p {
+    font-size: 1.3rem;
+    margin: 0 20px;
   }
   &__a {
     display: inline-block;
@@ -59,7 +59,7 @@
   }
 
   &__header {
-    margin: 20px;
+    margin: 20px 0;
   }
   .form {
     &__label {
@@ -67,6 +67,7 @@
     }
     &__input,
     &__textarea {
+      margin-bottom: 20px;
       display: block;
       font-size: 1.1rem;
       font-weight: 600;
@@ -83,8 +84,6 @@
       &__textarea {
         resize: vertical;
         font-weight: 700;
-        &:focus {
-        }
       }
     }
   }
