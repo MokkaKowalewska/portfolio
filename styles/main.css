@@ -14,7 +14,6 @@
 
 .contact__btn {
   width: 100px;
-  margin: 1rem auto;
   background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
   background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
   -webkit-text-fill-color: white;
@@ -339,7 +338,7 @@
 }
 
 .bio {
-  padding: 30px 0;
+  padding: 9vh 0;
   color: #575757;
   width: 75vw;
   margin: 0 auto;
@@ -435,7 +434,7 @@
 }
 
 .skills {
-  padding-top: 30px;
+  padding-top: 9vh;
   color: white;
   width: 100%;
 }
@@ -447,7 +446,6 @@
 }
 
 .skills__grid {
-  padding-top: 30px;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -495,7 +493,7 @@
 }
 
 .projects {
-  padding: 30px 0;
+  padding: 9vh 0;
   color: white;
   width: 100%;
 }
@@ -627,11 +625,16 @@
 }
 
 .contact {
-  padding: 30px 0;
+  padding: 9vh 0;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    margin: 0 20px 20px 20px;
+  }
 }
 
 .contact__grid {
-  padding-top: 30px;
   font-weight: 700;
   background-color: #eb8056;
   background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
@@ -658,12 +661,14 @@
 
 .left-col {
   text-align: right;
+  margin-bottom: 20px;
 }
 
 .left-col__header {
   text-transform: uppercase;
   font-weight: 700;
-  margin: 0 0 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 769px) {
@@ -680,7 +685,7 @@
 
 .left-col__p {
   font-size: 1.3rem;
-  margin: 0 20px;
+  margin: 0;
 }
 
 .left-col__a {
@@ -700,14 +705,8 @@
 }
 
 .left-col__a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-  .right-col {
-    width: 95vw;
-  }
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media (min-width: 769px) {
@@ -717,10 +716,14 @@
 }
 
 .right-col .form__label {
+  margin: 0 auto;
   font-size: 0.8rem;
 }
 
 .right-col .form__input, .right-col .form__textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
   margin-bottom: 20px;
   display: block;
   font-size: 1.1rem;
@@ -730,7 +733,6 @@
   padding: 15px;
   background: transparent;
   -webkit-text-fill-color: #c12f69;
-  color: black;
 }
 
 .right-col .form__input:focus, .right-col .form__textarea:focus {
