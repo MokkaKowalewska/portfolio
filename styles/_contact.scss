@@ -1,4 +1,5 @@
 .contact {
+  padding: 30px 0;
   &__grid {
     padding-top: 30px;
     font-weight: 700;
@@ -23,6 +24,7 @@
   &__header {
     text-transform: uppercase;
     font-weight: 700;
+    margin: 0 0 20px 0;
 
     @include media(">tablet") {
       font-size: 4rem;
@@ -61,7 +63,7 @@
 
   .form {
     &__label {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
     &__input,
     &__textarea {
@@ -79,10 +81,10 @@
         outline: none;
         background: transparent;
       }
-      &__textarea {
-        resize: vertical;
-        font-weight: 700;
-      }
+    }
+    &__textarea {
+      resize: vertical;
+      font-weight: 700;
     }
   }
 }

@@ -418,7 +418,9 @@
   list-style: none;
 }
 
-.bio__li:before {
+.bio__li::before {
+  font-family: "FontAwesome";
+  content: "\f005";
   color: #c12f69;
   font-size: 0.8rem;
   -webkit-margin-start: -1.3rem;
@@ -624,6 +626,10 @@
   }
 }
 
+.contact {
+  padding: 30px 0;
+}
+
 .contact__grid {
   padding-top: 30px;
   font-weight: 700;
@@ -657,6 +663,7 @@
 .left-col__header {
   text-transform: uppercase;
   font-weight: 700;
+  margin: 0 0 20px 0;
 }
 
 @media (min-width: 769px) {
@@ -710,7 +717,7 @@
 }
 
 .right-col .form__label {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .right-col .form__input, .right-col .form__textarea {
@@ -731,7 +738,7 @@
   background: transparent;
 }
 
-.right-col .form__input__textarea, .right-col .form__textarea__textarea {
+.right-col .form__textarea {
   resize: vertical;
   font-weight: 700;
 }
