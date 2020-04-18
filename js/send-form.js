@@ -1,8 +1,10 @@
+const submitBtn = document.querySelector(".contact__btn");
+
 function submitForm() {
-  var form = document.querySelector(".form"),
-    submitBtn = document.querySelector(".contact__btn"),
+  const form = document.querySelector(".form"),
+
     status = document.querySelector(".contact__waitMsg"),
-    name = document.querySelector("input #name");
+    name = document.getElementById("name");
 
   submitBtn.disabled = true;
   status.textContent = "sending...";
@@ -11,8 +13,8 @@ function submitForm() {
 
   let formdata = new FormData();
   formdata.append("name", name.value);
-  formdata.append("email", document.querySelector("input #email").value);
-  formdata.append("message", document.querySelector("textarea #message").value);
+  formdata.append("email", document.getElementById("email").value);
+  formdata.append("message", document.getElementById("message").value);
 
   console.log(document.querySelector("input #name").value);
 
@@ -36,4 +38,4 @@ function submitForm() {
   ajax.send(formdata);
 }
 
-// submitBtn.onclick = submitForm;
+submitBtn.addEventListener(submitForm);
