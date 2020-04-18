@@ -723,6 +723,10 @@
   }
 }
 
+.right-col__header {
+  margin: 10px 0;
+}
+
 .right-col .form__label {
   margin: 0 auto;
   font-size: 0.8rem;

@@ -61,7 +61,9 @@
   @include media(">tablet") {
     width: 35vw;
   }
-  @include media("<=tablet") {
+
+  &__header {
+    margin: 10px 0;
   }
 
   .form {
