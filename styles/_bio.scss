@@ -30,7 +30,7 @@
   }
   &__header {
     line-height: 1.2;
-    margin-bottom: 70 px;
+    margin-bottom: 70px;
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
@@ -38,10 +38,14 @@
   }
 
   &__h3 {
-    margin-top: 0;
+    margin: 1rem 0;
     text-align: center;
     font-size: 2.2rem;
     color: $myOrange;
+  }
+
+  &__h4 {
+    margin: 1rem 0;
   }
 
   &__p {

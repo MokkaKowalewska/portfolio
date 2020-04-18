@@ -16,14 +16,6 @@
       grid-template: repeat(3, 1fr) / repeat(3, 80px);
       gap: 10px;
     }
-    // @include media(">phone", "<=tablet") {
-    //   grid-template: row1:span3, row2:auto / repeat (4, 80px);
-    //   gap: 10px;
-    // }
-    // @include media(">tablet") {
-    //   grid-template: repeat(3, 1fr) / repeat(8, 80px);
-    //   gap: 30px;
-    // }
 
     @include media(">tablet") {
       grid-template: repeat(3, 1fr) / repeat(8, 80px);
@@ -34,6 +26,9 @@
   &__icon {
     text-align: center;
     font-size: 0.8rem;
+    .icon__caption {
+      margin: 1rem 0;
+    }
   }
 
   &__h3 {
