@@ -506,6 +506,21 @@
   width: 100%;
 }
 
+.projects__h3 {
+  text-align: center;
+  margin: 50px 0 10px 0;
+}
+
+.projects__caption {
+  margin: 10px;
+}
+
+@media (min-width: 768px) {
+  .projects__caption {
+    width: 50%;
+  }
+}
+
 @media (min-width: 769px) {
   .projects__grid {
     display: -ms-grid;
@@ -573,11 +588,6 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.projects__h3 {
-  text-align: center;
-  margin: 50px;
 }
 
 .projects__h4 {

@@ -3,6 +3,17 @@
   color: white;
   width: 100%;
 
+  &__h3 {
+    text-align: center;
+    margin: 50px 0 10px 0;
+  }
+
+  &__caption {
+    @include media(">=tablet") {
+      width: 50%;
+    }
+    margin: 10px;
+  }
   &__grid {
     @include media(">tablet") {
       display: grid;
@@ -46,11 +57,6 @@
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  &__h3 {
-    text-align: center;
-    margin: 50px;
   }
 
   &__h4 {

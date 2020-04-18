@@ -77,13 +77,13 @@
             <h3 class="bio__h3">
               the past
             </h3>
-          <p class="bio__p">For the past 10 years I had been working as a Ferry Forwarding Agent in a transport company. <span class="bio__p--highlighted">I may be a #CodeNewbie, but certainly not an employee newbie.</span> In less that 5 years from an Assistant I became Senior Ferry Forwarding Agent and I've learnt a lot. mainly within soft skills concerning communication with coworkers and clients. Among other duties, I’ve started automatizing pricelists. After work I was part of a few projects in WordPress environment, using themes or page builder... and I hated it, it was a mess. Surprisingly, last year I found out how frontend is REALLY done and I just fell in love!</p>
+          <p class="bio__p">For the past 10 years I had been booking ferry departures for cargo trucks. <span class="bio__p--highlighted">I may be a #CodeNewbie, but certainly not an employee newbie.</span> In less that 5 years from an Assistant I became Senior Ferry Forwarding Agent and I've learnt a lot. Among other duties, I’ve started automatizing pricelists. I made a couple WordPress sites with a builder in my life and I hated doing it. Surprisingly, last year I found out how frontend is REALLY done and I just fell in love!</p>
           <h4 class="bio__h4">
             fun facts
           </h4>
           <ul class="bio__ul">
             <li class="bio__li">in 2007 I created custom mobile theme and implemented it on my phone via IrDa</li>
-            <li class="bio__li">I can always see double whitespace in the text</li>
+            <li class="bio__li">I can always see double whitespace in a text</li>
             <li class="bio__li">I set new keyboard shortcuts, when procrastinating</li>
           </ul>
             </div>
@@ -93,13 +93,13 @@
             <h3 class="bio__h3">
               the present
             </h3>
-            <p class="bio__p">Long story short:  I’m in my late 20s and <span class="bio__p--highlighted">I literally have no time to be a shitty developer, so I decided to be an awesome one.</span> I am making it happen everyday, step by step. I know, that I’m just in the beginning of my way and that this way actually never ends. And it’s even more exciting.
+            <p class="bio__p">Long story short: I’m in my late 20s and <span class="bio__p--highlighted">I literally have no time to be a shitty developer, so I decided to be an awesome one.</span> I am making it happen everyday, step by step. I know, that I’m just in the beginning of my way and that this way actually never ends. And it’s even more exciting.
             </p>
             <h4 class="bio__h4">
             how do I learn?
             </h4>
             <p class="bio__p">
-              I'm taking courses (most important ones: JS fundamentals, JS in practice, ES6 course, WordPress: creating themes and plugins), coding with a mentor and then making my own projects (which You will see below). I simply try to make up any feature on my own and then code it. I'm also addicted to Codewars.
+              I take courses, code with mentor and then make my own projects (which You will see below). I simply try to make up any feature on my own and then code it. I read MDN and other official docs a lot (and Stack Overflow, when hope is gone).
             </p>
             <h4 class="bio__h4">
             privately
@@ -107,7 +107,7 @@
             <ul class="bio__ul">
               <li class="bio__li">passionate about psychology of advertising</li>
               <li class="bio__li">inspired by Michał Sadowski, Adam Romański and Ola Budzyńska</li>
-              <li class="bio__li">Nonviolent Communication and Attachment Parenting enthusiast</li>
+              <li class="bio__li">enthusiast of Nonviolent Communication and Attachment Parenting</li>
               <li class="bio__li">stand up fan</li>
             </ul>
           </div>
@@ -117,15 +117,15 @@
             <h3 class="bio__h3">
               the future
             </h3>
-            <p class="bio__p">I know that developer’s life is not a piece of cake, especially for junior. There is a hell of a lot hard work to do and I am ready to do it. <span class="bio__p--highlighted">I love making things useful and pretty for users and other developers.</span> I want to take care of high accesibility of websites and beautiful interface that pleases user. And I want to take care of clean, quality code, that won't be a nightmare as a legacy code. I value rules KISS, DRY and YAGNI, I am also making my first steps in Test-Driven Development.
+            <p class="bio__p">I know developer’s life is not a piece of cake, especially for junior. There is a hell of a lot hard work to do and I am ready to do it. <span class="bio__p--highlighted">I love making things useful and pretty - for users and other developers.</span> I want to take care of high accesibility and beautiful interface as well as clean, quality code, that won't be a nightmare as a legacy one. I value rules KISS, DRY and YAGNI.
             </p>
             <h4 class="bio__h4">
               what other value can I bring?
             </h4>
             <ul class="bio__ul">
               <li class="bio__li">good atmosphere, cause I believe communication in a team is crucial to deliver projects</li>
-              <li class="bio__li">I know how to not waste time at work and what is my most productive workflow</li>
-              <li class="bio__li">working under pressure - job in transport was a pretty good training</li>
+              <li class="bio__li">work organization and knowing my most productive workflow</li>
+              <li class="bio__li">working under pressure of time - there is no mercy in transport and logistics!</li>
             </ul>
 
           </div>
@@ -214,6 +214,7 @@
 
       <section class="projects js-aos-hidden" id="projects">
       <h3 class="skills__h3 projects__h3">projects</h3>
+      <p class="projects__caption"></p>Here You can find projects, which was created 100% according to my idea. You can check the other ones, which I've created doing courses and tutorials, on my Github profile.</p>
         <div class="projects__grid">
             <div class="projects__imgWrapper">
               <img class="projects__img" src="images/mockup-portfolio.jpg" alt="Screenshot of portfolio website">
@@ -270,15 +271,15 @@
 
         <div class="right-col">
           <p class="right-col__header">...or simply type here:</p>
-          <form class="contact__form" method="POST" action="contact-form.php">
-            <label class="form__label" for id="name">name</label>
-            <input class="form__input" type="name" id="name" pattern=".+" data-error="You forgot about a name!" required>
+          <form class="contact__form" method="POST">
+            <label class="form__label" for="name">name</label>
+            <input class="form__input" type="text" name="name" id="name" pattern=".+" data-error="You forgot about a name!" required>
 
-            <label class="form__label" for id="email">email</label>
-            <input class="form__input" type="email" id="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" data-error="You forgot about an email!" required>
+            <label class="form__label" for="email">email</label>
+            <input class="form__input" type="email" name="email" id="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" data-error="You forgot about an email!" required>
 
-            <label class="form__label" for id="message">message</label>
-            <textarea class="form__textarea" id="message" rows="5" data-error="You forgot about a message!" required></textarea>
+            <label class="form__label" for="message">message</label>
+            <textarea class="form__textarea" id="message" name="message" rows="5" data-error="You forgot about a message!" required></textarea>
 
             <span class="honey-row">
               <label for="honey">If You're a human, don't type anything here</label>
