@@ -18,7 +18,7 @@
     }
 
     @include media(">tablet") {
-      grid-template: repeat(3, 1fr) / repeat(8, 80px);
+      grid-template: repeat(3, 1fr) / repeat(9, 80px);
       gap: 30px;
     }
   }

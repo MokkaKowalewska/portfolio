@@ -12,20 +12,6 @@
   cursor: pointer;
 }
 
-.contact__btn {
-  width: 100px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
-  background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
-  -webkit-text-fill-color: white;
-  border: none;
-  font-size: 1rem;
-}
-
-.contact__btn:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .projects__btn {
   margin: 0.5rem;
   width: 30%;
@@ -46,6 +32,20 @@
   background: rgba(255, 255, 255, 0.3);
   color: white;
   border: 1px solid white;
+}
+
+.contact__btn {
+  width: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
+  background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
+  -webkit-text-fill-color: white;
+  border: none;
+  font-size: 1rem;
+}
+
+.contact__btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .js-aos-hidden,
@@ -470,8 +470,8 @@
 @media (min-width: 769px) {
   .skills__grid {
     -ms-grid-rows: (1fr)[3];
-    -ms-grid-columns: (80px)[8];
-        grid-template: repeat(3, 1fr)/repeat(8, 80px);
+    -ms-grid-columns: (80px)[9];
+        grid-template: repeat(3, 1fr)/repeat(9, 80px);
     gap: 30px;
   }
 }
@@ -755,6 +755,10 @@
 .right-col .form__textarea {
   resize: vertical;
   font-weight: 700;
+}
+
+.honey-row {
+  display: none;
 }
 
 .footer {

@@ -11,17 +11,6 @@
   }
 }
 
-.contact__btn {
-  width: 100px;
-  background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
-  -webkit-text-fill-color: white;
-  border: none;
-  font-size: 1rem;
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
 .projects__btn {
   margin: 0.5rem;
   width: 30%;
@@ -42,4 +31,15 @@
   background: rgba(255, 255, 255, 0.3);
   color: white;
   border: 1px solid white;
+}
+
+.contact__btn {
+  width: 100px;
+  background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
+  -webkit-text-fill-color: white;
+  border: none;
+  font-size: 1rem;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
