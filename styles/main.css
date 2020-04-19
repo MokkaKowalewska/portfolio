@@ -34,7 +34,8 @@
   border: 1px solid white;
 }
 
-.contact__btn {
+.form__btn {
+  display: inline-block;
   width: 100px;
   background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
   background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
@@ -43,7 +44,7 @@
   font-size: 1rem;
 }
 
-.contact__btn:hover {
+.form__btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -420,6 +421,7 @@
   text-align: left;
   padding-left: 1.3rem;
   list-style: none;
+  margin: 10px 0;
 }
 
 .bio__li::before {
@@ -689,8 +691,8 @@
 .left-col__header {
   text-transform: uppercase;
   font-weight: 700;
-  margin: 0;
   margin-bottom: 20px;
+  line-height: 0.9;
 }
 
 @media (min-width: 769px) {
@@ -769,6 +771,10 @@
 .right-col .form__textarea {
   resize: vertical;
   font-weight: 700;
+}
+
+.right-col .form__status {
+  margin: 0 20px;
 }
 
 .honey-row {

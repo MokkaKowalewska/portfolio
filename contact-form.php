@@ -12,7 +12,7 @@ if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"])) 
     $message = nl2br($_POST["message"]);
     $to = "hello@monikakowalewska.pl";
     $from = "hello@monikakowalewska.pl";
-    $subject = "MONIKAKOWALEWSKAPL MESSAGE";
+    $subject = "MESSAGE from " . $name;
     $content = "<b>Name:</b>" . $name . "<br><b>Email:</b>" . $email . "<br><b>Message:</b>" . "<p>" . $message . "</p>";
     $headers = "From: $from\n";
     $headers .= "MIME-Version: 1.0\n";
@@ -21,7 +21,7 @@ if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"])) 
     mail($to, $subject, $content, $headers);
 
         if(mail($to, $subject, $content, $headers))  {
-            echo "Thank You for Your message, " . $name . "!";
+            echo "success";
         } else {
             echo "Oopsie! The server failed to send the message. I'm sorry, could You try again later?";
         }

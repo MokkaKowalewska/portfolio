@@ -33,7 +33,8 @@
   border: 1px solid white;
 }
 
-.contact__btn {
+.form__btn {
+  display: inline-block;
   width: 100px;
   background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
   -webkit-text-fill-color: white;
