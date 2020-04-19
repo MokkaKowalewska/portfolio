@@ -403,6 +403,7 @@
 .bio__p {
   font-size: 0.97rem;
   text-align: left;
+  margin: 5px 0;
 }
 
 .bio__p--highlighted {
@@ -513,11 +514,14 @@
 
 .projects__caption {
   margin: 10px;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .projects__caption {
-    width: 50%;
+    width: 40%;
+    margin: 20px auto;
   }
 }
 
