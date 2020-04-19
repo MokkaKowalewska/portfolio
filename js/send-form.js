@@ -1,7 +1,6 @@
 function submitForm() {
   const status = document.querySelector(".contact__status"),
     submitBtn = document.querySelector(".contact__btn"),
-    form = document.querySelector(".form"),
     name = document.getElementById("name");
 
   submitBtn.disabled = true;
@@ -22,7 +21,6 @@ function submitForm() {
     console.log(ajax);
     if (ajax.readyState == 4 && ajax.status == 200) {
       if (ajax.responseText == "success") {
-        //
         status.innerHTML = ajax.responseText;
       } else {
         status.innerHTML = ajax.responseText;
@@ -30,7 +28,4 @@ function submitForm() {
       }
     }
   };
-  console.log(ajax.readyState);
-  // ajax.setRequestHeader("blabla", "blablabla");
-  console.log(ajax.readyState);
 }
