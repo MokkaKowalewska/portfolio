@@ -21,7 +21,7 @@ function showSection() {
   });
 }
 
-function showBio(i) {
+function showBio() {
   let bioItems = document.querySelectorAll(".js-aos-hidden-bio");
 
   bioItems.forEach(function (bioItem) {
@@ -43,10 +43,7 @@ function showBio(i) {
 //   }
 // }
 
-document.addEventListener("scroll", throttle(showBio, 300), false);
-
-document.addEventListener("scroll", throttle(showSection, 300), false);
-
+//listen to scroll event every x miliseconds
 function throttle(fn, wait) {
   let time = Date.now();
   return function () {
@@ -56,3 +53,14 @@ function throttle(fn, wait) {
     }
   };
 }
+
+document.addEventListener(
+  "scroll",
+  () => {
+    throttle(showBio, 300);
+    throttle(showSection, 300);
+  },
+  false
+);
+
+export { throttle };
