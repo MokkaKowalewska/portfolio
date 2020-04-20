@@ -40,8 +40,7 @@ function showBio() {
 //     console.log(timeout);
 //     setTimeout(showBio, timeout);
 //     showBio(i);
-//   }
-// }
+//   }}
 
 //listen to scroll event every x miliseconds
 function throttle(fn, wait) {
