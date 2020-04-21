@@ -1,6 +1,8 @@
+const sections = document.querySelectorAll(".js-aos-hidden");
+
 function isVisible(section) {
   let sectionBox = section.getBoundingClientRect(),
-    pxFromTop = -50;
+    pxFromTop = -150;
 
   if (sectionBox.top - window.innerHeight < pxFromTop) {
     return true;
@@ -10,27 +12,20 @@ function isVisible(section) {
 }
 
 function showSection() {
-  let sections = document.querySelectorAll(".js-aos-hidden");
-  sections.forEach(function (section) {
+  sections.forEach((section) => {
     if (isVisible(section)) {
       section.classList.remove("js-aos-hidden");
-      section.classList.add("js-aos-slideDown");
-    } else {
-      section.classList.add("js-aos-hidden");
+      section.classList.add("js-aos-slideIn");
     }
   });
 }
 
+//jako metoda showSection?
 function showBio() {
-  let bioItems = document.querySelectorAll(".js-aos-hidden-bio");
+  let bioItems = document.querySelectorAll("");
 
-  bioItems.forEach(function (bioItem) {
-    if (isVisible(bioItem)) {
-      bioItem.classList.remove("js-aos-hidden-bio");
-      bioItem.classList.add("js-aos-slideDown");
-    } else {
-      bioItem.classList.add("js-aos-hidden-bio");
-    }
+  bioItems.forEach((bioItem, index) => {
+    bioItem.style.animationDelay = `${1 + index}s`;
   });
 }
 

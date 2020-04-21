@@ -8,8 +8,8 @@ window.addEventListener(
   "scroll",
   () => {
     scrollUp();
-    showSection();
     showBio();
+    showSection();
   },
   false
 );

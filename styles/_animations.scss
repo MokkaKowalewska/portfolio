@@ -1,10 +1,9 @@
 //animate on scroll with JS
-.js-aos-hidden,
-.js-aos-hidden-bio {
+.js-aos-hidden {
   opacity: 0;
 }
 
-.js-aos-slideDown {
+.js-aos-slideIn {
   animation: aos-slideIn 0.5s forwards ease-in-out;
 }
 
