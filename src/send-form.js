@@ -1,4 +1,4 @@
-function submitForm() {
+export function submitForm() {
   const status = document.querySelector(".form__status"),
     submitBtn = document.querySelector(".form__btn"),
     form = document.querySelector(".contact__form"),

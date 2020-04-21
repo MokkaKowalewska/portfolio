@@ -1,4 +1,4 @@
-(function getNav() {
+export function getNav() {
   const nav = document.querySelector(".menu__ul"),
     burger = document.querySelector(".burger");
 
@@ -9,4 +9,4 @@
   nav.addEventListener("click", () => {
     nav.classList.toggle("show");
   });
-})();
+}
