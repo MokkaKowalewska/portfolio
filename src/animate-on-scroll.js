@@ -13,6 +13,7 @@ function isVisible(section) {
 
 function showSection() {
   sections.forEach((section) => {
+
     if (isVisible(section)) {
       section.classList.remove("js-aos-hidden");
       section.classList.add("js-aos-slideIn");
@@ -20,13 +21,5 @@ function showSection() {
   });
 }
 
-//jako metoda showSection?
-function showBio() {
-  let bioItems = document.querySelectorAll("");
 
-  bioItems.forEach((bioItem, index) => {
-    bioItem.style.animationDelay = `${1 + index}s`;
-  });
-}
-
-export { showSection, showBio };
+export { showSection };

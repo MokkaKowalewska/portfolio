@@ -1,15 +1,15 @@
-import { showSection, showBio } from "./animate-on-scroll.js";
 require("./navigation.js");
-import { scrollUp } from "./scroll-up.js";
 require("./send-form.js");
-// import { _ } from "lodash";
+
+import { showSection} from "./animate-on-scroll.js";
+import { scrollUp } from "./scroll-up.js";
+import _ from "lodash";
 
 window.addEventListener(
   "scroll",
   () => {
-    scrollUp();
-    showBio();
-    showSection();
+    _.throttle(scrollUp, 500);
+    _.throttle(showSection, 200);
   },
   false
 );
