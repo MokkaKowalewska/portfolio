@@ -1,6 +1,6 @@
 function scrollUp() {
-  let arrows = document.getElementById("scroll-up");
-  let pxScrolled = document.documentElement.scrollTop;
+  const arrows = document.getElementById("scroll-up");
+  const pxScrolled = document.documentElement.scrollTop;
 
   if (pxScrolled > 100) {
     arrows.classList.remove("js-scroll-up-hidden");
@@ -9,4 +9,4 @@ function scrollUp() {
   }
 }
 
-export { scrollUp };
+export default scrollUp;

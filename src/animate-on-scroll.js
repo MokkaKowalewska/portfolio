@@ -1,25 +1,25 @@
 const sections = document.querySelectorAll(".js-aos-hidden");
 
 function isVisible(section) {
-  let sectionBox = section.getBoundingClientRect(),
-    pxFromTop = -150;
+  const sectionBox = section.getBoundingClientRect();
+  const pxFromTop = -150;
 
   if (sectionBox.top - window.innerHeight < pxFromTop) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function showSection() {
   sections.forEach((section) => {
-
     if (isVisible(section)) {
       section.classList.remove("js-aos-hidden");
       section.classList.add("js-aos-slideIn");
+    } else {
+      section.classList.add("js-aos-hidden");
     }
   });
 }
 
 
-export { showSection };
+export default showSection;
