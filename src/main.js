@@ -1,13 +1,14 @@
-import throttle from "lodash";
+import _ from "lodash";
 import showSection from "./animate-on-scroll";
 import scrollUp from "./scroll-up";
+import submitForm from "./send-form";
 
-require("./navigation.js");
-require("./send-form.js");
+require("./navigation");
+require("./send-form");
 
 window.addEventListener(
   "scroll",
-  throttle(() => {
+  _.throttle(() => {
     showSection();
     scrollUp();
   }, 300),
