@@ -9,6 +9,7 @@ form.addEventListener("submit", (e) => {
   const email = document.getElementById("email");
   const message = document.getElementById("message");
 
+  e.preventDefault();
 
   submitBtn.disabled = true;
   status.innerHTML = "sending...";
