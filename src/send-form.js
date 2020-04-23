@@ -25,8 +25,8 @@ form.addEventListener("submit", (e) => {
   ajax.send(formdata);
 
   ajax.onreadystatechange = function () {
-    if (ajax.readyState == 4 && ajax.status == 200) {
-      if (ajax.responseText == "success") {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      if (ajax.responseText === "success") {
         status.innerHTML = ajax.responseText;
         formWrapper.innerHTML = `Thank You for Your message, ${name.value}!`;
       } else {
