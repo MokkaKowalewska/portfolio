@@ -487,6 +487,10 @@
   margin: 1rem 0;
 }
 
+.skills__icon__webpack-icon {
+  color: white;
+}
+
 .skills__h3 {
   font-size: 3rem;
   font-weight: 700;

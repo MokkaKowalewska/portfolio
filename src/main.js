@@ -1,4 +1,4 @@
-import throttle from "./throttle";
+import throttle from "lodash";
 import showSection from "./animate-on-scroll";
 import scrollUp from "./scroll-up";
 
@@ -7,9 +7,9 @@ require("./send-form.js");
 
 window.addEventListener(
   "scroll",
-  (e) => {
-    throttle(scrollUp, 500);
-    throttle(showSection, 200);
-  },
+  throttle(() => {
+    showSection();
+    scrollUp();
+  }, 300),
   false,
 );

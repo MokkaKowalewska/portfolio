@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Website, which is my resume - both its code and content as well. Constantly working on it!",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
