@@ -49,12 +49,11 @@
           transform: scale(1.1);
 }
 
-.js-aos-hidden,
-.js-aos-hidden-bio {
+.js-aos-hidden {
   opacity: 0;
 }
 
-.js-aos-slideDown {
+.js-aos-slideIn {
   -webkit-animation: aos-slideIn 0.5s forwards ease-in-out;
           animation: aos-slideIn 0.5s forwards ease-in-out;
 }
