@@ -1,15 +1,13 @@
 
 const form = document.querySelector(".contact__form");
 
-form.addEventListener("submit", (e) => {
+function submitForm() {
   const status = document.querySelector(".form__status");
   const submitBtn = document.querySelector(".form__btn");
   const formWrapper = document.querySelector(".right-col");
   const name = document.getElementById("name");
   const email = document.getElementById("email");
   const message = document.getElementById("message");
-
-  e.preventDefault();
 
   submitBtn.disabled = true;
   status.innerHTML = "sending...";
@@ -35,5 +33,7 @@ form.addEventListener("submit", (e) => {
       }
     }
   };
-},
-false);
+}
+
+
+export default submitForm;
