@@ -74,7 +74,8 @@
         outline: none;
         background: transparent;
       }
-      &--valid {
+      &--valid,
+      &:valid {
         border: 2px solid rgb(94, 177, 94);
       }
       &--invalid,

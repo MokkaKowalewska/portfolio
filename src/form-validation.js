@@ -8,39 +8,33 @@ function validate(e) {
   console.log("val");
 
   form.setAttribute("novalidate", true);
+  console.log(form.attributes);
 
-    .submitBtn.disabled = true;
-
-  let errors = [];
-
-  const regexs = {
-    name: /.+/,
-    email: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-    message: /.{3,}/,
-  };
-
-  function testFields(field, regex) {
-    if (regex.test(field.value)) {
-      field.classList.add("form__input--valid");
-    } else {
-      field.classList.add("form__input--invalid");
-      errors.push(field.name);
-    }
-    console.log(errors);
-  }
+  submitBtn.disabled = true;
 
   const inputs = form.querySelectorAll("input");
   inputs.forEach((input) => input.addEventListener(
-    "keyup", (event) => {
-      testFields(event.target, regexs[event.target.attributes.name.value]);
+    "input", (event) => {
+      const isValid = event.target.validity;
+      console.log(isValid);
     },
   ));
 
-  const errorsDiv = document.querySelector(".form__errors");
+  //   function testFields(field, regex) {
+  //     if (regex.test(field.value)) {
+  //       field.classList.add("form__input--valid");
+  //     } else {
+  //       field.classList.add("form__input--invalid");
+  //       errors.push(field.name);
+  //     }
+  //     console.log(errors);
+  //   }
 
-  if (errors === 0) {
-    submitForm();
-  }
+
+  //
+
+
+  const errorsDiv = document.querySelector(".form__errors");
 }
 
 
