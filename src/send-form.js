@@ -1,7 +1,7 @@
 
 const form = document.querySelector(".contact__form");
 
-function submitForm() {
+function submitForm(e) {
   const status = document.querySelector(".form__status");
   const submitBtn = document.querySelector(".form__btn");
   const formWrapper = document.querySelector(".right-col");
@@ -9,7 +9,7 @@ function submitForm() {
   const email = document.getElementById("email");
   const message = document.getElementById("message");
 
-  submitBtn.disabled = true;
+
   status.innerHTML = "sending...";
 
   const formdata = new FormData();
