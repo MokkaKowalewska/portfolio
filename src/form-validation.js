@@ -12,51 +12,35 @@ export default class ValidateForm {
     };
     this.noValidate();
     this.realtimeValidation();
-    this.displayErrors();
+    this.displayErrors;
   }
 
   noValidate() {
     this.form.setAttribute("novalidate", true);
   }
 
+  displayErrors(inputValidated, violetion) {
+    inputValidated.nextElementSibling.textContent = "siemanko";
+	 }
 
 
   realtimeValidation() {
-    this.inputs.forEach((input) => input.addEventListener(
-      "input", (event) => {
-        let testedInput = event.target;
+    this.inputs.forEach((input) => {
+      input.addEventListener(
+        "blur", (event) => {
+          let testedInput = event.target;
+          console.log(testedInput);
 
-        this.possibleVioletions.forEach((violetion) => {
-          if (testedInput.ValidityState.violetion) {
-            displayErrors(testedInput, violetion);
+
+          if (testedInput.validity.valueMissing) {
             console.log("validity state contains violetion");
+            displayErrors(testedInput, violetion);
           }
-        });
-      }, false,
-    ));
-	}
-
-	displayErrors(testedInput, violetion) {
-		this.messages.forEach(violetion) {
-			 let text = testedInput.nextElementSibling.textContent;
-
-			 text += message[key];
-		 }
-	 }
+        }, false,
+      );
+    }, false);
+  }
 }
-
-
-
-
-//   function testFields(field, regex) {
-//     if (regex.test(field.value)) {
-//       field.classList.add("form__input--valid");
-//     } else {
-//       field.classList.add("form__input--invalid");
-//       errors.push(field.name);
-//     }
-//     console.log(errors);
-//   }
 
 
 //
