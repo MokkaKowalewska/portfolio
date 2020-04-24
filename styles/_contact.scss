@@ -74,6 +74,16 @@
         outline: none;
         background: transparent;
       }
+      &--valid {
+        border: 2px solid rgb(94, 177, 94);
+      }
+      &--invalid,
+      &:invalid {
+        border: 2px solid rgb(255, 36, 36);
+      }
+       {
+        border: 2px solid rgb(255, 36, 36);
+      }
     }
     &__textarea {
       resize: vertical;
