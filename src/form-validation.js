@@ -1,10 +1,11 @@
 const form = document.querySelector(".contact__form");
-const errorsDiv = document.querySelector(".form__errors");
 
 
 function validate(e) {
+  const submitBtn = document.querySelector(".form__btn");
   console.log("val");
   e.preventDefault();
+  submitBtn.disabled = true;
 
   let errors = [];
 
@@ -25,11 +26,16 @@ function validate(e) {
     },
   ));
 
-  if (errors > 0) {
-    errorsDiv.textContent = `Please correct: ${errors}`;
-  } else {
-    errorsDiv.textContent = "";
-  }
+  const errorsDiv = document.querySelector(".form__errors");
+
+  //   if (errors > 0) {
+  //     errorsDiv.textContent = `Please correct: ${errors}`;
+  //     return false;
+  //   }
+  //   errorsDiv.textContent = "";
+  //   return true;
+  return false;
 }
+
 
 export { form, validate };
