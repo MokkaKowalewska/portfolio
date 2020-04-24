@@ -33,15 +33,30 @@
   border: 1px solid white;
 }
 
-.form__btn {
+.contact__btn {
   display: inline-block;
-  width: 100px;
+  background-color: $myOrange;
   background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 10px;
   -webkit-text-fill-color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: $myPurple;
+    background: linear-gradient(0deg, pink 0%, purple 100%);
+    transform: translateY(-5px);
+  }
+  &:active {
+    background-color: $myPurple;
+    background: linear-gradient(0deg, rgb(163, 63, 79) 0%, purple 100%);
+    outline: none;
+  }
+}
+
+.form__btn {
+  width: 100px;
   border: none;
   font-size: 1rem;
-  transition: background 0.3s ease-in;
-  &:hover {
-    transform: scale(1.1);
-  }
 }

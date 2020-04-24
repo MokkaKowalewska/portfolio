@@ -34,19 +34,39 @@
   border: 1px solid white;
 }
 
-.form__btn {
+.contact__btn {
   display: inline-block;
-  width: 100px;
+  background-color: #eb8056;
   background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
   background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 10px;
   -webkit-text-fill-color: white;
-  border: none;
-  font-size: 1rem;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
-.form__btn:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.contact__btn:hover {
+  background-color: #c12f69;
+  background: -webkit-gradient(linear, left bottom, left top, from(pink), to(purple));
+  background: linear-gradient(0deg, pink 0%, purple 100%);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.contact__btn:active {
+  background-color: #c12f69;
+  background: -webkit-gradient(linear, left bottom, left top, from(#a33f4f), to(purple));
+  background: linear-gradient(0deg, #a33f4f 0%, purple 100%);
+  outline: none;
+}
+
+.form__btn {
+  width: 100px;
+  border: none;
+  font-size: 1rem;
 }
 
 .js-aos-hidden {
@@ -487,10 +507,6 @@
   margin: 1rem 0;
 }
 
-.skills__icon__webpack-icon {
-  color: white;
-}
-
 .skills__h3 {
   font-size: 3rem;
   font-weight: 700;
@@ -713,27 +729,6 @@
 .left-col__p {
   font-size: 1.3rem;
   margin: 0;
-}
-
-.left-col__a {
-  display: inline-block;
-  background-color: #eb8056;
-  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
-  background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
-  margin: 10px 0;
-  border-radius: 10px;
-  padding: 10px;
-  -webkit-text-fill-color: white;
-  text-decoration: none;
-  -webkit-transition: -webkit-transform 0.1s ease-in-out;
-  transition: -webkit-transform 0.1s ease-in-out;
-  transition: transform 0.1s ease-in-out;
-  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
-}
-
-.left-col__a:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 @media (min-width: 769px) {
