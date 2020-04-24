@@ -31,12 +31,16 @@ export default class ValidateForm {
           let testedInput = event.target;
           console.log(testedInput);
 
-
+          for (let key in testedInput.validity) {
+            if(testedInput.validity === true)
+          }
           if (testedInput.validity.valueMissing) {
-            console.log("validity state contains violetion");
+            console.log(testedInput.validity);
+
             displayErrors(testedInput, violetion);
           }
-        }, false,
+        },
+        false,
       );
     }, false);
   }
