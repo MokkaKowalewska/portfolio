@@ -2,7 +2,7 @@ import throttle from "lodash/throttle";
 import showSection from "./animate-on-scroll";
 import scrollUp from "./scroll-up";
 import submitForm from "./send-form";
-import { form, validate } from "./form-validation";
+import ValidateForm from "./form-validation";
 
 require("./navigation");
 
@@ -15,9 +15,8 @@ window.addEventListener(
   false,
 );
 
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   validate(e);
-// }, false);
 
-validate();
+const possibleVioletions = ["valueMissing", "patternMismatch", "tooShort"];
+const form = document.querySelector(".contact__form");
+
+new ValidateForm(form, possibleVioletions);
