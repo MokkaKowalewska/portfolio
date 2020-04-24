@@ -1,55 +1,43 @@
 import { submitForm } from "./send-form";
 
-const form = document.querySelector(".contact__form");
+export default class ValidateForm {
+  constructor(form) {
+    this.form = form;
+    this.inputs = form.querySelectorAll("input");
+    this.noValidate();
+    this.realtimeValidation();
+    this.displayErrors();
+  }
+
+  noValidate() {
+    this.form.setAttribute("novalidate", true);
+  }
+
+  realtimeValidation() {
+    this.inputs.forEach((input) => input.addEventListener(
+      "input", (event) => {
+				let testedInput = event.target;
+
+				if(testedInput.validity.)
 
 
-class ValidateForm {
-	constructor(form, submitBtn) {
-		this.form = form;
-		this.submitBtn = submitBtn;
-		this.inputs = form.inputs
 
 
-	}
-
-
-
-
-  const submitBtn = document.querySelector(".form__btn");
-  console.log("val");
-
-  form.setAttribute("novalidate", true);
-  console.log(form.attributes);
-
-  submitBtn.disabled = true;
-
-  const inputs = form.querySelectorAll("input");
-  inputs.forEach((input) => input.addEventListener(
-    "input", (event) => {
-      const isValid = event.target.validity;
-			console.log(isValid);
-
-			if(isValid)
-
-    },
-  ));
-
-  //   function testFields(field, regex) {
-  //     if (regex.test(field.value)) {
-  //       field.classList.add("form__input--valid");
-  //     } else {
-  //       field.classList.add("form__input--invalid");
-  //       errors.push(field.name);
-  //     }
-  //     console.log(errors);
-  //   }
-
-
-  //
-
-
-  const errorsDiv = document.querySelector(".form__errors");
+      }, false,
+    ));
+  }
 }
 
 
-export { form, validate };
+//   function testFields(field, regex) {
+//     if (regex.test(field.value)) {
+//       field.classList.add("form__input--valid");
+//     } else {
+//       field.classList.add("form__input--invalid");
+//       errors.push(field.name);
+//     }
+//     console.log(errors);
+//   }
+
+
+//
