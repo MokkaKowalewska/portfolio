@@ -36,4 +36,4 @@ function submitForm(e) {
 }
 
 
-export default submitForm;
+export { submitForm };

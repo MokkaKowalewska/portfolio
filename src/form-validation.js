@@ -1,11 +1,15 @@
+import { submitForm } from "./send-form";
+
 const form = document.querySelector(".contact__form");
 
 
 function validate(e) {
   const submitBtn = document.querySelector(".form__btn");
   console.log("val");
-  e.preventDefault();
-  submitBtn.disabled = true;
+
+  form.setAttribute("novalidate", true);
+
+    .submitBtn.disabled = true;
 
   let errors = [];
 
@@ -16,25 +20,27 @@ function validate(e) {
   };
 
   function testFields(field, regex) {
-    regex.test(field.value) ? field.classList.add("valid") : field.classList.add("invalid");
+    if (regex.test(field.value)) {
+      field.classList.add("form__input--valid");
+    } else {
+      field.classList.add("form__input--invalid");
+      errors.push(field.name);
+    }
+    console.log(errors);
   }
 
   const inputs = form.querySelectorAll("input");
   inputs.forEach((input) => input.addEventListener(
-    "keyup", (e) => {
-      testFields(e.target, regexs[e.target.attributes.name.value]);
+    "keyup", (event) => {
+      testFields(event.target, regexs[event.target.attributes.name.value]);
     },
   ));
 
   const errorsDiv = document.querySelector(".form__errors");
 
-  //   if (errors > 0) {
-  //     errorsDiv.textContent = `Please correct: ${errors}`;
-  //     return false;
-  //   }
-  //   errorsDiv.textContent = "";
-  //   return true;
-  return false;
+  if (errors === 0) {
+    submitForm();
+  }
 }
 
 

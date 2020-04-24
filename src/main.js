@@ -15,5 +15,9 @@ window.addEventListener(
   false,
 );
 
-form.addEventListener("submit", (e) => validate(e), false);
-if (validate()) { submitForm(); }
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   validate(e);
+// }, false);
+
+validate();
