@@ -3,7 +3,18 @@ import { submitForm } from "./send-form";
 const form = document.querySelector(".contact__form");
 
 
-function validate(e) {
+class ValidateForm {
+	constructor(form, submitBtn) {
+		this.form = form;
+		this.submitBtn = submitBtn;
+		this.inputs = form.inputs
+
+
+	}
+
+
+
+
   const submitBtn = document.querySelector(".form__btn");
   console.log("val");
 
@@ -16,7 +27,10 @@ function validate(e) {
   inputs.forEach((input) => input.addEventListener(
     "input", (event) => {
       const isValid = event.target.validity;
-      console.log(isValid);
+			console.log(isValid);
+
+			if(isValid)
+
     },
   ));
 
