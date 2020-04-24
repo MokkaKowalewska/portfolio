@@ -5,7 +5,6 @@ import submitForm from "./send-form";
 import { form, validate } from "./form-validation";
 
 require("./navigation");
-require("./send-form");
 
 window.addEventListener(
   "scroll",
@@ -16,5 +15,5 @@ window.addEventListener(
   false,
 );
 
-form.addEventListener("submit", validate, false);
-if (validate) submitForm();
+form.addEventListener("submit", (e) => validate(e), false);
+if (validate()) { submitForm(); }
