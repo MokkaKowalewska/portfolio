@@ -19,4 +19,4 @@ window.addEventListener(
 const possibleVioletions = ["valueMissing", "patternMismatch", "tooShort"];
 const form = document.querySelector(".contact__form");
 
-new ValidateForm(form, possibleVioletions);
+new ValidateForm(form, ".validate", possibleVioletions);

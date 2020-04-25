@@ -97,6 +97,8 @@
       font-weight: 700;
     }
     &__errorMsg {
+      margin: 5px 0;
+      font-size: 0.9rem;
       -webkit-text-fill-color: rgb(255, 36, 36);
     }
     &__status {

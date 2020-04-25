@@ -6,7 +6,7 @@ export default class ValidateForm {
     this.inputs = form.querySelectorAll(inputsClassName);
     this.possibleVioletions = possibleVioletions;
     this.messages = {
-      valueMissing: "Yikes, his field cannot be empty",
+      valueMissing: "Yikes, this field cannot be empty!",
       patternMismatch: "Enter valid email, pretty please",
       tooShort: "Please write at least 3 signs, 'Hey' will do! :)",
     };
@@ -21,7 +21,7 @@ export default class ValidateForm {
 
   displayErrors(inputValidated, violetion) {
     console.log("errooors");
-    inputValidated.nextElementSibling.textContent = "siemanko";
+    inputValidated.nextElementSibling.textContent = this.messages[violetion];
 	 }
 
 
