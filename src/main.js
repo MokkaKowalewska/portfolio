@@ -16,4 +16,4 @@ window.addEventListener(
 );
 
 const form = document.querySelector(".contact__form");
-new ValidateForm(form, ".validate", ".errorMsg", possibleVioletions);
+new ValidateForm(form, ".validate", ".form__errorMsg");

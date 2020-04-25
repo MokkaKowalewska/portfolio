@@ -6,8 +6,8 @@ export default class ValidateForm {
   constructor(form, inputsClassName, errorMsgClassName) {
     this.form = form;
     this.inputs = form.querySelectorAll(inputsClassName);
-    this.possibleVioletions = ["valueMissing", "patternMismatch", "tooShort"];
     this.errorMsg = document.querySelector(errorMsgClassName);
+    this.possibleVioletions = ["valueMissing", "patternMismatch", "tooShort"];
     this.messages = {
       valueMissing: "Yikes, this field cannot be empty!",
       patternMismatch: "Enter valid email, pretty please",
@@ -35,6 +35,7 @@ export default class ValidateForm {
         "blur", debounce((event) => {
           let testedInput = event.target;
           let { validity } = testedInput;
+          let errorMsgColor = this.errorMsg.style.webkitTextFillColor;
 
           // eslint-disable-next-line no-restricted-syntax
           for (let violetion in validity) {
@@ -43,9 +44,11 @@ export default class ValidateForm {
               console.log(`${violetion}is violetion`);
               console.log(typeof violetion);
               this.displayErrors(testedInput, violetion);
+              errorMsgColor = "#ff2424";
               return;
             }
             this.displayErrors(testedInput, "check");
+            errorMsgColor = "#5eb15e";
             console.log(`${validity[violetion]}is validity violetion`);
             console.log(`${violetion}is violetion`);
             console.log("cheeck");

@@ -84,7 +84,7 @@
       }
 
       &:valid {
-        border: 2px solid rgb(94, 177, 94);
+        border: 2px solid #5eb15e;
       }
 
       &:invalid {
@@ -99,7 +99,6 @@
     &__errorMsg {
       margin: 5px 0;
       font-size: 0.9rem;
-      -webkit-text-fill-color: rgb(255, 36, 36);
     }
     &__status {
       margin: 0 20px;

@@ -789,7 +789,6 @@
 .right-col .form__errorMsg {
   margin: 5px 0;
   font-size: 0.9rem;
-  -webkit-text-fill-color: #ff2424;
 }
 
 .right-col .form__status {
