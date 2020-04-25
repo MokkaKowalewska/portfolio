@@ -1,9 +1,9 @@
 // import { submitForm } from "./send-form";
 
 export default class ValidateForm {
-  constructor(form, ...possibleVioletions) {
+  constructor(form, inputsClassName, ...possibleVioletions) {
     this.form = form;
-    this.inputs = form.querySelectorAll("input");
+    this.inputs = form.querySelectorAll(inputsClassName);
     this.possibleVioletions = possibleVioletions;
     this.messages = {
       valueMissing: "Yikes, his field cannot be empty",
@@ -20,6 +20,7 @@ export default class ValidateForm {
   }
 
   displayErrors(inputValidated, violetion) {
+    console.log("errooors");
     inputValidated.nextElementSibling.textContent = "siemanko";
 	 }
 
