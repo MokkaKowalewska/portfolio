@@ -6,7 +6,7 @@ export default class ValidateForm {
   constructor(form, inputsClassName, errorMsgClassName) {
     this.form = form;
     this.inputs = form.querySelectorAll(inputsClassName);
-    this.errorMsg = document.querySelector(errorMsgClassName);
+    this.errorMsg = document.querySelectorAll(errorMsgClassName);
     this.possibleVioletions = ["valueMissing", "patternMismatch", "tooShort"];
     this.messages = {
       valueMissing: "Yikes, this field cannot be empty!",
@@ -23,11 +23,6 @@ export default class ValidateForm {
     this.form.setAttribute("novalidate", true);
   }
 
-  displayErrors(inputValidated, violetion) {
-    inputValidated.nextElementSibling.textContent = this.messages[violetion];
-    inputValidated.setAttribute("aria-describedby", `error-for-${inputValidated.id}`);
-	 }
-
 
   realtimeValidation() {
     this.inputs.forEach((input) => {
@@ -35,7 +30,7 @@ export default class ValidateForm {
         "blur", debounce((event) => {
           let testedInput = event.target;
           let { validity } = testedInput;
-          let errorMsgColor = this.errorMsg.style.webkitTextFillColor;
+          let errorMsgColor;
 
           // eslint-disable-next-line no-restricted-syntax
           for (let violetion in validity) {
@@ -44,11 +39,11 @@ export default class ValidateForm {
               console.log(`${violetion}is violetion`);
               console.log(typeof violetion);
               this.displayErrors(testedInput, violetion);
-              errorMsgColor = "#ff2424";
+              testedInput.nextElementSibling.style.webkitTextFillColor = "#ff2424";
               return;
             }
             this.displayErrors(testedInput, "check");
-            errorMsgColor = "#5eb15e";
+            testedInput.nextElementSibling.style.webkitTextFillColor = "#5eb15e";
             console.log(`${validity[violetion]}is validity violetion`);
             console.log(`${violetion}is violetion`);
             console.log("cheeck");
@@ -57,6 +52,11 @@ export default class ValidateForm {
       );
     }, false);
   }
+
+  displayErrors(inputValidated, violetion) {
+    inputValidated.nextElementSibling.textContent = this.messages[violetion];
+    inputValidated.setAttribute("aria-describedby", `error-for-${inputValidated.id}`);
+	 }
 }
 
 
