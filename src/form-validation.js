@@ -24,38 +24,40 @@ export default class ValidateForm {
   }
 
 
-  realtimeValidation(event) {
-    let testedInput = event.target;
-    let { validity } = testedInput;
+  realtimeValidation() {
+    this.inputs.forEach((input) => {
+      input.addEventListener(
+        "keyup", debounce((event) => {
+          let testedInput = event.target;
+          let { validity } = testedInput;
+          let errorMsgColor;
 
-    // eslint-disable-next-line no-restricted-syntax
-    for (let violetion in validity) {
-      if (validity[violetion] === true && violetion !== "valid") {
-        console.log(`${validity[violetion]}is validity violetion`);
-        console.log(`${violetion}is violetion`);
-        console.log(typeof violetion);
-        this.displayErrors(testedInput, violetion);
-        testedInput.nextElementSibling.style.webkitTextFillColor = "#ff2424";
-        return;
-      }
-      this.displayErrors(testedInput, "check");
-      testedInput.nextElementSibling.style.webkitTextFillColor = "#5eb15e";
-      console.log(`${validity[violetion]}is validity violetion`);
-      console.log(`${violetion}is violetion`);
-      console.log("cheeck");
-    }
+          // eslint-disable-next-line no-restricted-syntax
+          for (let violetion in validity) {
+            if (validity[violetion] === true && violetion !== "valid") {
+              this.displayErrors(testedInput, violetion);
+              testedInput.nextElementSibling.style.webkitTextFillColor = "#ff2424";
+              return;
+            }
+            this.displayErrors(testedInput, "check");
+            testedInput.nextElementSibling.style.webkitTextFillColor = "#5eb15e";
+          }
+        }),
+      );
+    }, false);
   }
+
 
   displayErrors(inputValidated, violetion) {
     inputValidated.nextElementSibling.textContent = this.messages[violetion];
     inputValidated.setAttribute("aria-describedby", `error-for-${inputValidated.id}`);
   }
 
-  eventBlur(e) {
-    this.inputs.forEach((input) => {
-      input.addEventListener(
-        "blur", debounce(realtimeValidation, 300), false,
-      );
-    });
-  }
+
+  // onSubmitValidation(e) {
+  // 	this.form.addEventListener(
+  // 		"submit", event =>
+
+  // 	)
+  // }
 }
