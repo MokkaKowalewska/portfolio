@@ -277,15 +277,15 @@
           <p class="right-col__header">...or simply type here:</p>
           <form class="contact__form" method="POST">
             <label class="form__label" for="name">name</label>
-            <input class="form__input" type="text" name="name" id="name" required>
+            <input class="form__input validate" type="text" name="name" id="name" required>
             <p class="form__errorMsg"></p>
 
             <label class="form__label" for="email">email</label>
-            <input class="form__input" type="email" name="email" id="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+            <input class="form__input validate" type="email" name="email" id="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
             <p class="form__errorMsg"></p>
 
             <label class="form__label" for="message">message</label>
-            <textarea class="form__textarea" id="message" name="message" rows="5" minlenght="3" required></textarea>
+            <textarea class="form__textarea validate" id="message" name="message" rows="5" minlenght="3" required></textarea>
             <p class="form__errorMsg"></p>
 
             <span class="honey-row">
