@@ -20,7 +20,7 @@ export default class ValidateForm {
   }
 
   displayErrors(inputValidated, violetion) {
-    [inputValidated].nextElementSibling.textContent = "siemanko";
+    inputValidated.nextElementSibling.textContent = "siemanko";
 	 }
 
 
@@ -34,9 +34,10 @@ export default class ValidateForm {
 
           // eslint-disable-next-line no-restricted-syntax
           for (let key in validity) {
-            if (validity[key]) {
+            if (validity[key] === true && key !== "valid") {
               console.log(`${validity[key]}is validity key`);
               console.log(`${key}is key`);
+              console.log(typeof key);
               this.displayErrors(testedInput, key);
             }
           }
