@@ -9,6 +9,7 @@ export default class ValidateForm {
       valueMissing: "Yikes, this field cannot be empty!",
       patternMismatch: "Enter valid email, pretty please",
       tooShort: "Please write at least 3 signs, 'Hey' will do! :)",
+      check: "Check!",
     };
     this.noValidate();
     this.realtimeValidation();
@@ -20,8 +21,8 @@ export default class ValidateForm {
   }
 
   displayErrors(inputValidated, violetion) {
-    console.log("errooors");
     inputValidated.nextElementSibling.textContent = this.messages[violetion];
+    inputValidated.setAttribute("aria-describedby", `error-for-${inputValidated.id}`);
 	 }
 
 
@@ -31,15 +32,17 @@ export default class ValidateForm {
         "blur", (event) => {
           let testedInput = event.target;
           let { validity } = testedInput;
-          console.log(testedInput);
 
           // eslint-disable-next-line no-restricted-syntax
-          for (let key in validity) {
-            if (validity[key] === true && key !== "valid") {
-              console.log(`${validity[key]}is validity key`);
-              console.log(`${key}is key`);
-              console.log(typeof key);
-              this.displayErrors(testedInput, key);
+          for (let violetion in validity) {
+            if (validity[violetion] === true && violetion !== "valid") {
+              console.log(`${validity[violetion]}is validity violetion`);
+              console.log(`${violetion}is violetion`);
+              console.log(typeof violetion);
+              this.displayErrors(testedInput, violetion);
+            } else {
+              this.displayErrors(testedInput, check);
+              console.log("cheeck");
             }
           }
         },
