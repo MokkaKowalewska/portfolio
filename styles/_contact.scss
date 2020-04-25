@@ -74,18 +74,21 @@
         outline: none;
         background: transparent;
       }
-      &--valid,
+
       &:valid {
         border: 2px solid rgb(94, 177, 94);
       }
-      &--invalid,
+
       &:invalid {
         border: 2px solid rgb(255, 36, 36);
       }
     }
+
     &__textarea {
       resize: vertical;
       font-weight: 700;
+    }
+    &__errorMsg {
     }
     &__status {
       margin: 0 20px;

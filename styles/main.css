@@ -766,11 +766,11 @@
   background: transparent;
 }
 
-.right-col .form__input--valid, .right-col .form__input:valid, .right-col .form__textarea--valid, .right-col .form__textarea:valid {
+.right-col .form__input:valid, .right-col .form__textarea:valid {
   border: 2px solid #5eb15e;
 }
 
-.right-col .form__input--invalid, .right-col .form__input:invalid, .right-col .form__textarea--invalid, .right-col .form__textarea:invalid {
+.right-col .form__input:invalid, .right-col .form__textarea:invalid {
   border: 2px solid #ff2424;
 }
 
