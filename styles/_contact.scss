@@ -52,22 +52,30 @@
     margin: 10px 0;
   }
 
+  form > :nth-child(3n + 4) {
+    margin-top: 20px;
+  }
+
   .form {
     &__label {
-      margin: 0 auto;
+      display: block;
       font-size: 0.8rem;
+      &:nth-child(n + 2) {
+        margin-top: 20px;
+      }
     }
     &__input,
     &__textarea {
-      box-sizing: border-box;
+      font: {
+        size: 1.1rem;
+        weight: 600;
+      }
       margin: 0 auto;
-      margin-bottom: 20px;
+      padding: 15px;
+      box-sizing: border-box;
       display: block;
-      font-size: 1.1rem;
-      font-weight: 600;
       width: 100%;
       border: 2px solid $myOrange;
-      padding: 15px;
       background: transparent;
       -webkit-text-fill-color: $myPurple;
       &:focus {
@@ -89,6 +97,7 @@
       font-weight: 700;
     }
     &__errorMsg {
+      color: rgb(255, 36, 36);
     }
     &__status {
       margin: 0 20px;

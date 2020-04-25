@@ -741,22 +741,29 @@
   margin: 10px 0;
 }
 
+.right-col form > :nth-child(3n + 4) {
+  margin-top: 20px;
+}
+
 .right-col .form__label {
-  margin: 0 auto;
+  display: block;
   font-size: 0.8rem;
 }
 
+.right-col .form__label:nth-child(n + 2) {
+  margin-top: 20px;
+}
+
 .right-col .form__input, .right-col .form__textarea {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  display: block;
   font-size: 1.1rem;
   font-weight: 600;
+  margin: 0 auto;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
   width: 100%;
   border: 2px solid #eb8056;
-  padding: 15px;
   background: transparent;
   -webkit-text-fill-color: #c12f69;
 }
@@ -777,6 +784,10 @@
 .right-col .form__textarea {
   resize: vertical;
   font-weight: 700;
+}
+
+.right-col .form__errorMsg {
+  color: #ff2424;
 }
 
 .right-col .form__status {
