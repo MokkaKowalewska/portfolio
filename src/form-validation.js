@@ -1,10 +1,13 @@
+/* eslint-disable guard-for-in */
 // import { submitForm } from "./send-form";
+import debounce from "lodash/debounce";
 
 export default class ValidateForm {
-  constructor(form, inputsClassName, ...possibleVioletions) {
+  constructor(form, inputsClassName, errorMsgClassName) {
     this.form = form;
     this.inputs = form.querySelectorAll(inputsClassName);
-    this.possibleVioletions = possibleVioletions;
+    this.possibleVioletions = ["valueMissing", "patternMismatch", "tooShort"];
+    this.errorMsg = document.querySelector(errorMsgClassName);
     this.messages = {
       valueMissing: "Yikes, this field cannot be empty!",
       patternMismatch: "Enter valid email, pretty please",
@@ -29,7 +32,7 @@ export default class ValidateForm {
   realtimeValidation() {
     this.inputs.forEach((input) => {
       input.addEventListener(
-        "blur", (event) => {
+        "blur", debounce((event) => {
           let testedInput = event.target;
           let { validity } = testedInput;
 
@@ -40,13 +43,14 @@ export default class ValidateForm {
               console.log(`${violetion}is violetion`);
               console.log(typeof violetion);
               this.displayErrors(testedInput, violetion);
-            } else {
-              this.displayErrors(testedInput, check);
-              console.log("cheeck");
+              return;
             }
+            this.displayErrors(testedInput, "check");
+            console.log(`${validity[violetion]}is validity violetion`);
+            console.log(`${violetion}is violetion`);
+            console.log("cheeck");
           }
-        },
-        false,
+        }),
       );
     }, false);
   }
