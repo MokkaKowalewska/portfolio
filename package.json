@@ -13,12 +13,14 @@
     "script-loader": "^0.7.2",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-sass-guidelines": "^7.0.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
     "changelog": "auto-changelog -u -l false",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "stylelint": "stylelint"
   },
   "repository": {
     "type": "git",
