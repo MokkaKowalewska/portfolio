@@ -787,7 +787,7 @@
 }
 
 .right-col .form__errorMsg {
-  color: #ff2424;
+  -webkit-text-fill-color: #ff2424;
 }
 
 .right-col .form__status {

@@ -97,7 +97,7 @@
       font-weight: 700;
     }
     &__errorMsg {
-      color: rgb(255, 36, 36);
+      -webkit-text-fill-color: rgb(255, 36, 36);
     }
     &__status {
       margin: 0 20px;
