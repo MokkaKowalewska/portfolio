@@ -49,6 +49,7 @@
 .contact__btn:focus, .contact__btn:hover {
   -webkit-box-shadow: 0px 10px 23px -2px rgba(193, 47, 105, 0.5);
           box-shadow: 0px 10px 23px -2px rgba(193, 47, 105, 0.5);
+  outline: none;
 }
 
 .contact__btn:active {
@@ -771,32 +772,32 @@
   outline: none;
 }
 
+.form__input:valid, .form__textarea:valid {
+  border: 2px solid #3fcc3f;
+}
+
 .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
   font: 400 0.8rem "Montserrat", sans-serif;
+  -webkit-text-fill-color: #9b9b9b;
   opacity: 0.95;
 }
 
 .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
   font: 400 0.8rem "Montserrat", sans-serif;
+  -webkit-text-fill-color: #9b9b9b;
   opacity: 0.95;
 }
 
 .form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
   font: 400 0.8rem "Montserrat", sans-serif;
+  -webkit-text-fill-color: #9b9b9b;
   opacity: 0.95;
 }
 
 .form__input::placeholder, .form__textarea::placeholder {
   font: 400 0.8rem "Montserrat", sans-serif;
+  -webkit-text-fill-color: #9b9b9b;
   opacity: 0.95;
-}
-
-.form__input:valid, .form__textarea:valid {
-  border: 2px solid #5eb15e;
-}
-
-.form__input:not(:placeholder-shown):invalid, .form__textarea:not(:placeholder-shown):invalid {
-  border: 2px solid #ff2424;
 }
 
 .form__textarea {

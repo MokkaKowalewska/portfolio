@@ -91,17 +91,14 @@
       outline: none;
     }
 
+    &:valid {
+      border: 2px solid rgb(63, 204, 63);
+    }
+
     &::placeholder {
       font: 400 0.8rem "Montserrat", sans-serif;
+      -webkit-text-fill-color: rgb(155, 155, 155);
       opacity: 0.95;
-    }
-
-    &:valid {
-      border: 2px solid #5eb15e;
-    }
-
-    &:not(:placeholder-shown):invalid {
-      border: 2px solid rgb(255, 36, 36);
     }
   }
 
