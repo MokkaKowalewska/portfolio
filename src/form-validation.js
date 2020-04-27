@@ -1,36 +1,28 @@
 /* eslint-disable guard-for-in */
-// import { submitForm } from "./send-form";
 import debounce from "lodash/debounce";
+import { submitForm } from "./send-form";
 
 export default class ValidateForm {
-  constructor(form, inputsClassName, errorMsgClassName) {
+  constructor(form, inputsClassName, errorMsgClassName, messages) {
     this.form = form;
     this.inputs = form.querySelectorAll(inputsClassName);
     this.errorMsg = document.querySelectorAll(errorMsgClassName);
-    this.possibleVioletions = ["valueMissing", "patternMismatch", "tooShort"];
-    this.messages = {
-      valueMissing: "Oh noes, this field cannot be empty!",
-      patternMismatch: "Enter valid email, pretty please",
-      tooShort: "Please write at least 3 signs, 'Hey' will do! :)",
-      check: "Check!",
-    };
+    this.messages = messages;
     this.noValidate();
     this.realtimeValidation();
-    this.displayErrors;
+    this.validateOnSubmit();
   }
 
   noValidate() {
     this.form.setAttribute("novalidate", true);
   }
 
-
   realtimeValidation() {
     this.inputs.forEach((input) => {
       input.addEventListener(
-        "keyup", debounce((event) => {
+        "blur", (event) => {
           let testedInput = event.target;
           let { validity } = testedInput;
-          let errorMsgColor;
 
           // eslint-disable-next-line no-restricted-syntax
           for (let violetion in validity) {
@@ -39,25 +31,34 @@ export default class ValidateForm {
               testedInput.nextElementSibling.style.webkitTextFillColor = "#ff2424";
               return;
             }
+
             this.displayErrors(testedInput, "check");
             testedInput.nextElementSibling.style.webkitTextFillColor = "#5eb15e";
           }
-        }),
+        },
       );
     }, false);
   }
 
 
   displayErrors(inputValidated, violetion) {
-    inputValidated.nextElementSibling.textContent = this.messages[violetion];
-    inputValidated.setAttribute("aria-describedby", `error-for-${inputValidated.id}`);
+    const input = inputValidated;
+    input.nextElementSibling.textContent = this.messages[violetion];
+    input.setAttribute("aria-describedby", `error-for-${inputValidated.id}`);
   }
 
 
-  // onSubmitValidation(e) {
-  // 	this.form.addEventListener(
-  // 		"submit", event =>
-
-  // 	)
-  // }
+  validateOnSubmit() {
+    this.form.addEventListener(
+      "submit", (e) => {
+        this.inputs.forEach((input) => {
+          if (input.checkValidity()) {
+            submitForm();
+          } else {
+            console.warn("no validate");
+          }
+        });
+      },
+    );
+  }
 }
