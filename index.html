@@ -57,7 +57,7 @@
         </p>
 
         <a class="" href="#bio">
-          <svg class="start__mouseIcon" version="1.1" id="Warstwa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+          <svg class="start__mouseIcon" version="1.1" id="Warstwa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background: new 0 0 300 300;" xml:space="preserve">
             <path fill="#c12f69" d="M149.3,0C97.8,0,55.9,37.8,55.9,84.4v131.3c0,46.6,41.8,84.4,93.4,84.4c51.5,0,93.3-37.8,93.3-84.4V84.4
               C242.6,37.8,200.9,0,149.3,0L149.3,0z M221.9,215.6c0,36.3-32.5,65.7-72.6,65.7c-40.1,0-72.6-29.4-72.6-65.7V84.4
               c0-36.3,32.5-65.7,72.6-65.7c40,0,72.6,29.4,72.6,65.7V215.6z M149.3,46.9"></path>
@@ -107,6 +107,7 @@
             privately
             </h4>
             <ul class="bio__ul">
+              <li class="bio__li">moved to Olsztyn a year ago and really like living here</li>
               <li class="bio__li">passionate about psychology of advertising</li>
               <li class="bio__li">inspired by Michał Sadowski, Adam Romański and Ola Budzyńska</li>
               <li class="bio__li">enthusiast of Nonviolent Communication and Attachment Parenting</li>
@@ -216,7 +217,7 @@
 
       <section class="projects js-aos-hidden" id="projects">
       <h3 class="skills__h3 projects__h3">projects</h3>
-      <p class="projects__caption">Here You will find projects, which was created 100% according to my idea. You can check the other ones, which I've created doing courses and tutorials, on my Github profile.</p>
+      <p class="projects__caption">...which I've created on my own.<br>Those created with tutorials and courses<br>are available on my Github profile.</p>
         <div class="projects__grid">
             <div class="projects__imgWrapper">
               <img class="projects__img" src="images/mockup-portfolio.jpg" alt="Screenshot of portfolio website">
@@ -227,12 +228,12 @@
             </div>
 
             <h4 class="projects__h4">portfolio<br>website</h4>
-            <p class="projects__p">My portfolio website, which presents majority of my skills and is my most recent work. Made from scratch, according to my own project. I used Jira and tried to deliver user stories according to Agile methods.</p>
+            <p class="projects__p">My portfolio website, which presents majority of my skills and is my most recent work, made from scratch. I've learnt enormous bunch of things - from mastering grid and writing CSS animations to different ways of form validation, to which finally I've created my own approach.</p>
               <ul class="projects__ul">Tech stack
                 <li class="projects__li">HTML</li>
                 <li class="projects__li">CSS</li>
                 <li class="projects__li">Sass</li>
-                <li class="projects__li">Vanilla JS</li>
+                <li class="projects__li">Vanilla JS + Lodash</li>
                 <li class="projects__li">AJAX</li>
                 <li class="projects__li">PHP</li>
               </ul>
@@ -240,17 +241,20 @@
             <div class="projects__imgWrapper">
               <img class="projects__img" src="images/mockup-wdp.jpg" alt="Screenshot of Weekly Dinner Planner">
               <div class="projects__btns">
-                <a href="https://mokkakowalewska.github.io/weekly-dinner-planner" class="projects__btn projects__btn-demo btn">demo</a>
+                <a href="https://weeklydinnerplanner.monikakowalewska.pl" class="projects__btn projects__btn-demo btn">demo</a>
                 <a href="https://github.com/MokkaKowalewska/weekly-dinner-planner" class="projects__btn projects__btn-code btn">code</a>
               </div>
             </div>
 
             <h4 class="projects__h4">weekly<br>dinner<br>planner</h4>
-            <p class="projects__p">My first app created in plain JavaScript, made according to my project and idea (inspired by classic todo list).</p>
+            <p class="projects__p">My first app created in plain JavaScript. You can add Your favourite meals, then assign it to specific days from current week and send Yourself an email with this plan. In "get inspired" section You can find recipies, based on Your input or losowe, if any recipe doesn't match - using API.</p>
               <ul class="projects__ul">Tech stack
                 <li class="projects__li">HTML</li>
                 <li class="projects__li">CSS</li>
                 <li class="projects__li">Vanilla JS</li>
+                <li class="projects__li">API</li>
+                <li class="projects__li">AJAX</li>
+                <li class="projects__li">PHP</li>
               </ul>
             </div>
         </div>
@@ -277,20 +281,20 @@
           <p class="right-col__header">...or simply type here:</p>
           <form class="contact__form" method="POST">
             <label class="form__label" for="name">name</label>
-            <input class="form__input validate" type="text" name="name" id="name" required>
+            <input class="form__input validate" type="text" name="name" id="name" placeholder="enter Your name" required>
             <p class="form__errorMsg"></p>
 
             <label class="form__label" for="email">email</label>
-            <input class="form__input validate" type="email" name="email" id="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+            <input class="form__input validate" type="email" name="email" id="email" placeholder="enter Your email address" pattern="\S+@\S+\.\S+" required>
             <p class="form__errorMsg"></p>
 
             <label class="form__label" for="message">message</label>
-            <textarea class="form__textarea validate" id="message" name="message" rows="5" minLenght="3" required></textarea>
+            <textarea class="form__textarea validate" id="message" name="message" rows="5" placeholder="enter Your message" minlength="3" required></textarea>
             <p class="form__errorMsg"></p>
 
-            <span class="honey-row">
-              <label for="honey">If You're a human, don't type anything here</label>
-              <input type="text" name="honey">
+            <span class="form__honey-row">
+              <label for="honey">If You're a human, don't type anything here. It's antispam.</label>
+              <input type="text" id="honey">
             </span>
 
             <div class="form__errors"></div>
