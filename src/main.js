@@ -16,4 +16,12 @@ window.addEventListener(
 );
 
 const form = document.querySelector(".contact__form");
-new ValidateForm(form, ".validate", ".form__errorMsg");
+const messages = {
+  valueMissing: "Oh noes, this field cannot be empty!",
+  typeMismatch: "It doesn't look like email address...",
+  patternMismatch: "It doesn't look like email address...",
+  tooShort: "Hey there, write at least 3 signs",
+  check: "Check!",
+};
+
+new ValidateForm(form, ".validate", ".form__errorMsg", messages);
