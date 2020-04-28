@@ -2,14 +2,21 @@
 
 Website, which is my resume - both its code and content as well. Constantly working on it!
 
-Please find DEMO [here](https://mokkakowalewska.github.io/portfolio).
+Please find it [here](www.monikakowalewska.pl).
 
 ## Status
-
-Still deeply _in progress_!
+Still _in progress_!
 
 ## Technologies used
 
 HTML5
-CSS3: SCSS
-JavaScript (Vanilla JS)
+CSS3: Sass
+JavaScript (Vanilla JS + Lodash)
+
+###Tools:
+VS Code
+npm
+webpack
+ESLint
+stylelint
+
