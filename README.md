@@ -2,7 +2,7 @@
 
 Website, which is my resume - both its code and content as well. Constantly working on it!
 
-Please find it [here](www.monikakowalewska.pl).
+Please find it [here](http://monikakowalewska.pl).
 
 ## Status
 Still _in progress_!
