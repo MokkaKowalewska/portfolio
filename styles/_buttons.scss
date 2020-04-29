@@ -1,7 +1,6 @@
 .btn {
   padding: 0.5rem;
   font-weight: 700;
-  // text-align: center;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.58, 0.11, 0.11, 0.95);
   display: block;
@@ -13,8 +12,9 @@
 
 .projects__btn {
   margin: 0.5rem;
-  width: 30%;
-
+  text-align: center;
+  text-transform: uppercase;
+  width: 10vw;
   &:hover {
     background: rgba(192, 47, 105, 0.8);
     color: white;
@@ -22,8 +22,8 @@
 }
 
 .projects__btn-demo {
-  background: rgba(255, 255, 255, 0.3);
-  color: $myPurple;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgb(255, 140, 179);
   border: 1px solid $myPurple;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .form__btn {
-  width: 100px;
-  border: none;
+  border: 0;
   font-size: 1rem;
+  width: 100px;
 }

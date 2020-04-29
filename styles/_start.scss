@@ -11,15 +11,16 @@
     @include flexCenter;
     height: 100vh;
     min-height: 12rem;
-    background: url("../images/trianglify-lowres.png") no-repeat center center
-      fixed;
+    background: url("../images/start-background.svg") center center fixed
+      no-repeat;
     background-size: cover;
     background-position: 100% 100%;
   }
 
   &__h1 {
-    //  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-    font-size: calc(80px + (192 - 80) * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(
+      80px + (192 - 80) * ((100vw - 320px) / (1440 - 320))
+    ); //calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
     font-family: $firaCode;
     font-weight: 300;
     line-height: 0.9;
