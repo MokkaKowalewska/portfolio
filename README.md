@@ -14,10 +14,14 @@ Still _in progress_, but MVP is ready. I hope You enjoy!
 * Sass
 - JavaScript (Vanilla JS + Lodash)
 
-###Tools:
+### Tools:
 - VS Code
 - npm
 - webpack
 - ESLint
 - stylelint
+
+## Contact
+Created by Monika Kowalewska - [here's my LinkedIn](http://www.linkedin.com/in/mon-kowalewska) - contact me anytime!
+
 
