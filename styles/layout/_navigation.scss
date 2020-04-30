@@ -69,6 +69,8 @@
 
 //mobile nav
 .burger {
+  cursor: pointer;
+
   @include media(">tablet") {
     display: none;
   }

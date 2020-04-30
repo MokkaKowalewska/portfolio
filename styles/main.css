@@ -252,6 +252,10 @@
   opacity: 0.5;
 }
 
+.burger {
+  cursor: pointer;
+}
+
 @media (min-width: 769px) {
   .burger {
     display: none;
