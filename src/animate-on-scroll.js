@@ -21,5 +21,4 @@ function showSection() {
   });
 }
 
-
 export default showSection;

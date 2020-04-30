@@ -922,6 +922,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-moz-selection {
+  background: #ffb7b7;
+}
+
+::selection {
+  background: #ffb7b7;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
