@@ -1,4 +1,4 @@
-export function getNav() {
+function getNav() {
   const nav = document.querySelector(".menu__ul"),
     burger = document.querySelector(".burger");
 
@@ -10,3 +10,5 @@ export function getNav() {
     nav.classList.toggle("show");
   });
 }
+
+export default getNav;

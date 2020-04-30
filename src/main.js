@@ -2,7 +2,9 @@ import throttle from "lodash/throttle";
 import showSection from "./animate-on-scroll";
 import scrollUp from "./scroll-up";
 import ValidateForm from "./form-validation";
-require("./navigation");
+import getNav from "./mobile-nav";
+
+getNav();
 
 window.addEventListener(
   "scroll",
