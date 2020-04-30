@@ -17,7 +17,6 @@ module.exports = {
   rules: {
     "quotes": ["error", "double"],
     "linebreak-style": "off",
-    "no-plusplus": "off",
-    "prefer-const": "off"
+    "guard-for-in": "suggestion"
   },
 };
