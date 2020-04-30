@@ -1,7 +1,6 @@
-/* eslint-disable guard-for-in */
-import { submitForm } from "./send-form";
+import { submitForm } from "./submit-form";
 
-export default class ValidateForm {
+class ValidateForm {
   constructor(form, inputsClassName, errorMsgClassName, messages) {
     this.form = form;
     this.inputs = form.querySelectorAll(inputsClassName);
@@ -23,10 +22,9 @@ export default class ValidateForm {
   }
 
   inputsValidation(testedInput) {
-    let { validity } = testedInput;
+    const { validity } = testedInput;
 
-    // eslint-disable-next-line no-restricted-syntax
-    for (let violetion in validity) {
+    for (const violetion in validity) {
       if (validity[violetion] === true && violetion !== "valid") {
         this.displayErrors(testedInput, violetion);
         testedInput.nextElementSibling.style.webkitTextFillColor = "#ff2424";
@@ -37,7 +35,6 @@ export default class ValidateForm {
       testedInput.nextElementSibling.style.webkitTextFillColor = "#5eb15e";
     }
   }
-
 
   realtimeValidation() {
     this.inputs.forEach((input) => {
@@ -50,16 +47,24 @@ export default class ValidateForm {
     });
   }
 
-
   validateOnSubmit() {
     this.form.addEventListener(
       "submit", (e) => {
+        const inputsArr = Array.from(this.inputs);
+
         e.preventDefault();
-        console.log(this.inputs);
-        this.inputs.forEach((input) => {
+
+        inputsArr.forEach(input => {
           this.inputsValidation(input);
         });
+
+        if (inputsArr.every(input => input.checkValidity() === true)) {
+          submitForm();
+        }
+
       }, false,
     );
   }
 }
+
+export default ValidateForm;
