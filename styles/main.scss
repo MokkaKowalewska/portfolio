@@ -1,29 +1,17 @@
-//include-media - media queries library
-@import "./include-media";
-
-//variables and mixins
-@import "./fonts";
-@import "./colors";
-@import "./mixins";
-
-//buttons
-@import "./buttons";
-
-//animations
-@import "./animations";
-
-//page sections
-@import "./navigation";
-@import "./start";
-@import "./bio";
-@import "./svg-shaped";
-@import "./skills";
-@import "./projects";
-@import "./contact";
-@import "./footer";
-
-//JS
-@import "./scroll-up-arrows";
+@import "./components/fonts";
+@import "./components/colors";
+@import "./components/include-media";
+@import "./components/mixins";
+@import "./components/buttons";
+@import "./components/animations";
+@import "./components/scroll-up-arrows";
+@import "./layout/navigation";
+@import "./layout/start";
+@import "./layout/bio";
+@import "./layout/skills";
+@import "./layout/projects";
+@import "./layout/contact";
+@import "./layout/footer";
 
 * {
   -webkit-font-smoothing: antialiased;

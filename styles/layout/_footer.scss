@@ -1,10 +1,11 @@
 .footer {
+  @include flexCenter;
+  height: 8vw;
   background: $myOrange;
   background-size: cover;
-  height: 8vw;
-  @include flexCenter;
-  &__copyright {
-    font-size: 0.7rem;
-    color: white;
-  }
+
+    &__copyright {
+      font-size: 0.7rem;
+      color: rgb(255, 255, 255);
+    }
 }

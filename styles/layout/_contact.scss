@@ -8,13 +8,13 @@
     background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
     background-clip: text;
     background-color: $myOrange;
-    font-weight: 700;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 700;
     @include media(">tablet") {
       display: grid;
-      gap: 80px;
       grid-template: 1fr / 1fr 1fr;
+      gap: 80px;
     }
 
     &__grid-item {
@@ -28,9 +28,9 @@
   text-align: right;
 
   &__header {
+    margin-bottom: 20px;
     font-weight: 700;
     line-height: 0.9;
-    margin-bottom: 20px;
     text-transform: uppercase;
 
     @include media(">tablet") {
@@ -42,8 +42,8 @@
   }
 
   &__p {
-    font-size: 1.3rem;
     margin: 0;
+    font-size: 1.3rem;
   }
 }
 
@@ -61,8 +61,8 @@
   font-weight: 500;
 
   &__label {
-    font-size: 0.8rem;
     display: block;
+    font-size: 0.8rem;
 
     &:nth-child(n + 2) {
       margin-top: 20px;
@@ -71,24 +71,24 @@
 
   &__input,
   &__textarea {
-    -webkit-text-fill-color: $myPurple;
-    background: transparent;
-    border: 2px solid $myOrange;
-    box-sizing: border-box;
     display: block;
     margin: 0 auto;
     padding: 15px;
     width: 100%;
+    // box-sizing: border-box;
+    border: 2px solid $myOrange;
+    background: transparent;
+    -webkit-text-fill-color: $myPurple;
+    letter-spacing: 1.1;
     font: {
       family: "Montserrat", sans-serif;
       size: 1.1rem;
-      letter-spacing: 1.1;
     }
 
     &:focus {
+      outline: none;
       background: transparent;
       box-shadow: 0 0 23px -2px rgba(193, 47, 105, 0.5);
-      outline: none;
     }
 
     &:valid {
@@ -96,9 +96,9 @@
     }
 
     &::placeholder {
+      opacity: 0.95;
       font: 400 0.8rem "Montserrat", sans-serif;
       -webkit-text-fill-color: rgb(155, 155, 155);
-      opacity: 0.95;
     }
   }
 
@@ -107,9 +107,11 @@
   }
 
   &__errorMsg {
-    font-size: 0.9rem;
-    font-weight: 500;
     margin: 5px 0;
+    font: {
+      size: 0.9rem;
+      weight: 500;
+    }
   }
 
   &__status {

@@ -1,7 +1,17 @@
 .projects {
   padding: 9vh 0;
-  color: white;
+  color: rgb(255, 255, 255);
   width: 100%;
+
+  &__link {
+    background: rgb(255, 255, 255);
+    color: $myPurple;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover {
+      background: rgba(255, 255, 255, 0.658);
+    }
+  }
 
   &__h3 {
     text-align: center;
@@ -16,32 +26,23 @@
     margin: 10px;
     font-size: 0.8rem;
     text-align: center;
-    .caption__link {
-      background: white;
-      color: $myPurple;
-      text-decoration: none;
-      font-weight: 600;
-      &:hover {
-        background: rgba(255, 255, 255, 0.658);
-      }
-    }
   }
   &__grid {
     @include media(">tablet") {
       display: grid;
-      justify-content: center;
-      justify-items: center;
       grid-auto-flow: column;
       grid-template: repeat(4, auto) / repeat(2, 38vw);
+      justify-content: center;
+      justify-items: center;
     }
   }
 
   &__imgWrapper {
+    @include flexCenter;
+    position: relative;
     @include media(">tablet") {
       height: 26vw;
     }
-    @include flexCenter;
-    position: relative;
   }
 
   &__img {
@@ -55,7 +56,7 @@
     }
   }
 
-  &__btns {
+  &__btnsWrapper {
     @include flexCenter;
     position: absolute;
     top: 80%;
@@ -64,16 +65,16 @@
   }
 
   &__h4 {
-    font-size: 1.7rem;
+    margin: 10px 0;
     align-self: center;
     text-align: center;
-    margin: 10px 0;
+    font-size: 1.7rem;
   }
 
   &__p,
   &__ul {
-    padding: 0 20px;
     margin: 20px 40px;
+    padding: 0 20px;
     font-size: 0.9rem;
   }
 
@@ -83,24 +84,10 @@
   }
 
   &__li {
-    margin-bottom: 5px;
     display: inline-block;
-    border: 1px solid white;
-    border-radius: 10px;
+    margin-bottom: 5px;
     padding: 5px;
-  }
-}
-
-.showBtns {
-  animation: showBtns 4s forwards;
-  opacity: 1;
-}
-
-@keyframes showBtns {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
   }
 }

@@ -9,9 +9,9 @@
 }
 
 .scroll-up__path {
+  stroke-width: 1px;
   stroke: rgb(255, 151, 169);
   fill: transparent;
-  stroke-width: 1px;
   animation: blinkUp 7s infinite;
 
   &--a1 {

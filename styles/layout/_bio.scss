@@ -1,47 +1,51 @@
 .bio {
-  padding: 9vh 0;
-  color: $myGrey;
   width: 75vw;
   margin: 0 auto;
+  padding: 9vh 0;
+  color: $myGrey;
 
   &__grid {
     @include media(">tablet") {
       display: grid;
       grid-template: auto / repeat(3, 1fr);
-      place-items: stretch;
       justify-content: center;
+      place-items: stretch;
       gap: 2vw;
     }
 
     &-item {
       padding: 30px;
-      @include media("<=tablet") {
-        max-width: 95vw;
-        margin: 20px 0;
-      }
       border-radius: 60px;
-      box-shadow: 0 0 1em $myOrange;
       text-align: center;
+      box-shadow: 0 0 1em $myOrange;
+      @include media("<=tablet") {
+        margin: 20px 0;
+        max-width: 95vw;
+      }
     }
   }
+
   &__img {
     width: 200px;
-    margin-block-end: 20px;
+    margin-bottom: 20px;
   }
+
   &__header {
-    line-height: 1.2;
     margin-bottom: 70px;
-    font-size: 3rem;
-    font-weight: 700;
     text-align: center;
     color: $myPurple;
+    line-height: 1.2;
+    font: {
+      size: 3rem;
+      weight: 700;
+    }
   }
 
   &__h3 {
     margin: 1rem 0;
     text-align: center;
-    font-size: 2.2rem;
     color: $myOrange;
+    font-size: 2.2rem;
   }
 
   &__h4 {
@@ -49,15 +53,17 @@
   }
 
   &__text {
-    font-size: 0.97rem;
-    text-align: left;
     margin: 5px 0;
+    text-align: left;
+    font-size: 0.97rem;
 
     &--highlighted {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: white;
       background-color: $myPurple;
+      color: rgb(255, 255, 255);
+      font: {
+        size: 0.9rem;
+        weight: 600;
+      }
     }
 
     &--bold {
@@ -69,12 +75,14 @@
     padding-left: 1.3rem;
     list-style: none;
   }
+
   &__li::before {
-    font-family: "FontAwesome";
+    margin: 0 0.45rem 0 -1.3rem;
     content: "\f005";
     color: $myPurple;
-    font-size: 0.8rem;
-    margin-inline-start: -1.3rem;
-    margin-inline-end: 0.45rem;
+    font: {
+      family: "FontAwesome";
+      size: 0.8rem;
+    }
   }
 }

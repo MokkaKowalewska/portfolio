@@ -1,14 +1,14 @@
 .menu {
-  text-transform: uppercase;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: $myPurple;
-  position: fixed;
   top: 0;
   left: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
   height: 9vh;
   z-index: 20;
+  background-color: $myPurple;
+  text-transform: uppercase;
 
   @include media(">tablet") {
     justify-content: center;
@@ -27,14 +27,14 @@
     }
 
     @include media("<=tablet") {
-      position: absolute;
       top: 9vh;
       right: 0;
-      width: 100%;
-      height: 92vh;
+      position: absolute;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      width: 100%;
+      height: 92vh;
       background: rgba(193, 47, 105, 0.7);
       backdrop-filter: blur(5px);
       transform: translateX(100%);
@@ -47,18 +47,18 @@
     margin: 17px 25px;
 
     &--underlined {
-      text-decoration: none;
-      color: white;
-      letter-spacing: 0.2rem;
-      font-size: 0.7rem;
       padding: 2px;
+      color: rgb(255, 255, 255);
+      font-size: 0.7rem;
+      letter-spacing: 0.2rem;
+      text-decoration: none;
       transition: border-bottom 0.1s ease-in-out;
       &:hover {
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid rgb(255, 255, 255);
       }
     }
     &--icon {
-      color: white;
+      color: rgb(255, 255, 255);
       transition: opacity 0.1s ease-in-out;
       &:hover {
         opacity: 0.5;
@@ -82,7 +82,7 @@
     width: 20px;
     height: 2px;
     margin: 4px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
   }
 }
 
