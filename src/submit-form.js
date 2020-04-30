@@ -2,6 +2,7 @@
 const form = document.querySelector(".contact__form");
 
 function submitForm(e) {
+  console.log("hello from submitForm!");
   const status = document.querySelector(".form__status");
   const submitBtn = document.querySelector(".form__btn");
   const formWrapper = document.querySelector(".right-col");

@@ -1,9 +1,7 @@
 import throttle from "lodash/throttle";
 import showSection from "./animate-on-scroll";
 import scrollUp from "./scroll-up";
-import submitForm from "./send-form";
 import ValidateForm from "./form-validation";
-
 require("./navigation");
 
 window.addEventListener(
