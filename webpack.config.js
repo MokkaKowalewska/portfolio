@@ -10,9 +10,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.exec\.js$/,
-        use: ["script-loader"],
-      },
+        test: /\.scss$/i,
+        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+      }
     ],
   },
   watch: true,

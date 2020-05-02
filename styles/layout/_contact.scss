@@ -5,11 +5,7 @@
   }
 
   &__grid {
-    background: linear-gradient(0deg, $myPurple 0%, $myOrange 100%);
-    background-clip: text;
-    background-color: $myOrange;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $myOrange;
     font-weight: 700;
     @include media(">tablet") {
       display: grid;
@@ -75,10 +71,9 @@
     margin: 0 auto;
     padding: 15px;
     width: 100%;
-    // box-sizing: border-box;
     border: 2px solid $myOrange;
     background: transparent;
-    -webkit-text-fill-color: $myPurple;
+    color: $myPurple;
     letter-spacing: 1.1;
     font: {
       family: "Montserrat", sans-serif;
@@ -98,7 +93,7 @@
     &::placeholder {
       opacity: 0.95;
       font: 400 0.8rem "Montserrat", sans-serif;
-      -webkit-text-fill-color: rgb(155, 155, 155);
+      color: rgb(155, 155, 155);
     }
   }
 
