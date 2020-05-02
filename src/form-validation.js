@@ -39,7 +39,7 @@ class ValidateForm {
   realtimeValidation() {
     this.inputs.forEach((input) => {
       input.addEventListener(
-        "blur", (e) => {
+        "change", (e) => {
           this.inputsValidation(e.target);
         },
         false,
