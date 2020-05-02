@@ -729,12 +729,7 @@
 }
 
 .contact__grid {
-  background: -webkit-gradient(linear, left bottom, left top, from(#c12f69), to(#eb8056));
-  background: linear-gradient(0deg, #c12f69 0%, #eb8056 100%);
-  background-clip: text;
-  background-color: #eb8056;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #eb8056;
   font-weight: 700;
 }
 
@@ -811,8 +806,7 @@
   padding: 15px;
   width: 100%;
   border: 2px solid #eb8056;
-  background: transparent;
-  -webkit-text-fill-color: #c12f69;
+  color: #c12f69;
   letter-spacing: 1.1;
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
@@ -832,25 +826,25 @@
 .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
   opacity: 0.95;
   font: 400 0.8rem "Montserrat", sans-serif;
-  -webkit-text-fill-color: #9b9b9b;
+  color: #9b9b9b;
 }
 
 .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
   opacity: 0.95;
   font: 400 0.8rem "Montserrat", sans-serif;
-  -webkit-text-fill-color: #9b9b9b;
+  color: #9b9b9b;
 }
 
 .form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
   opacity: 0.95;
   font: 400 0.8rem "Montserrat", sans-serif;
-  -webkit-text-fill-color: #9b9b9b;
+  color: #9b9b9b;
 }
 
 .form__input::placeholder, .form__textarea::placeholder {
   opacity: 0.95;
   font: 400 0.8rem "Montserrat", sans-serif;
-  -webkit-text-fill-color: #9b9b9b;
+  color: #9b9b9b;
 }
 
 .form__textarea {
