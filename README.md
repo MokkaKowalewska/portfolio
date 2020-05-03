@@ -14,6 +14,7 @@ Still _in progress_, but MVP is ready.
 * Sass
 - JS
 * Lodash
+- a little bit of PHP (contact form)
 
 ## Contact
 Created by Monika Kowalewska - [here's my LinkedIn](http://www.linkedin.com/in/mon-kowalewska) - contact me anytime!
