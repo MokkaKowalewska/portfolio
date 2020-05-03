@@ -27,12 +27,12 @@ class ValidateForm {
     for (const violetion in validity) {
       if (validity[violetion] === true && violetion !== "valid") {
         this.displayErrors(testedInput, violetion);
-        testedInput.nextElementSibling.style.webkitTextFillColor = "#ff2424";
+        testedInput.nextElementSibling.style.color = "#ff2424";
         return;
       }
 
       this.displayErrors(testedInput, "check");
-      testedInput.nextElementSibling.style.webkitTextFillColor = "#5eb15e";
+      testedInput.nextElementSibling.style.color = "#5eb15e";
     }
   }
 
