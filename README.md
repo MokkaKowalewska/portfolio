@@ -9,12 +9,12 @@ Still _in progress_, but MVP is ready.
 
 ## Technologies used
 
-- HTML
-- CSS
+1. HTML
+2. CSS
 * Sass
-- JS
+3. JS
 * Lodash
-- a little bit of PHP (contact form)
+4. A little bit of PHP (contact form)
 
 ## Contact
 Created by Monika Kowalewska - [here's my LinkedIn](http://www.linkedin.com/in/mon-kowalewska) - contact me anytime!
