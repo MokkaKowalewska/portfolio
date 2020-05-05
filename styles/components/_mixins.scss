@@ -3,3 +3,12 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin widthForProjectsImg {
+  @include media(">tablet") {
+    height: 23vw;
+  }
+  @include media("<=tablet") {
+    width: 60vw;
+  }
+}

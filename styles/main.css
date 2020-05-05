@@ -655,7 +655,6 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,6 +666,18 @@
           justify-content: center;
   -webkit-backdrop-filter: brightness(60%);
           backdrop-filter: brightness(60%);
+}
+
+@media (min-width: 769px) {
+  .projects__iconsWrapper {
+    height: 23vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects__iconsWrapper {
+    width: 60vw;
+  }
 }
 
 .projects__icon {
@@ -797,9 +808,9 @@
 
 .form__input, .form__textarea {
   display: block;
-  margin: 0 auto;
+  margin: 0;
   padding: 15px;
-  width: 100%;
+  width: 80%;
   border: 2px solid #eb8056;
   color: #c12f69;
   letter-spacing: 1.1;
