@@ -15,18 +15,18 @@ class ValidateForm {
     this.form.setAttribute("novalidate", true);
   }
 
-  displayErrors(inputValidated, violetion) {
+  displayErrors(inputValidated, violation) {
     const input = inputValidated;
-    input.nextElementSibling.textContent = this.messages[violetion];
+    input.nextElementSibling.textContent = this.messages[violation];
     input.setAttribute("aria-describedby", `error-for-${inputValidated.id}`);
   }
 
   inputsValidation(testedInput) {
     const { validity } = testedInput;
 
-    for (const violetion in validity) {
-      if (validity[violetion] === true && violetion !== "valid") {
-        this.displayErrors(testedInput, violetion);
+    for (const violation in validity) {
+      if (validity[violation] === true && violation !== "valid") {
+        this.displayErrors(testedInput, violation);
         testedInput.nextElementSibling.style.color = "#ff2424";
         return;
       }
