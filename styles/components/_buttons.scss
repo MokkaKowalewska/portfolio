@@ -10,29 +10,6 @@
   }
 }
 
-.projects__btn {
-  width: 10vw;
-  margin: 0.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  &:hover {
-    background: rgba(192, 47, 105, 0.8);
-    color: rgb(255, 255, 255);
-  }
-}
-
-.projects__btn-demo {
-  border: 1px solid $myPurple;
-  background: rgba(0, 0, 0, 0.3);
-  color: rgb(255, 140, 179);
-}
-
-.projects__btn-code {
-  border: 1px solid rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.3);
-  color: rgb(255, 255, 255);
-}
-
 .contact__btn {
   display: inline-block;
   margin: 10px 0;

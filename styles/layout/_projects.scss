@@ -56,12 +56,28 @@
     }
   }
 
-  &__btnsWrapper {
+  &__iconsWrapper {
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
     @include flexCenter;
+    backdrop-filter: brightness(60%);
+  }
+
+  &__icon {
+    width: 10vw;
+    margin: 0.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    &:hover {
+      color: $myOrange;
+    }
+    &:active {
+      color: rgb(241, 82, 19);
+    }
   }
 
   &__h4 {

@@ -12,30 +12,6 @@
   cursor: pointer;
 }
 
-.projects__btn {
-  width: 10vw;
-  margin: 0.5rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.projects__btn:hover {
-  background: rgba(192, 47, 105, 0.8);
-  color: white;
-}
-
-.projects__btn-demo {
-  border: 1px solid #c12f69;
-  background: rgba(0, 0, 0, 0.3);
-  color: #ff8cb3;
-}
-
-.projects__btn-code {
-  border: 1px solid white;
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-}
-
 .contact__btn {
   display: inline-block;
   margin: 10px 0;
@@ -72,8 +48,8 @@
 }
 
 .js-aos-slideIn {
-  -webkit-animation: aos-slideIn 0.5s forwards ease-in-out;
-          animation: aos-slideIn 0.5s forwards ease-in-out;
+  -webkit-animation: aos-slideIn 0.1s forwards ease-in;
+          animation: aos-slideIn 0.1s forwards ease-in;
 }
 
 @-webkit-keyframes aos-slideIn {
@@ -673,12 +649,13 @@
   }
 }
 
-.projects__btnsWrapper {
+.projects__iconsWrapper {
   position: absolute;
   top: 80%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,6 +665,24 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-backdrop-filter: brightness(60%);
+          backdrop-filter: brightness(60%);
+}
+
+.projects__icon {
+  width: 10vw;
+  margin: 0.5rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.projects__icon:hover {
+  color: #eb8056;
+}
+
+.projects__icon:active {
+  color: #f15213;
 }
 
 .projects__h4 {
