@@ -48,8 +48,8 @@
 }
 
 .js-aos-slideIn {
-  -webkit-animation: aos-slideIn 0.1s forwards ease-in;
-          animation: aos-slideIn 0.1s forwards ease-in;
+  -webkit-animation: aos-slideIn 0.5s forwards ease-in;
+          animation: aos-slideIn 0.5s forwards ease-in;
 }
 
 @-webkit-keyframes aos-slideIn {
