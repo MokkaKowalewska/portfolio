@@ -58,7 +58,6 @@
     transform: translate(-50%, -50%);
     @include widthForProjectsImg;
     @include flexCenter;
-    backdrop-filter: brightness(60%);
   }
 
   &__icon {

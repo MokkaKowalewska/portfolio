@@ -664,8 +664,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-backdrop-filter: brightness(60%);
-          backdrop-filter: brightness(60%);
 }
 
 @media (min-width: 769px) {
