@@ -63,9 +63,8 @@
   }
 
   &__iconsWrapper {
-    display: flex;
+    @include flexCenter;
     margin: 20px;
-    // @include flexCenter;
   }
 
   &__icon {
