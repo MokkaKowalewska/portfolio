@@ -597,14 +597,18 @@
   }
 }
 
+.projects__grid {
+  margin-top: 50px;
+}
+
 @media (min-width: 769px) {
   .projects__grid {
     display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
-    -ms-grid-rows: (auto)[4];
+    -ms-grid-rows: (auto)[5];
     -ms-grid-columns: (38vw)[2];
-        grid-template: repeat(4, auto)/repeat(2, 38vw);
+        grid-template: repeat(5, auto)/repeat(2, 38vw);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -622,24 +626,24 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-}
-
-@media (min-width: 769px) {
-  .projects__imgWrapper {
-    height: 26vw;
-  }
 }
 
 .projects__img {
   border-radius: 10px;
   -webkit-box-shadow: 0 0 1em wheat;
           box-shadow: 0 0 1em wheat;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 @media (min-width: 769px) {
   .projects__img {
-    height: 23vw;
+    width: 30vw;
+  }
+  .projects__img:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    cursor: pointer;
   }
 }
 
@@ -649,12 +653,7 @@
   }
 }
 
-.projects__iconsWrapper {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.projects__titleWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -666,24 +665,16 @@
           justify-content: center;
 }
 
-@media (min-width: 769px) {
-  .projects__iconsWrapper {
-    height: 23vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects__iconsWrapper {
-    width: 60vw;
-  }
+.projects__iconsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px;
 }
 
 .projects__icon {
-  width: 10vw;
-  margin: 0.5rem;
+  margin: 0 30px;
   color: white;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .projects__icon:hover {
@@ -694,13 +685,17 @@
   color: #f15213;
 }
 
-.projects__h4 {
+.projects__title {
+  display: block;
   margin: 10px 0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
+  text-decoration: none;
+  color: white;
   font-size: 1.7rem;
+  font-weight: 700;
 }
 
 .projects__p, .projects__ul {

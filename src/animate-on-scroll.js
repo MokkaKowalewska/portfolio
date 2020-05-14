@@ -1,6 +1,6 @@
 const sections = document.querySelectorAll(".js-aos-hidden");
 
-function isVisible(section) {
+const isVisible = (section) => {
   const sectionBox = section.getBoundingClientRect();
   const pxFromTop = -150;
 
