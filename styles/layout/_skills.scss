@@ -18,12 +18,12 @@
     justify-content: center;
     place-items: center;
     @include media("<=tablet") {
-      grid-template: repeat(3, 1fr) / repeat(3, 80px);
+      grid-template: repeat(2, 1fr) / repeat(3, 80px);
       gap: 10px;
     }
 
     @include media(">tablet") {
-      grid-template: repeat(3, 1fr) / repeat(9, 80px);
+      grid-template: repeat(2, 1fr) / repeat(9, 80px);
       gap: 30px;
     }
   }

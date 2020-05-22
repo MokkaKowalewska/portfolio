@@ -522,18 +522,18 @@
 
 @media (max-width: 768px) {
   .skills__grid {
-    -ms-grid-rows: (1fr)[3];
+    -ms-grid-rows: (1fr)[2];
     -ms-grid-columns: (80px)[3];
-        grid-template: repeat(3, 1fr)/repeat(3, 80px);
+        grid-template: repeat(2, 1fr)/repeat(3, 80px);
     gap: 10px;
   }
 }
 
 @media (min-width: 769px) {
   .skills__grid {
-    -ms-grid-rows: (1fr)[3];
+    -ms-grid-rows: (1fr)[2];
     -ms-grid-columns: (80px)[9];
-        grid-template: repeat(3, 1fr)/repeat(9, 80px);
+        grid-template: repeat(2, 1fr)/repeat(9, 80px);
     gap: 30px;
   }
 }
