@@ -4,7 +4,7 @@
   "description": "Website, which is my resume - both its code and content as well. Constantly working on it!",
   "private": true,
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
